@@ -1,0 +1,163 @@
+<div class="ng-scope" style="text-align: center;">
+    <style>
+        
+        #contextmenu{
+            background-color:#ccc;
+            border-style:solid;
+            border-width:1px;
+            width:100px;
+            display:none;
+            position: absolute;
+        }
+        #contextmenu td{
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            padding:2px;
+            padding-left:4px;
+        }
+        
+        .game-iframe {
+                border: solid 1px black;
+          overflow-x: hidden;
+            overflow-y: hidden;
+            overflow-wrap:hidden;
+          resize: both;
+          position: absolute;
+          top: 0;
+          left: 0%;
+          bottom: 0%;
+          right: 0%;
+          width: 70%;
+          height: 90%;
+        }
+        
+        .neon {
+            text-shadow: 
+                0 0 5px #ff7bac,
+                0 0 10px #ff7bac,
+                0 0 20px #ff7bac,
+                0 0 40px #ff7bac,
+                0 0 80px #ff7bac,
+                0 0 90px #ff7bac,
+                0 0 100px #ff7bac,
+                0 0 150px #ff7bac;
+        }
+        
+        .neon-blue {
+            text-shadow: 
+                0 0 5px #005eff,
+                0 0 10px #005eff,
+                0 0 20px #005eff,
+                0 0 40px #005eff,
+                0 0 80px #005eff,
+                0 0 90px #005eff,
+                0 0 100px #005eff,
+                0 0 150px #005eff;
+        }
+        
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+            padding-top:0px;
+          width: 70%;
+        }
+        
+        .game-iframe-full {
+             border:hidden;
+          overflow-y: hidden;
+          position: absolute;
+          top: 0;
+          left: 0%;
+          bottom: 0%;
+          right: 0%;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .cl {
+            color:#34a2eb;
+        }
+        
+        a:link {
+            color:#ff7bac;
+        }
+        
+        a:active {
+            color:#ff7bac;
+        }
+        
+        a:hover {
+            color:#ff4a8d;
+        }
+        
+        a:visited {
+            color:#ff7bac;
+        }
+        
+        body {
+            height: 110%;
+         overflow-y: scroll;
+            overflow-x: hidden;
+            line-height:120%;
+            
+            background-color: #000000;
+            color:white;
+         font-family: "Press Start 2P", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+        
+        hr {
+            border-color:white;
+        }
+        
+        .container {
+          position: relative;
+          max-width: 200px;
+                line-height:100%;
+             background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmrbG1RGaSD1i5t0GVea-fRKXGKd66i1rAJRruMkV6lB3dLxZxlWxXCdeVRW7JmEXljk:https://media.wired.com/photos/592722c1af95806129f51b71/master/pass/MIT-Web-Loading.jpg&usqp=CAU);
+        }
+        .game-img {
+          display: block;
+          width: 200px;
+             height: 200px;
+          height: auto;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #eb4034;
+        }
+        .container:hover .overlay {
+          opacity: 1;
+        }
+        .text {
+          color: white;
+             text-decoration: none;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+    </style>
+
+<div ng-view="" class="ng-scope"><iframe class="game-iframe-full ng-scope" width="100%" height="100%" src="https://than1089.github.io/adventure-capitalist/" <="" iframe="">
+</iframe></div>
+<!DOCTYPE html>
+<html lang="en"><script>(function(){window['_docs_annotate_canvas_by_ext']='kohfgcgbkjodfcfkcackpagifgbcmimk';})();</script><head><meta charset="utf-8"><link rel="icon" href="/adventure-capitalist/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="/adventure-capitalist/logo192.png"><link rel="manifest" href="/adventure-capitalist/manifest.json"><title>Adventure Capitalist</title><link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet"><link href="/adventure-capitalist/static/css/main.39e638da.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="App"><div class="side-bar"><img src="/adventure-capitalist/images/capitalist.png" alt="Capitalist"><div><div class="manager-btn">Managers</div></div></div><div class="main"><div class="balance"><span>$0.83</span></div><div class="businesses"><div class="business"><div class="business-icon"><img src="/adventure-capitalist/images/lemon.png" alt="icon" width="60"><div class="business-quantity">10</div></div><div class="business-content"><div class="business-progress"><div class="progress-bar"><span style="width: 0px;"></span></div><span class="business-profit">$5.08</span></div><div class="business-buy-and-timer"><div class="business-buy"><span>Buy</span><span>$2.37</span></div><div class="business-timer"><div class="count-down-timer">00:00:01</div></div></div></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Newspaper Deliver</span><br><span class="price">$30</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Car Wash</span><br><span class="price">$500</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Pizza Delivery</span><br><span class="price">$3,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Donut Shop</span><br><span class="price">$50,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Shrimp Boat</span><br><span class="price">$800,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Hockey Team</span><br><span class="price">$6,000,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Movie Studio</span><br><span class="price">$100,000,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Bank</span><br><span class="price">$5,000,000,000</span></div></div><div class="business"><div class="business-unpurchased" style="background-image: url(&quot;/adventure-capitalist/images/lock.png&quot;);"><span>Oil Company</span><br><span class="price">$153,434,564,431</span></div></div></div></div></div></div><script>!function(e){function t(t){for(var n,a,i=t[0],l=t[1],p=t[2],f=0,s=[];f<i.length;f++)a=i[f],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in l)Object.prototype.hasOwnProperty.call(l,n)&&(e[n]=l[n]);for(c&&c(t);s.length;)s.shift()();return u.push.apply(u,p||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,i=1;i<r.length;i++){var l=r[i];0!==o[l]&&(n=!1)}n&&(u.splice(t--,1),e=a(a.s=r[0]))}return e}var n={},o={1:0},u=[];function a(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,a),r.l=!0,r.exports}a.m=e,a.c=n,a.d=function(e,t,r){a.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,t){if(1&t&&(e=a(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(a.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)a.d(r,n,function(t){return e[t]}.bind(null,n));return r},a.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(t,"a",t),t},a.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},a.p="/adventure-capitalist/";var i=this["webpackJsonpadventure-capitalist"]=this["webpackJsonpadventure-capitalist"]||[],l=i.push.bind(i);i.push=t,i=i.slice();for(var p=0;p<i.length;p++)t(i[p]);var c=l;r()}([])</script><script src="/adventure-capitalist/static/js/2.d0016a81.chunk.js"></script><script src="/adventure-capitalist/static/js/main.18e3ecab.chunk.js"></script><script type="text/javascript" src="https:////than1089.github.io/93791460bd4591916fae6788dd691570096e47a0e47061cdead407edc2363560/inject.js"></script>
+</body></html>
+</div>

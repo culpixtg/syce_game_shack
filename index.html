@@ -4,291 +4,339 @@
 <title>Google Slides :)</title>
 <link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
 <div class="ng-scope" style="text-align: center;">
-    <style>
-        
-        #contextmenu{
-            background-color:#ccc;
-            border-style:solid;
-            border-width:1px;
-            width:100px;
-            display:none;
-            position: absolute;
-        }
-        #contextmenu td{
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-            padding:2px;
-            padding-left:4px;
-        }
-        
-        .game-iframe {
-                border: solid 1px black;
-          overflow-x: hidden;
-            overflow-y: hidden;
-            overflow-wrap:hidden;
-          resize: both;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 70%;
-          height: 90%;
-        }
-        
-        .neon {
-            text-shadow: 
-                0 0 5px #ff7bac,
-                0 0 10px #ff7bac,
-                0 0 20px #ff7bac,
-                0 0 40px #ff7bac,
-                0 0 80px #ff7bac,
-                0 0 90px #ff7bac,
-                0 0 100px #ff7bac,
-                0 0 150px #ff7bac;
-        }
-        
-        .neon-blue {
-            text-shadow: 
-                0 0 5px #005eff,
-                0 0 10px #005eff,
-                0 0 20px #005eff,
-                0 0 40px #005eff,
-                0 0 80px #005eff,
-                0 0 90px #005eff,
-                0 0 100px #005eff,
-                0 0 150px #005eff;
-        }
-        
-        .center {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-            padding-top:0px;
-          width: 70%;
-        }
-        
-        .game-iframe-full {
-             border:hidden;
-          overflow-y: hidden;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 100%;
-          height: 100%;
-        }
-        
-        .cl {
-            color:#34a2eb;
-        }
-        
-        a:link {
-            color:#ff7bac;
-        }
-        
-        a:active {
-            color:#ff7bac;
-        }
-        
-        a:hover {
-            color:#ff4a8d;
-        }
-        
-        a:visited {
-            color:#ff7bac;
-        }
-        
-        body {
-            height: 110%;
-         overflow-y: scroll;
-            overflow-x: hidden;
-            line-height:120%;
-            
-            background-color: #000000;
-            color:white;
-         font-family: "Press Start 2P", sans-serif;
-        }
-        ::-webkit-scrollbar {
-            width: 0;
-            background: transparent;
-        }
-        
-        hr {
-            border-color:white;
-        }
-        
-        .container {
-          position: relative;
-          max-width: 200px;
-                line-height:100%;
-             background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmrbG1RGaSD1i5t0GVea-fRKXGKd66i1rAJRruMkV6lB3dLxZxlWxXCdeVRW7JmEXljk:https://media.wired.com/photos/592722c1af95806129f51b71/master/pass/MIT-Web-Loading.jpg&usqp=CAU);
-        }
-        .game-img {
-          display: block;
-          width: 200px;
-             height: 200px;
-          height: auto;
-        }
-        .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #eb4034;
-        }
-        .container:hover .overlay {
-          opacity: 1;
-        }
-        .text {
-          color: white;
-             text-decoration: none;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-        </style>
+  <style>
+
+    #contextmenu{
+      background-color:#ccc;
+      border-style:solid;
+      border-width:1px;
+      width:100px;
+      display:none;
+      position: absolute;
+    }
+    #contextmenu td{
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      padding:2px;
+      padding-left:4px;
+    }
+
+    .game-iframe {
+        border: solid 1px black;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      overflow-wrap:hidden;
+      resize: both;
+      position: absolute;
+      top: 0;
+      left: 0%;
+      bottom: 0%;
+      right: 0%;
+      width: 70%;
+      height: 90%;
+    }
+
+    .neon {
+      text-shadow: 
+            0 0 5px #ff7bac,
+            0 0 10px #ff7bac,
+            0 0 20px #ff7bac,
+            0 0 40px #ff7bac,
+            0 0 80px #ff7bac,
+            0 0 90px #ff7bac,
+            0 0 100px #ff7bac,
+            0 0 150px #ff7bac;
+    }
+
+    .neon-blue {
+      text-shadow: 
+            0 0 5px #005eff,
+            0 0 10px #005eff,
+            0 0 20px #005eff,
+            0 0 40px #005eff,
+            0 0 80px #005eff,
+            0 0 90px #005eff,
+            0 0 100px #005eff,
+            0 0 150px #005eff;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top:0px;
+      width: 70%;
+    }
+
+    .game-iframe-full {
+      border:hidden;
+      overflow-y: hidden;
+      position: absolute;
+      top: 0;
+      left: 0%;
+      bottom: 0%;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cl {
+      color:#34a2eb;
+    }
+
+    a:link {
+      color:#ff7bac;
+      opacity:100%
+    }
+
+    a:active {
+      color:#ff7bac;
+      opacity:100%
+    }
+
+    a:hover {
+      color:#ff7bac;
+      opacity:50%
+    }
+
+    a:visited {
+      color:#ff7bac;
+      opacity:100%
+    }
+
+    body {
+      height: 110%;
+    overflow-y: scroll;
+      overflow-x: hidden;
+      line-height:90%;
+      
+      background-color: #000000;
+      color:white;
+      font-family: "Press Start 2P", sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+        background: blue;
+    }
+
+    hr {
+      border-color:white;
+    }
+
+    .container {
+      position: relative;
+      max-width: 200px;
+        line-height:0%;
+      text-decoration:hidden;
+      background-color:#121212;
+      padding:7px;
+      padding-bottom:0%;
+      margin-top:7px;
+      margin-left:3px;
+    }
+    .game-img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      height: auto;
+    }
+
+    .movie-img {
+      display: block;
+      width: 200px;
+      height: 300px;
+    }
+
+
+    h3 {
+      text-decoration:none;
+    }
+    h4 {
+      text-decoration:none;
+    }
+    a {
+      text-decoration:none;
+    }
+
+  </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update: 3/28/2022, added Adventure Capitalist, Cut the Rope, Stack, and Turbo Moto Racer. Also fixed the weird border thing that occurred on most of the games.</a></h3>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - v2.0.0 (4/20/2022): New UI for game icons with a new font. Added Bloxorz, Shell Shockers and have now made stack file based so it's been moved in over to the file based section. Plus some other small changes.</a></h3>
     <br>
     <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
     <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
     <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
     <div style="text-align:center; line-height:150%; font-size:20px"></div>
-    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">BROWSER GAMES</span><hr/></div>
-      
-    <div class="container" style="color: white; display: inline-block;"><a href="Adventure Capitalist/index.html"><img class="game-img" src="Adventure Capitalist/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Adventure Capitalist</div>
-      </div>
-      </a>
-      </div>
+    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 30px;">BROWSER GAMES (THESE MIGHT GET BLOCKED)</span><hr/></div>
 
-    <div class="container" style="color: white; display: inline-block;"><a href="Basketball Stars/index.html"><img class="game-img" src="Basketball Stars/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Basketball Stars</div>
-      </div>
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Adventure Capitalist/index.html">
+      <img src="Adventure Capitalist/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Adventure Capitalist</h3>
       </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Connect 4/index.html"><img class="game-img" src="Connect 4/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Connect 4</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Cookie Clicker/index.html"><img class="game-img" src="Cookie Clicker/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Cookie Clicker</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Cut the Rope/index.html"><img class="game-img" src="Cut the Rope/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Cut the Rope</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Friday Night Funkin'/index.html"><img class="game-img" src="Friday Night Funkin'/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Friday Night Funkin'</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Moto X3M/index.html"><img class="game-img" src="Moto X3M/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Moto X3M</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Moto x3m Winter/index.html"><img class="game-img" src="Moto x3m Winter/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Moto X3M Winter</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="My Friend Pedro/index.html"><img class="game-img" src="My Friend Pedro/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">My Friend Pedro</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="My Friend Pedro Arena/index.html"><img class="game-img" src="My Friend Pedro Arena/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">My Friend Pedro Arena</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Stack/index.html"><img class="game-img" src="Stack/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Stack</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Tetris/index1.html"><img class="game-img" src="Tetris/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Tetris</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Turbo Moto Racer/index.html"><img class="game-img" src="Turbo Moto Racer/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Turbo Moto Racer</div>
-      </div>
-      </a>
-      </div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Wordle/index.html"><img class="game-img" src="Wordle/logo.webp" />
-    <div class="overlay">
-    <div class="text" style="font-size: 15px;">Wordle</div>
     </div>
-    </a>
+    
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Basketball Stars/index.html">
+      <img src="Basketball Stars/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Basketball Stars</h3>
+      </a>
     </div>
 
-    <div class="container" style="color: white; display: inline-block;"><a href="Unlimited Wordle/index.html"><img class="game-img" src="Unlimited Wordle/logo.png" />
-        <div class="overlay">
-        <div class="text" style="font-size: 15px;">Wordle Unlimited</div>
-        </div>
-        </a>
-        </div>
-    </div>
-
-    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">MY OWN GAMES</span><hr/></div>
-
-    <div class="container" style="color: white; display: inline-block;"><a href="Falling Ball/index.html"><img class="game-img" src="Falling Ball/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Falling Ball</div>
-      </div>
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Bloxorz/index.html">
+      <img src="Bloxorz/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Bloxorz</h3>
       </a>
-      </div>
     </div>
 
-    <div class="container" style="color: white; display: inline-block;"><a href="FlappyBird/index.html"><img class="game-img" src="FlappyBird/logo.png" />
-      <div class="overlay">
-      <div class="text" style="font-size: 15px;">Flappy Bird</div>
-      </div>
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="BoxBob/index.html">
+      <img src="BoxBob/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">BoxBob</h3>
       </a>
-      </div>
     </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Connect 4/index.html">
+      <img src="Connect 4/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Connect 4</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Cookie Clicker/index.html">
+      <img src="Cookie Clicker/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Cookie Clicker</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Cut the Rope/index.html">
+      <img src="Cut the Rope/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Cut the Rope</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Friday Night Funkin'/index.html">
+      <img src="Friday Night Funkin'/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Friday Night Funkin'</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Minecraft/index.html">
+      <img src="Minecraft/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Minecraft</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Minesweeper/index.html">
+      <img src="Minesweeper/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Minesweeper</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Moto X3M/index.html">
+      <img src="Moto X3M/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Moto X3M</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Moto X3M Winter/index.html">
+      <img src="Moto X3M Winter/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Moto X3M Winter</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="My Friend Pedro/index.html">
+      <img src="My Friend Pedro/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">My Friend Pedro</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="My Friend Pedro Arena/index.html">
+      <img src="My Friend Pedro Arena/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">My Friend Pedro Arena</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Shell Shockers/index.html">
+      <img src="Shell Shockers/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Shell Shockers</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Turbo Moto Racer/index.html">
+      <img src="Turbo Moto Racer/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Turbo Moto Racer</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Wordle/index.html">
+      <img src="Wordle/logo.webp" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Wordle</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Wordle Unlimited/index.html">
+      <img src="Wordle Unlimited/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Wordle Unlimited</h3>
+      </a>
+    </div>
+
+    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 30px;">FILE BASED GAMES (MIGHT LOAD SLOWER)</span><hr/></div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Cookie Clicker/index.html">
+      <img src="Cookie Clicker/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Cookie Clicker</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Stack/index.html">
+      <img src="Stack/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Stack</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Tetris/index1.html">
+      <img src="Tetris/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Tetris</h3>
+      </a>
+    </div>
+
+    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">MY OWN GAMES (THAT ARE BAD)</span><hr/></div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="Falling Ball/index.html">
+      <img src="Falling Ball/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Falling Ball</h3>
+      </a>
+    </div>
+
+    <div class="container" style="color:white; display: inline-block;">
+      <a href="FlappyBird/index.html">
+      <img src="FlappyBird/logo.png" class="game-img">
+        <h3 style="font-family: Roboto Condensed;">Flappy Bird</h3>
+      </a>
+    </div>
+
+    <hr>
+      <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;">Want to check out previous update logs? Click <a style="color:#ffffff" href="update_logs.html">here!</a></h3>
+    </hr>
+</div>

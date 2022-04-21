@@ -5,163 +5,164 @@
 <link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
 <div class="ng-scope" style="text-align: center;">
     <style>
+
+      #contextmenu{
+        background-color:#ccc;
+        border-style:solid;
+        border-width:1px;
+        width:100px;
+        display:none;
+        position: absolute;
+      }
+      #contextmenu td{
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        padding:2px;
+        padding-left:4px;
+      }
+
+      .game-iframe {
+          border: solid 1px black;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        overflow-wrap:hidden;
+        resize: both;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        bottom: 0%;
+        right: 0%;
+        width: 70%;
+        height: 90%;
+      }
+
+      .neon {
+        text-shadow: 
+              0 0 5px #ff7bac,
+              0 0 10px #ff7bac,
+              0 0 20px #ff7bac,
+              0 0 40px #ff7bac,
+              0 0 80px #ff7bac,
+              0 0 90px #ff7bac,
+              0 0 100px #ff7bac,
+              0 0 150px #ff7bac;
+      }
+
+      .neon-blue {
+        text-shadow: 
+              0 0 5px #005eff,
+              0 0 10px #005eff,
+              0 0 20px #005eff,
+              0 0 40px #005eff,
+              0 0 80px #005eff,
+              0 0 90px #005eff,
+              0 0 100px #005eff,
+              0 0 150px #005eff;
+      }
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top:0px;
+        width: 70%;
+      }
+
+      .game-iframe-full {
+        border:hidden;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        bottom: 0%;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+      }
+
+      .cl {
+        color:#34a2eb;
+      }
+
+      a:link {
+        color:#ff7bac;
+        opacity:100%
+      }
+
+      a:active {
+        color:#ff7bac;
+        opacity:100%
+      }
+
+      a:hover {
+        color:#ff7bac;
+        opacity:50%
+      }
+
+      a:visited {
+        color:#ff7bac;
+        opacity:100%
+      }
+
+      body {
+        height: 110%;
+      overflow-y: scroll;
+        overflow-x: hidden;
+        line-height:90%;
         
-        #contextmenu{
-            background-color:#ccc;
-            border-style:solid;
-            border-width:1px;
-            width:100px;
-            display:none;
-            position: absolute;
-        }
-        #contextmenu td{
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-            padding:2px;
-            padding-left:4px;
-        }
-        
-        .game-iframe {
-                border: solid 1px black;
-          overflow-x: hidden;
-            overflow-y: hidden;
-            overflow-wrap:hidden;
-          resize: both;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 70%;
-          height: 90%;
-        }
-        
-        .neon {
-            text-shadow: 
-                0 0 5px #ff7bac,
-                0 0 10px #ff7bac,
-                0 0 20px #ff7bac,
-                0 0 40px #ff7bac,
-                0 0 80px #ff7bac,
-                0 0 90px #ff7bac,
-                0 0 100px #ff7bac,
-                0 0 150px #ff7bac;
-        }
-        
-        .neon-blue {
-            text-shadow: 
-                0 0 5px #005eff,
-                0 0 10px #005eff,
-                0 0 20px #005eff,
-                0 0 40px #005eff,
-                0 0 80px #005eff,
-                0 0 90px #005eff,
-                0 0 100px #005eff,
-                0 0 150px #005eff;
-        }
-        
-        .center {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-            padding-top:0px;
-          width: 70%;
-        }
-        
-        .game-iframe-full {
-             border:hidden;
-          overflow-y: hidden;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 100%;
-          height: 100%;
-        }
-        
-        .cl {
-            color:#34a2eb;
-        }
-        
-        a:link {
-            color:#ff7bac;
-        }
-        
-        a:active {
-            color:#ff7bac;
-        }
-        
-        a:hover {
-            color:#ff4a8d;
-        }
-        
-        a:visited {
-            color:#ff7bac;
-        }
-        
-        body {
-            height: 110%;
-         overflow-y: scroll;
-            overflow-x: hidden;
-            line-height:120%;
-            
-            background-color: #000000;
-            color:white;
-         font-family: "Press Start 2P", sans-serif;
-        }
-        ::-webkit-scrollbar {
-            width: 0;
-            background: transparent;
-        }
-        
-        hr {
-            border-color:white;
-        }
-        
-        .container {
-          position: relative;
-          max-width: 200px;
-                line-height:100%;
-             background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmrbG1RGaSD1i5t0GVea-fRKXGKd66i1rAJRruMkV6lB3dLxZxlWxXCdeVRW7JmEXljk:https://media.wired.com/photos/592722c1af95806129f51b71/master/pass/MIT-Web-Loading.jpg&usqp=CAU);
-        }
-        .game-img {
-          display: block;
-          width: 200px;
-             height: 200px;
-          height: auto;
-        }
-        .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #eb4034;
-        }
-        .container:hover .overlay {
-          opacity: 1;
-        }
-        .text {
-          color: white;
-             text-decoration: none;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-        </style>
+        background-color: #000000;
+        color:white;
+        font-family: "Press Start 2P", sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+          width: 0;
+          background: blue;
+      }
+
+      hr {
+        border-color:white;
+      }
+
+      .container {
+        position: relative;
+        max-width: 200px;
+          line-height:0%;
+        text-decoration:hidden;
+        background-color:#121212;
+        padding:7px;
+        padding-bottom:0%;
+        margin-top:7px;
+        margin-left:3px;
+      }
+      .game-img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        height: auto;
+      }
+
+      .movie-img {
+        display: block;
+        width: 200px;
+        height: 300px;
+      }
+
+
+      h3 {
+        text-decoration:none;
+      }
+      h4 {
+        text-decoration:none;
+      }
+      a {
+        text-decoration:none;
+      }
+
+    </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - v2.0.0 (4/20/2022): New UI for game icons with a new font. Added Bloxorz, Shell Shockers and have now made stack file based so it's been moved in over to the file based section. Plus some other small changes.</a></h3>
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 4/20/2022 (v2.0.0): New UI for game icons with a new font. Added Bloxorz, Shell Shockers and have now made stack file based so it's been moved in over to the file based section. Plus some other small changes.</a></h3>
     <br>
     <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
     <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
@@ -169,11 +170,11 @@
     <div style="text-align:center; line-height:150%; font-size:20px"></div>
     <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 30px;">PREVIOUS UPDATE LOGS</span><hr/></div>
 
-    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">v2.0.0 - 4/20/2022: New UI for game icons with a new font. Added Bloxorz, Shell Shockers and have now made stack file based so it's been moved in over to the file based section. Plus some other small changes.</h1>
-    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">v1.3.2 - 4/11/2022: Added Minesweeper, if the Google one wasn't already good. I moved Wordle and Wordle Unlimited to brower games because I realized they aren't really file based.</h1>
-    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">v1.3.1 - 3/31/2022: Added Minecraft, but very scuffed. At the very bottom I added a button to view the old update logs.</h1>
-    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">v1.3.0 - 3/30/2022: Added Boxbob and a new section for file based games. Moved Cookie Clicker, Tetris, Wordle and Wordle Unlimited to the new section. Also introducing my very not good games that I made, I added a section for that too.</h1>
-    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">v1.2.0 - 3/28/2022: Added Adventure Capitalist, Cut the Rope, Stack, and Turbo Moto Racer. Also fixed the weird border thing that occurred on most of the games.</h1>
+    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">4/20/2022 (v2.0.0): New UI for game icons with a new font. Added Bloxorz, Shell Shockers and have now made stack file based so it's been moved in over to the file based section. Plus some other small changes.</h1>
+    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">4/11/2022 (v1.3.2): Added Minesweeper, if the Google one wasn't already good. I moved Wordle and Wordle Unlimited to brower games because I realized they aren't really file based.</h1>
+    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">3/31/2022 (v1.3.1): Added Minecraft, but very scuffed. At the very bottom I added a button to view the old update logs.</h1>
+    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">3/30/2022 (v1.3.0): Added Boxbob and a new section for file based games. Moved Cookie Clicker, Tetris, Wordle and Wordle Unlimited to the new section. Also introducing my very not good games that I made, I added a section for that too.</h1>
+    <h1 style="background-color:#7a7a7a; text-align:center; color:#000000; padding:10px; line-height:120%; font-size:17px;">3/28/2022 (v1.2.0): Added Adventure Capitalist, Cut the Rope, Stack, and Turbo Moto Racer. Also fixed the weird border thing that occurred on most of the games.</h1>
       
     <hr>
       <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color:#ffffff" href="index.html">Return back to the main page!</a></h3>

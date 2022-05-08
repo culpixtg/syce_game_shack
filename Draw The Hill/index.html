@@ -1,56 +1,45 @@
-<iframe id="player--embed" src="https://svxf.github.io/arcade/gfiles/html5/drawthehill/" frameborder="no" scrolling="yes" allowfullscreen="true" style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;">
-    <!DOCTYPE html><html><script>(function(){window['_docs_annotate_canvas_by_ext']='kohfgcgbkjodfcfkcackpagifgbcmimk';})();</script><head>
-        <meta charset="UTF-8">
-        <title>Draw the Hill | 3kh0</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <meta name="generator" content="Construct 3">
-        <link rel="manifest" href="appmanifest.json">
-        <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
-        <link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
-        <link rel="icon" type="image/png" href="icons/icon-512.png">
-        <link rel="stylesheet" href="style.css">
-        <script type="application/javascript" src="/js/lib.js"></script>
-    </head>
-    <body onload="check();">
-        <noscript>
-            <div id="notSupportedWrap">
-                <h2 id="notSupportedTitle">This content requires JavaScript</h2>
-                <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
-            </div>
-        </noscript>
-        <script type="text/javascript">
-            document.addEventListener('touchmove', function(e) {
-            e.preventDefault();
-            }, { passive: false });
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Slides :)</title>
+<link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
+<script src="../script.js"></script>
+</head>
+<div class="ng-scope" style="text-align: center;">
 
-            document.addEventListener("contextmenu", function (e) {
-            	e.preventDefault();
-            }, false);
+<body style>
 
-            window.addEventListener("keydown", function(e)
-            {
-            	if(["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1)
-            	{
-            		e.preventDefault();
-            	}
-            }, false);
-        </script>
-		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-98DP5VKS42"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "G-98DP5VKS42");
-        </script>
-        <script src="scripts/supportcheck.js" type="text/javascript"></script>
-        <script src="scripts/offlineclient.js" type="module"></script>
-        <script src="scripts/main.js" type="module"></script>
-        <script src="scripts/register-sw.js" type="module"></script>
-        
-    <script type="text/javascript" src="https:////svxf.github.io/93791460bd4591916fae6788dd691570096e47a0e47061cdead407edc2363560/inject.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/8/2022 (v3.1.0): New minimized view for games. Merged the browser games and the file based games together for simplicity. Added a couple of games, temporarily removed My Friend Pedro Arena and replace Wordle and Wordle Unlimited with Wordle+.</a></h3>
+    <br>
+    <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
+    <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
+    <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
+    <div style="text-align:center; line-height:150%; font-size:20px"></div>
+    <hr>
+	
+	<!--GAME-->
+	<iframe class="gameIframe" src="https://svxf.github.io/arcade/gfiles/html5/drawthehill/" id="gameIframe" width="1074" height="600"></iframe>
+	
+    <br>
+	<br><button class="fullScreenBtn" onclick="fullscreen()">Fullscreen</button>
+    <button class="fullScreenBtn" onclick="gameselection()">Game Selection</button><br>
 
-    <canvas width="1184" height="592" style="width: 1184px; height: 592px; margin-left: 74px; margin-top: 0px;"></canvas></body></html>
-</iframe>
+    <style>
+        .fullScreenBtn {
+            background-color:#141414;
+            border-radius:5px;
+            color:white;
+            padding:12px;
+            padding-left:20px;
+            padding-right:20px;
+            font-family: Radio Canada;
+            font-size: 100%;
+        }
+    </style>
+</div>
+</body>
+</html>

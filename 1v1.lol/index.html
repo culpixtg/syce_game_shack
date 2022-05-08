@@ -40,24 +40,6 @@
             font-size: 100%;
         }
     </style>
-    <script>
-        function fullscreen() {
-            if (window.location == window.parent.location) {
-                //not iframe
-                    var elem = document.getElementById("gameIframe");
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-            } else {
-                //iframe
-                window.location = "gamepage-full.html"
-            }
-        }
-    </script>
 </div>
 </body>
 </html>

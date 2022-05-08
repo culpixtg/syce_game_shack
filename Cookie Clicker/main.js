@@ -11492,12 +11492,12 @@ window.onload=function()
 	
 	if (!Game.ready)
 	{
-		if (top!=self) Game.ErrorFrame();
-		else
-		{
+		// if (top!=self) Game.ErrorFrame();
+		// else
+		// {
 			Game.Load();
 			//try {Game.Load();}
 			//catch(err) {console.log('ERROR : '+err.message);}
-		}
+		// }
 	}
 };

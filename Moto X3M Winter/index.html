@@ -1,163 +1,19 @@
-<div class="ng-scope" style="text-align: center;">
-    <style>
-        
-        #contextmenu{
-            background-color:#ccc;
-            border-style:solid;
-            border-width:1px;
-            width:100px;
-            display:none;
-            position: absolute;
-        }
-        #contextmenu td{
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-            padding:2px;
-            padding-left:4px;
-        }
-        
-        .game-iframe {
-                border: solid 1px black;
-          overflow-x: hidden;
-            overflow-y: hidden;
-            overflow-wrap:hidden;
-          resize: both;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 70%;
-          height: 90%;
-        }
-        
-        .neon {
-            text-shadow: 
-                0 0 5px #ff7bac,
-                0 0 10px #ff7bac,
-                0 0 20px #ff7bac,
-                0 0 40px #ff7bac,
-                0 0 80px #ff7bac,
-                0 0 90px #ff7bac,
-                0 0 100px #ff7bac,
-                0 0 150px #ff7bac;
-        }
-        
-        .neon-blue {
-            text-shadow: 
-                0 0 5px #005eff,
-                0 0 10px #005eff,
-                0 0 20px #005eff,
-                0 0 40px #005eff,
-                0 0 80px #005eff,
-                0 0 90px #005eff,
-                0 0 100px #005eff,
-                0 0 150px #005eff;
-        }
-        
-        .center {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-            padding-top:0px;
-          width: 70%;
-        }
-        
-        .game-iframe-full {
-             border:hidden;
-          overflow-y: hidden;
-          position: absolute;
-          top: 0;
-          left: 0%;
-          bottom: 0%;
-          right: 0%;
-          width: 100%;
-          height: 100%;
-        }
-        
-        .cl {
-            color:#34a2eb;
-        }
-        
-        a:link {
-            color:#ff7bac;
-        }
-        
-        a:active {
-            color:#ff7bac;
-        }
-        
-        a:hover {
-            color:#ff4a8d;
-        }
-        
-        a:visited {
-            color:#ff7bac;
-        }
-        
-        body {
-            height: 110%;
-         overflow-y: scroll;
-            overflow-x: hidden;
-            line-height:120%;
-            
-            background-color: #000000;
-            color:white;
-         font-family: "Press Start 2P", sans-serif;
-        }
-        ::-webkit-scrollbar {
-            width: 0;
-            background: transparent;
-        }
-        
-        hr {
-            border-color:white;
-        }
-        
-        .container {
-          position: relative;
-          max-width: 200px;
-                line-height:100%;
-             background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmrbG1RGaSD1i5t0GVea-fRKXGKd66i1rAJRruMkV6lB3dLxZxlWxXCdeVRW7JmEXljk:https://media.wired.com/photos/592722c1af95806129f51b71/master/pass/MIT-Web-Loading.jpg&usqp=CAU);
-        }
-        .game-img {
-          display: block;
-          width: 200px;
-             height: 200px;
-          height: auto;
-        }
-        .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #eb4034;
-        }
-        .container:hover .overlay {
-          opacity: 1;
-        }
-        .text {
-          color: white;
-             text-decoration: none;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-    </style>
-
-<body><div ng-app="myapp" class="ng-scope">
-
-    <!-- ngView:  --><div ng-view="" class="ng-scope">
-        <iframe class="game-iframe ng-scope" width="70%" height="70%" src="https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s017q3e/moto-x3m-4-winter.xml" <="" iframe="">
-    </iframe></div></div></body>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MotoX3M Winter | 3kh0</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <link rel="shortcut icon" href="download.jpeg">
+    <link rel="icon" href="download.jpeg"> 
+  </head>
+  <body>
+    <script type="text/javascript" src="assets/box2dweb/nape.min.js">
+      var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="motox3m.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>

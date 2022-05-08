@@ -125,7 +125,7 @@ function fullscreen() {
   }
 	} else {
 		//iframe
-		window.location = "/g/gamepage-full.html"
+		window.location = "gamepage-full.html"
 	}
 }
 

@@ -98,7 +98,7 @@
 
   body {
     height: 110%;
-  overflow-y: scroll;
+    overflow-y: scroll;
     overflow-x: hidden;
     line-height:90%;
     
@@ -128,6 +128,76 @@
     padding-bottom:0%;
     margin-top:7px;
     margin-left:3px;
+  }
+
+  .gameIframe {
+    background:url('sgs-loading.png') center center no-repeat;
+    overflow: hidden;
+    width:80%;
+    height:600px;
+    border-color:white;
+    border-radius:5px;
+    margin-bottom:0;
+  }
+  
+  .gameIframeFull {
+    background:url('sgs-loading.png') center center no-repeat;
+    overflow: hidden;
+    border-color:white;
+    margin-bottom:0;
+    border:hidden;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0%;
+    bottom:0%;
+    right:0%;
+    width:100%;
+    height:100%;
+  }
+
+  .gameIframeWithoutBackground {
+    overflow: hidden;
+    width:80%;
+    height:600px;
+    border-color:white;
+    border-radius:5px;
+    margin-bottom:0;
+  }
+  
+  .gameIframeFullWithoutBackground {
+    overflow: hidden;
+    border-color:white;
+    margin-bottom:0;
+    border:hidden;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0%;
+    bottom:0%;
+    right:0%;
+    width:100%;
+    height:100%;
+  }
+  
+  .gameBottom {
+    background-color:#7a7a7a;
+    text-align:center;
+    color:black;
+    padding:10px;
+    line-height:120%;
+    font-size:20px;
+    width:60%;
+    margin-top:0;
+  }  
+
+  .fullScreenBtn {
+    background-color:#141414;
+    border-radius:5px;
+    color:white;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
   }
 
   .game-img {

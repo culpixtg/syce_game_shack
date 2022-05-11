@@ -1,45 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Google Slides :)</title>
-<link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
-<script src="../script.js"></script>
-</head>
-<div class="ng-scope" style="text-align: center;">
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+        <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+        <title>Basketball Stars | 3kh0</title>
 
-<body style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <script src="/js/main.js"></script>
+    <body>
+        <div id="content"></div>
+        <div id="orientation"></div>
+        <div id="loader">Loading ...</div>
+        <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script type="text/javascript" src="assets/box2dweb/nape.min.js">
+            var nape ="nape.min.js" ;
+        </script>
+        <script type="text/javascript" src="assets/box2dweb/nape-debug-draw.min.js"></script>
+        <script type="text/javascript" src="assets/box2dweb/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="assets/box2dweb/easeljs-0.8.2.combined.js"></script>
+        <script type="text/javascript" src="assets/box2dweb/bluebird.min.js"></script>
+        <script type="text/javascript">
+            var useEvents = typeof Event === "function";
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/9/2022 (v3.2.0): Temporarily removed Zombs Royale due to some issues, added 8 new games: Drift Hunters, Duck Life 3 & 4, Edge Not Found, Pokemon Emerald & Sapphire, Tanuki Sunset, and Townscaper.</a></h3>
-    <br>
-    <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
-    <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
-    <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
-    <div style="text-align:center; line-height:150%; font-size:20px"></div>
-    <hr>
-	
-	<!--GAME-->
-	<iframe class="gameIframe" src="https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/basketballlegendunblocked/basketball_stars.xml" id="gameIframe" width="1074" height="600"></iframe>
-	
-    <br>
-	<br><button class="fullScreenBtn" onclick="fullscreen()">Fullscreen</button>
-    <button class="fullScreenBtn" onclick="gameselection()">Game Selection</button><br>
+            var myDispatchEvent = function (name) {
+                var event;
+                if (useEvents) {
+                    event = new Event(name);
+                } else {
+                    event = document.createEvent("Event");
+                    event.initEvent(name, true, true);
+                }
+                document.getElementById("content").dispatchEvent(event);
+            };
 
-    <style>
-        .fullScreenBtn {
-            background-color:#141414;
-            border-radius:5px;
-            color:white;
-            padding:12px;
-            padding-left:20px;
-            padding-right:20px;
-            font-family: Radio Canada;
-            font-size: 100%;
-        }
-    </style>
-</div>
-</body>
+            window["GD_OPTIONS"] = {
+                gameId: "69d78d071f704fa183d75b4114ae40ec",
+                onEvent: function (event) {
+                    switch (event.name) {
+                        case "SDK_GAME_START":
+                            // advertisement done, resume game logic and unmute audio
+                            myDispatchEvent("SDK_GAME_START");
+                            break;
+                        case "SDK_GAME_PAUSE":
+                            // pause game logic / mute audio
+                            myDispatchEvent("SDK_GAME_PAUSE");
+                            // document.getElementById("content").dispatchEvent(new Event("SDK_GAME_PAUSE"));
+                            break;
+                        case "SDK_GDPR_TRACKING":
+                            // this event is triggered when your user doesn't want to be tracked
+                            console.log("SDK_GDPR_TRACKING");
+                            break;
+                        case "SDK_GDPR_TARGETING":
+                            // this event is triggered when your user doesn't want personalised targeting of ads and such
+                            console.log("SDK_GDPR_TARGETING");
+                            break;
+                        case "SDK_READY":
+                            // this event is triggered when your user doesn't want personalised targeting of ads and such
+                            console.log("SDK_READY");
+                            // gdsdk.openConsole();
+                            break;
+                    }
+                },
+            };
+            (function (d, s, id) {
+                var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "assets/main.min.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            })(document, "script", "gamedistribution-jssdk");
+        </script>
+        <script type="text/javascript" src="assets/basketball_legends_2019.min.js"></script>
+    </body>
 </html>

@@ -26,7 +26,7 @@ function loadGame(){
 function search() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
-    let x = document.getElementsByClassName('game');
+    let x = document.getElementsByClassName('container');
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].id.toLowerCase().includes(input)) {
@@ -158,4 +158,28 @@ setInterval(function () {
 
 	function gameselection() {
 		window.location = "../index.html"   
+	}
+
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	function filterFunction_Classical() {
+		filterFunction("Classical")
+		console.log("E")
+	}
+  
+	function filterFunction(tag) {
+		div = document.getElementById("myDropdown");
+		a = document.getElementsByTagName("tag");
+		for (i = 0; i < a.length; i++) {
+			txtValue = a[i].textContent || a[i].innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				a[i].style.display = "";
+			} else {
+				a[i].style.display = "none";
+			}
+		}
 	}

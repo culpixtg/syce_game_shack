@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/9/2022 (v3.2.0): Temporarily removed Zombs Royale due to some issues, added 8 new games: Drift Hunters, Duck Life 3 & 4, Edge Not Found, Pokemon Emerald & Sapphire, Tanuki Sunset, and Townscaper.</a></h3>
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/10/2022 (v3.3.0): Commando got blocked so I removed it, I also removed my own games because they're so bad. Added a search bar to find games easier. Added Crossy Road, Chess, and Idle Breakout. I've also made a temporaily fix for My Friend Pedro Arena and Zombs Royale.</a></h3>
     <br>
     <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
     <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
@@ -45,14 +45,17 @@
     <div style="text-align:center; line-height:150%; font-size:20px"></div>
     <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">BROWSER GAMES</span><hr/></div>
 
-    <!--
-    <div style="line-height:50%">
-      <br>
-      <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Enter a game...">
-    </div>
-    --> 
+    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Enter a game...">
+    <!-- <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Filter by category...</button>
+      <div id="myDropdown" class="dropdown-content">
+         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> 
+        <button onclick="filterFunction_Classical()">Classical</button>
+      </div>
+    </div> -->
+    <br>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" tag="Classical" id="1v1.lol" style="color:white; display: inline-block;">
       <a href="1v1.lol/index.html">
       <img src="1v1.lol/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">1v1.lol</h3>
@@ -60,7 +63,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="99 Balls" style="color:white; display: inline-block;">
       <a href="99 Balls/index.html">
       <img src="99 Balls/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">99 Balls</h3>
@@ -68,7 +71,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="2048" style="color:white; display: inline-block;">
       <a href="2048/main.html">
       <img src="2048/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">2048</h3>
@@ -76,7 +79,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Adventure Capitalist" style="color:white; display: inline-block;">
       <a href="Adventure Capitalist/index.html">
       <img src="Adventure Capitalist/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Adventure Capitalist</h3>
@@ -84,15 +87,15 @@
       </a>
     </div>
     
-    <div class="container" style="color:white; display: inline-block;">
-      <a href="Basketball Stars/index.html">
+    <div class="container" id="Basketball Stars" style="color:white; display: inline-block;">
+      <a href="Basketball Stars/main.html">
       <img src="Basketball Stars/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Basketball Stars</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Sports / Arcade</h4>
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Basketbros.io" style="color:white; display: inline-block;">
       <a href="Basketbros.io/index.html">
       <img src="Basketbros.io/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Basketbros.io</h3>
@@ -100,7 +103,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Bloxorz" style="color:white; display: inline-block;">
       <a href="Bloxorz/main.html">
       <img src="Bloxorz/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Bloxorz</h3>
@@ -108,7 +111,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="BoxBob" style="color:white; display: inline-block;">
       <a href="BoxBob/index.html">
       <img src="BoxBob/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">BoxBob</h3>
@@ -116,23 +119,33 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Chess" style="color:white; display: inline-block;">
+      <a href="Chess/main.html">
+      <img src="Chess/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Chess</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
+      </a>
+    </div>
+
+    <!--
+    <div class="container" id="Commando" style="color:white; display: inline-block;">
       <a href="Commando/index.html">
       <img src="Commando/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Commando</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
+  -->
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Connect 4" style="color:white; display: inline-block;">
       <a href="Connect 4/main.html">
       <img src="Connect 4/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Connect 4</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Cookie Clicker" style="color:white; display: inline-block;">
       <a href="Cookie Clicker/main.html">
       <img src="Cookie Clicker/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Cookie Clicker</h3>
@@ -140,7 +153,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="CraftMine" style="color:white; display: inline-block;">
       <a href="CraftMine/index.html">
       <img src="CraftMine/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">CraftMine</h3>
@@ -148,7 +161,15 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Crossy Road" style="color:white; display: inline-block;">
+      <a href="Crossy Road/main.html">
+      <img src="Crossy Road/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Crossy Road</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Cut the Rope" style="color:white; display: inline-block;">
       <a href="Cut the Rope/main.html">
       <img src="Cut the Rope/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Cut the Rope</h3>
@@ -156,7 +177,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Draw The Hill" style="color:white; display: inline-block;">
       <a href="Draw The Hill/index.html">
       <img src="Draw The Hill/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Draw The Hill</h3>
@@ -164,7 +185,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Drift Hunters" style="color:white; display: inline-block;">
       <a href="Drift Hunters/index.html">
       <img src="Drift Hunters/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Drift Hunters</h3>
@@ -172,7 +193,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Duck Life 3" style="color:white; display: inline-block;">
       <a href="Duck Life 3/main.html">
       <img src="Duck Life 3/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 3</h3>
@@ -180,7 +201,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Duck Life 4" style="color:white; display: inline-block;">
       <a href="Duck Life 4/main.html">
       <img src="Duck Life 4/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 4</h3>
@@ -188,7 +209,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Edge Not Found" style="color:white; display: inline-block;">
       <a href="Edge Not Found/main.html">
       <img src="Edge Not Found/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Edge Not Found</h3>
@@ -196,7 +217,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Friday Night Funkin'" style="color:white; display: inline-block;">
       <a href="Friday Night Funkin'/index.html">
       <img src="Friday Night Funkin'/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Friday Night Funkin'</h3>
@@ -204,15 +225,23 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Geometry Dash" style="color:white; display: inline-block;">
       <a href="GeometryDash/main.html">
       <img src="GeometryDash/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">GeometryDash</h3>
+        <h3 style="font-family: Radio Canada; color:#ffffff">Geometry Dash</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Idle Breakout" style="color:white; display: inline-block;">
+      <a href="Idle Breakout/main.html">
+      <img src="Idle Breakout/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Idle Breakout</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Idle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Minecraft" style="color:white; display: inline-block;">
       <a href="Minecraft/index.html">
       <img src="Minecraft/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Minecraft</h3>
@@ -220,7 +249,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Minesweeper" style="color:white; display: inline-block;">
       <a href="Minesweeper/index.html">
       <img src="Minesweeper/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Minesweeper</h3>
@@ -228,7 +257,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Moto X3M" style="color:white; display: inline-block;">
       <a href="Moto X3M/main.html">
       <img src="Moto X3M/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M</h3>
@@ -236,7 +265,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Moto X3M Pool Party" style="color:white; display: inline-block;">
       <a href="Moto X3M Pool Party/main.html">
       <img src="Moto X3M Pool Party/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Pool Party</h3>
@@ -244,7 +273,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Moto X3M Spooky" style="color:white; display: inline-block;">
       <a href="Moto X3M Spooky/main.html">
       <img src="Moto X3M Spooky/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Spooky</h3>
@@ -252,7 +281,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Moto X3M Winter" style="color:white; display: inline-block;">
       <a href="Moto X3M Winter/main.html">
       <img src="Moto X3M Winter/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Winter</h3>
@@ -260,7 +289,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="My Friend Pedro" style="color:white; display: inline-block;">
       <a href="My Friend Pedro/index.html">
       <img src="My Friend Pedro/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro</h3>
@@ -268,15 +297,15 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
-      <!--<a href="My Friend Pedro Arena/index.html">-->
-      <img src="not_working.png" class="game-img">
+    <div class="container" id="My Friend Pedro Arena" style="color:white; display: inline-block;">
+      <a href="My Friend Pedro Arena/index.html">
+      <img src="My Friend Pedro Arena/logo.png" class="game-img">
         <h4 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro Arena</h4>
         <h4 style="font-family: Radio Canada; color:#ffffff">Shooter / Action</h4>
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Pokemon Emerald" style="color:white; display: inline-block;">
       <a href="Pokemon Emerald/index.html">
       <img src="Pokemon Emerald/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Emerald</h3>
@@ -284,7 +313,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Pokemon Sapphire" style="color:white; display: inline-block;">
       <a href="Pokemon Sapphire/index.html">
       <img src="Pokemon Sapphire/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Sapphire</h3>
@@ -292,7 +321,7 @@
       </a>
     </div>
     
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="RoadBlocks" style="color:white; display: inline-block;">
       <a href="RoadBlocks/main.html">
       <img src="RoadBlocks/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">RoadBlocks</h3>
@@ -300,7 +329,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Shell Shockers" style="color:white; display: inline-block;">
       <a href="Shell Shockers/index.html">
       <img src="Shell Shockers/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Shell Shockers</h3>
@@ -308,7 +337,7 @@
       </a>
     </div>
     
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Stack" style="color:white; display: inline-block;">
       <a href="Stack/main.html">
       <img src="Stack/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Stack</h3>
@@ -316,7 +345,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Super Mario Bros" style="color:white; display: inline-block;">
       <a href="Super Mario Bros/main.html">
       <img src="Super Mario Bros/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Super Mario Bros</h3>
@@ -324,7 +353,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Tanuki Sunset" style="color:white; display: inline-block;">
       <a href="Tanuki Sunset/index.html">
       <img src="Tanuki Sunset/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Tanuki Sunset</h3>
@@ -332,7 +361,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Temple Run 2" style="color:white; display: inline-block;">
       <a href="Temple Run 2/index.html">
       <img src="Temple Run 2/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Temple Run 2</h3>
@@ -340,7 +369,7 @@
       </a>
     </div>
     
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Tetris" style="color:white; display: inline-block;">
       <a href="Tetris/main.html">
       <img src="Tetris/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Tetris</h3>
@@ -348,7 +377,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Time Shooter 2" style="color:white; display: inline-block;">
       <a href="Time Shooter 2/index.html">
       <img src="Time Shooter 2/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Time Shooter 2</h3>
@@ -356,7 +385,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Time Shooter 3" style="color:white; display: inline-block;">
       <a href="Time Shooter 3/index.html">
       <img src="Time Shooter 3/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Time Shooter 3</h3>
@@ -364,7 +393,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Townscaper" style="color:white; display: inline-block;">
       <a href="Townscaper/index.html">
       <img src="Townscaper/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Townscaper</h3>
@@ -372,7 +401,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Turbo Moto Racer" style="color:white; display: inline-block;">
       <a href="Turbo Moto Racer/index.html">
       <img src="Turbo Moto Racer/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Turbo Moto Racer</h3>
@@ -380,7 +409,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Vex 3" style="color:white; display: inline-block;">
       <a href="Vex 3/main.html">
       <img src="Vex 3/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Vex 3</h3>
@@ -388,7 +417,7 @@
       </a>
     </div>
     
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Vex 4" style="color:white; display: inline-block;">
       <a href="Vex 4/main.html">
       <img src="Vex 4/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Vex 4</h3>
@@ -396,7 +425,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Vex 5" style="color:white; display: inline-block;">
       <a href="Vex 5/main.html">
       <img src="Vex 5/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Vex 5</h3>
@@ -404,7 +433,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Vex 6" style="color:white; display: inline-block;">
       <a href="Vex 6/main.html">
       <img src="Vex 6/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Vex 6</h3>
@@ -412,7 +441,7 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Wordle+" style="color:white; display: inline-block;">
       <a href="Wordle+/main.html">
       <img src="Wordle+/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Wordle+</h3>
@@ -420,29 +449,30 @@
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
-      <!--<a href="Zombs Royale/index.html">-->
-      <img src="not_working.png" class="game-img">
+    <div class="container" id="Zombs Royale" style="color:white; display: inline-block;">
+      <a href="Zombs Royale/index.html">-
+      <img src="Zombs Royale/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Zombs Royale</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
       </a>
     </div>
-
+    
+    <!-- 
     <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">MY OWN GAMES (THAT ARE BAD)</span><hr/></div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Falling Ball" style="color:white; display: inline-block;">
       <a href="Falling Ball/index.html">
       <img src="Falling Ball/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Falling Ball</h3>
       </a>
     </div>
 
-    <div class="container" style="color:white; display: inline-block;">
+    <div class="container" id="Flappy Bird" style="color:white; display: inline-block;">
       <a href="FlappyBird/index.html">
       <img src="FlappyBird/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Flappy Bird</h3>
       </a>
-    </div>
+    </div> -->
 
     <hr>
       <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color: #ffffff;" href="update_logs.html">Want to check out previous update logs? Click here!</a></h3>

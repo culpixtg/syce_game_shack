@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">I am very aware of Bob's Game Shack getting blocked so feel free to share this shack with your friends. I recommend sharing through this link: bit.ly/sgs-launcher</a></h3>
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/15/2022 (v3.3.1): Added a few new games: Appel, Cannon Basketball 4, Getaway Shootout, a less scuffed Minecraft (1.5.2), Paper.io, Rooftop Snipers, Skribbl.io, and Slither.io.</a></h3>
     <br>
     <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
     <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
@@ -49,17 +49,35 @@
     <!-- <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Filter by category...</button>
       <div id="myDropdown" class="dropdown-content">
-         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> 
-        <button onclick="filterFunction_Classical()">Classical</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Adventure</button>
+        <button onclick="filterFunction_Arcade()" class="dropbtn">Arcade</button>
+        <button onclick="filterFunction_Classic()" class="dropbtn">Classic</button>
+        <button onclick="filterFunction_Drifting()" class="dropbtn">Drifting</button>
+        <button onclick="filterFunction_Driving()" class="dropbtn">Driving</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">FPS</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Misc</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Puzzle</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Rhythm</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Shooter</button>
+        <button onclick="filterFunction_Adventure()" class="dropbtn">Sports</button>
+        <a onclick="filterFunction_Classical()">Adventure</a>
+        <a onclick="filterFunction_Classical()">Arcade</a>
+        <a onclick="filterFunction_Classical()">Classic</a>
+        <a onclick="filterFunction_Classical()">Drifting</a>
+        <a onclick="filterFunction_Classical()">Driving</a>
+        <a onclick="filterFunction_Classical()">Misc</a>
+        <a onclick="filterFunction_Classical()">Puzzle</a>
+        <a onclick="filterFunction_Classical()">Rhythm</a>
+        <a onclick="filterFunction_Classical()">Sports</a>
       </div>
     </div> -->
     <br>
 
-    <div class="container" tag="Classical" id="1v1.lol" style="color:white; display: inline-block;">
+    <div class="container" id="1v1.lol" style="color:white; display: inline-block;">
       <a href="1v1.lol/index.html">
       <img src="1v1.lol/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">1v1.lol</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">FPS / Shooter</h4>
       </a>
     </div>
 
@@ -84,6 +102,14 @@
       <img src="Adventure Capitalist/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Adventure Capitalist</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Appel" style="color:white; display: inline-block;">
+      <a href="Appel/main.html">
+      <img src="Appel/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Appel</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
     
@@ -116,6 +142,14 @@
       <img src="BoxBob/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">BoxBob</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Cannon Basketball 4" style="color:white; display: inline-block;">
+      <a href="Cannon Basketball 4/main.html">
+      <img src="Cannon Basketball 4/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Cannon Basketball 4</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Sports / Arcade</h4>
       </a>
     </div>
 
@@ -233,17 +267,25 @@
       </a>
     </div>
 
+    <div class="container" id="Getaway Shootout" style="color:white; display: inline-block;">
+      <a href="Getaway Shootout/main.html">
+      <img src="Getaway Shootout/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Getaway Shootout</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
+      </a>
+    </div>
+
     <div class="container" id="Idle Breakout" style="color:white; display: inline-block;">
       <a href="Idle Breakout/main.html">
       <img src="Idle Breakout/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Idle Breakout</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Idle</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
 
     <div class="container" id="Minecraft" style="color:white; display: inline-block;">
-      <a href="Minecraft/index.html">
-      <img src="Minecraft/logo.png" class="game-img">
+      <a href="Minecraft (1.5.2)/index.html">
+      <img src="Minecraft (1.5.2)/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Minecraft</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
       </a>
@@ -253,7 +295,7 @@
       <a href="Minesweeper/index.html">
       <img src="Minesweeper/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Minesweeper</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Classic / Puzzle</h4>
       </a>
     </div>
 
@@ -305,6 +347,14 @@
       </a>
     </div>
 
+    <div class="container" id="Paper.io" style="color:white; display: inline-block;">
+      <a href="Paper.io/index.html">
+      <img src="Paper.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Paper.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
     <div class="container" id="Pokemon Emerald" style="color:white; display: inline-block;">
       <a href="Pokemon Emerald/index.html">
       <img src="Pokemon Emerald/logo.png" class="game-img">
@@ -318,6 +368,14 @@
       <img src="Pokemon Sapphire/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Sapphire</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Rooftop Snipers" style="color:white; display: inline-block;">
+      <a href="Rooftop Snipers/main.html">
+      <img src="Rooftop Snipers/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Rooftop Snipers</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
     
@@ -334,6 +392,22 @@
       <img src="Shell Shockers/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Shell Shockers</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">FPS</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Skribbl.io" style="color:white; display: inline-block;">
+      <a href="Skribbl.io/index.html">
+      <img src="Skribbl.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Skribbl.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Drawing</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Slither.io" style="color:white; display: inline-block;">
+      <a href="Slither.io/index.html">
+      <img src="Slither.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Slither.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
     

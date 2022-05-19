@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/16/2022 (v3.3.2): Added a few new games: Burrito Bisen, Getting Over It (Scratch), Paper Minecraft. Temporarily removed Mineraft, Paper.io, Skribbl.io, and Slither.io due to a few issues.</a></h3>
+    <h3 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px;">Latest update - 5/18/2022 (v3.4.0): You can now filter games by category. Added new games: Among Us (fan made), Ball Blast, CTR Holiday & Time Travel, Incredibox, Run 3, Slope 1, and Subway Surfers. Plus some other small changes.</a></h3>
     <br>
     <h1 class="neon" style="font-size: 50px;">Syce's Game Shack</h1>
     <h4 class="neon-blue" style="font-size: 15px;">Created by Syce</h4>
@@ -46,7 +46,7 @@
     <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">BROWSER GAMES</span><hr/></div>
 
     <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Enter a game...">
-    <!-- <div class="dropdown">
+    <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Filter by category...</button>
       <div id="myDropdown" class="dropdown-content">
         <button onclick="filterFunction_Adventure()" class="dropbtn">Adventure</button>
@@ -54,23 +54,18 @@
         <button onclick="filterFunction_Classic()" class="dropbtn">Classic</button>
         <button onclick="filterFunction_Drifting()" class="dropbtn">Drifting</button>
         <button onclick="filterFunction_Driving()" class="dropbtn">Driving</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">FPS</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">Misc</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">Puzzle</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">Rhythm</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">Shooter</button>
-        <button onclick="filterFunction_Adventure()" class="dropbtn">Sports</button>
-        <a onclick="filterFunction_Classical()">Adventure</a>
-        <a onclick="filterFunction_Classical()">Arcade</a>
-        <a onclick="filterFunction_Classical()">Classic</a>
-        <a onclick="filterFunction_Classical()">Drifting</a>
-        <a onclick="filterFunction_Classical()">Driving</a>
-        <a onclick="filterFunction_Classical()">Misc</a>
-        <a onclick="filterFunction_Classical()">Puzzle</a>
-        <a onclick="filterFunction_Classical()">Rhythm</a>
-        <a onclick="filterFunction_Classical()">Sports</a>
+        <button onclick="filterFunction_FPS()" class="dropbtn">FPS</button>
+        <button onclick="filterFunction_Misc()" class="dropbtn">Misc</button>
+        <button onclick="filterFunction_Mystery()" class="dropbtn">Mystery</button>
+        <button onclick="filterFunction_Puzzle()" class="dropbtn">Puzzle</button>
+        <button onclick="filterFunction_Rhythm()" class="dropbtn">Rhythm</button>
+        <button onclick="filterFunction_Shooter()" class="dropbtn">Shooter</button>
+        <button onclick="filterFunction_Sports()" class="dropbtn">Sports</button>
       </div>
-    </div> -->
+    </div>
+    
+    <button onclick="clearFilter()" id="clearFilter" class="clearFilterBtn">Clear filter</button>
+
     <br>
 
     <div class="container" id="1v1.lol" style="color:white; display: inline-block;">
@@ -105,10 +100,26 @@
       </a>
     </div>
 
+    <div class="container" id="Among Us" style="color:white; display: inline-block;">
+      <a href="Among Us/main.html">
+      <img src="Among Us/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Among Us</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Mystery</h4>
+      </a>
+    </div>
+
     <div class="container" id="Appel" style="color:white; display: inline-block;">
       <a href="Appel/main.html">
       <img src="Appel/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Appel</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Ball Blast" style="color:white; display: inline-block;">
+      <a href="Ball Blast/main.html">
+      <img src="Ball Blast/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Ball Blast</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
@@ -211,10 +222,26 @@
       </a>
     </div>
 
-    <div class="container" id="Cut the Rope" style="color:white; display: inline-block;">
+    <div class="container" id="Cut the Rope CTR" style="color:white; display: inline-block;">
       <a href="Cut the Rope/main.html">
       <img src="Cut the Rope/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Cut the Rope</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Cut the Rope Holiday CTR Holiday" style="color:white; display: inline-block;">
+      <a href="CTR Holiday/main.html">
+      <img src="CTR Holiday/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">CTR Holiday</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Cut the Rope Time Travel CTR Time Travel" style="color:white; display: inline-block;">
+      <a href="CTR Time Travel/main.html">
+      <img src="CTR Time Travel/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">CTR Time Travel</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
       </a>
     </div>
@@ -299,6 +326,14 @@
       </a>
     </div>
 
+    <div class="container" id="Incredibox" style="color:white; display: inline-block;">
+      <a href="Incredibox/index.html">
+      <img src="Incredibox/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Incredibox</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Rhythm</h4>
+      </a>
+    </div>
+
     <div class="container" id="Minecraft" style="color:white; display: inline-block;">
       <!-- <a href="Minecraft (1.5.2)/index.html"> -->
       <img src="not_working.png" class="game-img">
@@ -351,7 +386,7 @@
       <a href="My Friend Pedro/index.html">
       <img src="My Friend Pedro/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter / Action</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
 
@@ -359,7 +394,7 @@
       <a href="My Friend Pedro Arena/index.html">
       <img src="My Friend Pedro Arena/logo.png" class="game-img">
         <h4 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro Arena</h4>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter / Action</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
 
@@ -395,6 +430,14 @@
       </a>
     </div>
 
+    <div class="container" id="RoadBlocks" style="color:white; display: inline-block;">
+      <a href="RoadBlocks/main.html">
+      <img src="RoadBlocks/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">RoadBlocks</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
     <div class="container" id="Rooftop Snipers" style="color:white; display: inline-block;">
       <a href="Rooftop Snipers/main.html">
       <img src="Rooftop Snipers/logo.png" class="game-img">
@@ -402,12 +445,12 @@
         <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
-    
-    <div class="container" id="RoadBlocks" style="color:white; display: inline-block;">
-      <a href="RoadBlocks/main.html">
-      <img src="RoadBlocks/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">RoadBlocks</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+
+    <div class="container" id="Run 3" style="color:white; display: inline-block;">
+      <a href="Run 3/index.html">
+      <img src="Run 3/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Run 3</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
       </a>
     </div>
 
@@ -434,12 +477,28 @@
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
+
+    <div class="container" id="Slope 1" style="color:white; display: inline-block;">
+      <a href="Slope 1/main.html">
+      <img src="Slope 1/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Slope 1</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
     
     <div class="container" id="Stack" style="color:white; display: inline-block;">
       <a href="Stack/main.html">
       <img src="Stack/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Stack</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Subway Surfers" style="color:white; display: inline-block;">
+      <a href="Subway Surfers/index.html">
+      <img src="Subway Surfers/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Subway Surfers</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Runner</h4>
       </a>
     </div>
 
@@ -548,10 +607,10 @@
     </div>
 
     <div class="container" id="Zombs Royale" style="color:white; display: inline-block;">
-      <a href="Zombs Royale/index.html">-
+      <a href="Zombs Royale/index.html">
       <img src="Zombs Royale/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Zombs Royale</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
       </a>
     </div>
     

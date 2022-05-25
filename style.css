@@ -200,6 +200,10 @@
     border: none;
   }
 
+  .fullScreenBtn:hover {
+    background-color: #333333;
+  }
+
   .clearFilterBtn {
     background-color:#262626;
     border-radius:5px;
@@ -215,6 +219,43 @@
   }
 
   .clearFilterBtn:hover {
+    background-color: #333333;
+  }
+
+  .settingsBtn {
+    background-color:#262626;
+    border-radius:5px;
+    color: #767676;
+    padding-top:9px;
+    padding-bottom:9px;
+    padding-left:40px;
+    padding-right:40px;
+    font-family: "Radio Canada";
+    font-size: 15px;
+    border: none;
+    float: right;
+    transform: translate(0, -10px);
+  }
+
+  .settingsBtn:hover {
+    background-color: #333333;
+  }
+
+  .regularBtn {
+    background-color:#262626;
+    border-radius:5px;
+    color: #767676;
+    padding-top:9px;
+    padding-bottom:9px;
+    padding-left:40px;
+    padding-right:40px;
+    font-family: "Radio Canada";
+    font-size: 15px;
+    border: none;
+    display: inline-block;
+  }
+
+  .regularBtn:hover {
     background-color: #333333;
   }
 

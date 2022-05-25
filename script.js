@@ -1,26 +1,96 @@
-function loadGame(){
-	var game = localStorage.getItem("currentGame");
-	var url = "https://000687715.codepen.website/#"+game;
-	document.getElementById("gameIframe").src = url;
-	document.getElementById("likeButton").setAttribute("data-identifier", game);
-	
-	setTheme();
-	
-	if (window.location != window.parent.location) {
-		var fs = document.getElementById("fullScreenBtn")
-		if (fs == null) {} else {
-			fs.innerHTML = "Open in full screen tab"
-		}
+// {
+// 	let currentTheme = localStorage.getItem("TitleColor")
+// 	if(currentTheme === "Classic" || currentTheme === null){
+// 		document.getElementById("title").style.class = "neon";
+// 	}
+
+// 	if(currentTheme === "Blue" || currentTheme === null){
+// 		document.getElementById("title").style.class = "neon-blue";
+// 	}
+
+// 	setInterval(() => {
+// 		console.log(document.getElementById("themeSelect").value)
+// 	}, 100)
+// }
+
+function setTheme() {
+	let theme = localStorage.getItem("theme")
+	if(!theme) theme = "Classic"
+
+	if(theme === "Classic"){
+		let e = document.getElementById("title")
+		e.style.textShadow = "0 0 5px #ff7bac, 0 0 10px #ff7bac, 0 0 20px #ff7bac, 0 0 40px #ff7bac, 0 0 80px #ff7bac, 0 0 90px #ff7bac, 0 0 100px #ff7bac, 0 0 150px #ff7bac";
+
+		let r = document.getElementById("sub-title")
+		r.style.textShadow = "0 0 5px #005eff, 0 0 10px #005eff, 0 0 20px #005eff, 0 0 40px #005eff, 0 0 80px #005eff, 0 0 90px #005eff, 0 0 100px #005eff, 0 0 150px #005eff";
 	}
-	
-	var themeSelect = document.getElementById("themeSelect")
-	themeSelect.addEventListener("change",function(event){
-	if (localStorage.getItem('theme')===null) {localStorage.setItem('theme', "Classic");}
- localStorage.setItem('theme', event.target.value);
- console.log(localStorage.getItem('theme'))
- setTheme()
+
+	if(theme === "Gold"){
+		let e = document.getElementById("title")
+		e.style.textShadow = "0 0 5px #ffbb00, 0 0 10px #ffbb00, 0 0 20px #ffbb00, 0 0 40px #ffbb00, 0 0 80px #ffbb00, 0 0 90px #ffbb00, 0 0 100px #ffbb00, 0 0 150px #ffbb00";
+
+		let r = document.getElementById("sub-title")
+		r.style.textShadow = "0 0 5px #005eff, 0 0 10px #005eff, 0 0 20px #005eff, 0 0 40px #005eff, 0 0 80px #005eff, 0 0 90px #005eff, 0 0 100px #005eff, 0 0 150px #005eff";
+	}
+
+	if(theme === "Blue"){
+		let e = document.getElementById("title")
+		e.style.textShadow = "0 0 5px #005eff, 0 0 10px #005eff, 0 0 20px #005eff, 0 0 40px #005eff, 0 0 80px #005eff, 0 0 90px #005eff, 0 0 100px #005eff, 0 0 150px #005eff";
+
+		let r = document.getElementById("sub-title")
+		r.style.textShadow = "0 0 5px #ff7bac, 0 0 10px #ff7bac, 0 0 20px #ff7bac, 0 0 40px #ff7bac, 0 0 80px #ff7bac, 0 0 90px #ff7bac, 0 0 100px #ff7bac, 0 0 150px #ff7bac";
+	}
+
+	if(theme === "Green"){
+		let e = document.getElementById("title")
+		e.style.textShadow = "0 0 5px #0be600, 0 0 10px #0be600, 0 0 20px #0be600, 0 0 40px #0be600, 0 0 80px #0be600, 0 0 90px #0be600, 0 0 100px #0be600, 0 0 150px #0be600";
+
+		let r = document.getElementById("sub-title")
+		r.style.textShadow = "0 0 5px #005eff, 0 0 10px #005eff, 0 0 20px #005eff, 0 0 40px #005eff, 0 0 80px #005eff, 0 0 90px #005eff, 0 0 100px #005eff, 0 0 150px #005eff";
+	}
 }
-)
+
+setCloak()
+
+function setCloak() {
+	let icon = localStorage.getItem("tabCloak")
+	if(!icon) icon = "Google Slides"
+	var link = window.document.querySelector("link[rel~='icon']");
+	if (!link) {
+		link = window.document.createElement('link');
+		link.rel = 'icon';
+		window.document.getElementsByTagName('head')[0].appendChild(link);
+	}
+
+	if(icon === "Default"){
+		link.href = 'sgs-favicon.png';
+		document.title = "Syce's Game Shack"
+	}
+
+	if(icon === "Google Slides"){
+		link.href = 'https://ssl.gstatic.com/docs/presentations/images/favicon5.ico';
+		document.title = "Google Slides"
+	}
+
+	if(icon === "Google Docs"){
+		link.href = 'https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico';
+		document.title = "Google Docs"
+	}
+
+	if(icon === "Google Drive"){
+		link.href = 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png';
+		document.title = "My Drive - Google Drive"
+	}
+
+	if(icon === "Schoology"){
+		link.href = 'https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico';
+		document.title = "Home | Schoology"
+	}
+
+	if(icon === "Desmos"){
+		link.href = 'https://www.desmos.com/assets/img/touch-icon-192x192.png';
+		document.title = "Desmos | Scientific Calculator"
+	}
 }
 
 function search() {
@@ -38,62 +108,54 @@ function search() {
     }
 }
 
-function setTheme() {
-	var sel = document.getElementById("themeSelect")
-	var theme
-	if (sel === null) {
-		if (localStorage.getItem('theme')===null) {localStorage.setItem('theme', "Classic");}
-		theme = localStorage.getItem('theme')
-	} else {theme = document.getElementById("themeSelect").value}
- 
- if (theme==="Classic") {
-   document.getElementById("title").style.color="#fc033d";
-	 	document.getElementById("title2").style.color="#fc033d";
- }
- if (theme==="Gold") {
-   document.getElementById("title").style.color="#ffbb00";
-		document.getElementById("title2").style.color="#ffbb00";
- }
- if (theme==="Blue") {
-   document.getElementById("title").style.color="#0073ff";
-		document.getElementById("title2").style.color="#0073ff";
- }
- if (theme==="Green") {
-   document.getElementById("title").style.color="#0be600";
-		document.getElementById("title2").style.color="#0be600";
- }
-}
-
-window.addEventListener("load",function(){
+window.addEventListener("load", function(){
 	var themeSelect = document.getElementById("themeSelect")
- if (localStorage.getItem('theme')===null) {localStorage.setItem('theme', "Classic");}
+ 	if (localStorage.getItem('theme')===null) {localStorage.setItem('theme', "Classic");}
  
-  console.log(localStorage.getItem('theme'));
- 
- var ddl = document.getElementById('themeSelect');
-	console.log(ddl)
-	if (ddl == null) {} else	{
-var opts = ddl.options.length;
-for (var i=0; i<opts; i++){
-    if (ddl.options[i].value == localStorage.getItem('theme')){
-        ddl.options[i].selected = true;
-        break;
-    }
-} }
+ 	var ddl = document.getElementById('themeSelect');
+	if (ddl == null) {} else {
+		var opts = ddl.options.length;
+		for (var i=0; i<opts; i++){
+			if (ddl.options[i].value == localStorage.getItem('theme')){
+				ddl.options[i].selected = true;
+				break;
+			}
+		} 
+	}
+
+	var cloakSelect = document.getElementById("cloakSelect")
+ 	if (localStorage.getItem('tabCloak') === null ){ localStorage.setItem('tabCloak', "Google Slides"); }
+ 	var ddl = document.getElementById('cloakSelect');
+	if (ddl == null) {} else {
+		var opts = ddl.options.length;
+		for (var i=0; i<opts; i++){
+			if (ddl.options[i].value == localStorage.getItem('tabCloak')){
+				ddl.options[i].selected = true;
+				break;
+			}
+		} 
+	}
 })
 
 
 window.onload = (event) => {	
- setTheme()
+ 	setTheme()
 	
-		var themeSelect = document.getElementById("themeSelect")
-		themeSelect.addEventListener("change",function(event){
-	if (localStorage.getItem('theme')===null) {localStorage.setItem('theme', "Classic");}
- localStorage.setItem('theme', event.target.value);
- console.log(localStorage.getItem('theme'))
- setTheme()
-}
-)
+	var themeSelect = document.getElementById("themeSelect")
+	themeSelect.addEventListener("change", function(event){
+		if (localStorage.getItem('theme')===null ){ localStorage.setItem('theme', "Classic"); }
+		localStorage.setItem('theme', event.target.value);
+		setTheme()
+	})
+
+	setCloak()
+	
+	var cloakSelect = document.getElementById("cloakSelect")
+	cloakSelect.addEventListener("change", function(event){
+		if (localStorage.getItem('tabCloak')===null ){ localStorage.setItem('tabCloak', "Google Slides"); }
+		localStorage.setItem('tabCloak', event.target.value);
+		setCloak()
+	})
 };
 
 function play(game,gameName){
@@ -182,13 +244,19 @@ setInterval(function () {
 		e.style.display="none"
 	}
 
+	let two_player_games = [
+		"Basketball Stars",
+		"Basketbros.io",
+		"Getaway Shootout",
+		"Rooftop Snipers",
+	]
+
 	let adventure_games = [
 		"Burrito Bisen",
 		"CraftMine",
 		"Duck Life 3",
 		"Duck Life 4",
 		"Getting Over It",
-		"Minecraft",
 		"Paper Minecraft",
 		"Pokemon Emerald",
 		"Pokemon Sapphire",
@@ -200,14 +268,9 @@ setInterval(function () {
 		"99 Balls",
 		"Appel",
 		"Ball Blast",
-		"Basketball Stars",
-		"Basketbros.io",
-		"Cannon Basketball 4",
 		"Crossy Road",
 		"Draw The Hill",
 		"Geometry Dash",
-		"Paper.io",
-		"Slither.io",
 		"Stack",
 		"Super Mario Bros",
 		"Temple Run 2"
@@ -269,6 +332,14 @@ setInterval(function () {
 		"Incredibox",
 	]
 
+	let rougelike_games = [
+		"Binding of Isaac",
+	]
+
+	let runner_games = [
+		"Subway Surfers",
+	]
+
 	let shooter_games = [
 		"1v1.lol",
 		"Getaway Shootout",
@@ -283,56 +354,8 @@ setInterval(function () {
 	let sports_games = [
 		"Basketball Stars",
 		"Basketbros.io",
-		"Cannon Basketball",
+		"Cannon Basketball 4",
 	]
-
-	function filterFunction_Adventure() {
-		filterFunction("Adventure")
-	}
-
-	function filterFunction_Arcade() {
-		filterFunction("Arcade")
-	}
-
-	function filterFunction_Classic() {
-		filterFunction("Classic")
-	}
-
-	function filterFunction_Drifting() {
-		filterFunction("Drifting")
-	}
-
-	function filterFunction_Driving() {
-		filterFunction("Driving")
-	}
-
-	function filterFunction_FPS() {
-		filterFunction("FPS")
-	}
-
-	function filterFunction_Misc() {
-		filterFunction("Misc")
-	}
-
-	function filterFunction_Mystery() {
-		filterFunction("Mystery")
-	}
-
-	function filterFunction_Puzzle() {
-		filterFunction("Puzzle")
-	}
-
-	function filterFunction_Rhythm() {
-		filterFunction("Rhythm")
-	}
-
-	function filterFunction_Shooter() {
-		filterFunction("Shooter")
-	}
-
-	function filterFunction_Sports() {
-		filterFunction("Sports")
-	}
   
 	async function filterFunction(tag) {
 		div = document.getElementById("myDropdown");
@@ -347,6 +370,17 @@ setInterval(function () {
 
 		e = document.getElementById("myDropdown");
 		e.style.display="none"
+
+		if(tag === "2_Player"){
+			for(o = 0; o < two_player_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === two_player_games[o].toLowerCase()) {
+						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
 
 		if(tag === "Adventure"){
 			for(o = 0; o < adventure_games.length; o++){
@@ -451,6 +485,28 @@ setInterval(function () {
 			for(o = 0; o < rhythm_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === rhythm_games[o].toLowerCase()) {
+						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Rougelike"){
+			for(o = 0; o < rougelike_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === rougelike_games[o].toLowerCase()) {
+						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Runner"){
+			for(o = 0; o < runner_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === runner_games[o].toLowerCase()) {
 						console.log(a[i])
 						a[i].style.display="inline-table";
 					}

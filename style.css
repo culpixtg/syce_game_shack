@@ -202,6 +202,7 @@
 
   .fullScreenBtn:hover {
     background-color: #333333;
+    cursor: pointer;
   }
 
   .clearFilterBtn {
@@ -220,6 +221,7 @@
 
   .clearFilterBtn:hover {
     background-color: #333333;
+    cursor: pointer;
   }
 
   .settingsBtn {
@@ -234,11 +236,12 @@
     font-size: 15px;
     border: none;
     float: right;
-    transform: translate(0, -10px);
+    transform: translate(0, -6px);
   }
 
   .settingsBtn:hover {
     background-color: #333333;
+    cursor: pointer;
   }
 
   .regularBtn {
@@ -257,6 +260,7 @@
 
   .regularBtn:hover {
     background-color: #333333;
+    cursor: pointer;
   }
 
   .game-img {

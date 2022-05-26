@@ -245,8 +245,10 @@ setInterval(function () {
 	}
 
 	let two_player_games = [
+		"2 Player Games",
 		"Basketball Stars",
 		"Basketbros.io",
+		"Fireboy & Watergirl Fireboy and Watergirl",
 		"Getaway Shootout",
 		"Rooftop Snipers",
 	]
@@ -256,6 +258,7 @@ setInterval(function () {
 		"CraftMine",
 		"Duck Life 3",
 		"Duck Life 4",
+		"Fireboy & Watergirl Fireboy and Watergirl",
 		"Getting Over It",
 		"Paper Minecraft",
 		"Pokemon Emerald",
@@ -297,9 +300,15 @@ setInterval(function () {
 
 	let fps_games = [
 		"1v1.lol",
+		"Horde Killer",
 		"Shell Shockers",
 		"Time Shooter 2",
 		"Time Shooter 3",
+	]
+
+	let horror_games = [
+		"Dreader",
+		"Five Nights At Freddy's Final Purgatory FNAF Final Purgatory",
 	]
 
 	let misc_games = [
@@ -441,6 +450,17 @@ setInterval(function () {
 			for(o = 0; o < fps_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === fps_games[o].toLowerCase()) {
+						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Horror"){
+			for(o = 0; o < horror_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === horror_games[o].toLowerCase()) {
 						console.log(a[i])
 						a[i].style.display="inline-table";
 					}

@@ -297,6 +297,7 @@ setInterval(function () {
 	]
 
 	let driving_games = [
+		"Mario Kart",
 		"Moto X3M",
 		"Moto X3M Pool Party",
 		"Moto X3M Spooky",

@@ -31,8 +31,16 @@
       //   w = undefined;
       // }
     </script>
-
     <link rel="stylesheet" href="style.css">
+    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div slot="indeterminate">
+          <svg class="spinner-svg" viewBox="0 0 16 16">
+              <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
+              <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
+          </svg>
+      </div>
+    </div>
+
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
@@ -65,6 +73,14 @@
         <option>Google Drive</option>
         <option>Schoology</option>
         <option>Desmos</option>
+       </select>
+    </div>
+
+    <div style="line-height:0%; display: inline-block;">
+      <h3 style="font-family: Radio Canada">Hide Update Log</h3>
+      <select style="border-radius:5px; background-color:#262626;color: #ffffff; padding-top:6px; padding-bottom:6px; padding-right:40px; font-family: Radio Canada; font-size: 15px;" id="updateMessageSelect">
+        <option>Yes</option>
+        <option>No</option>
        </select>
     </div>
 

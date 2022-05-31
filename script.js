@@ -93,6 +93,31 @@ function setCloak() {
 	}
 }
 
+setUpdateMessage()
+
+function setUpdateMessage() {
+	let message = localStorage.getItem("UpdateMessage")
+	console.log(message)
+
+	if(message === "No"){
+		let e = document.getElementById("updateMessage")
+		if(!e){
+
+		} else {
+			e.style.display = "inline-table"
+		}
+	}
+
+	if(message === "Yes"){
+		let e = document.getElementById("updateMessage")
+		if(!e){
+
+		} else {
+			e.style.display = "none"
+		}
+	}
+}
+
 function search() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
@@ -135,6 +160,19 @@ window.addEventListener("load", function(){
 			}
 		} 
 	}
+
+	var updateMessageSelect = document.getElementById("updateMessageSelect")
+ 	if (localStorage.getItem('UpdateMessage') === null ){ localStorage.setItem('UpdateMessage', "No"); }
+ 	var ddl = document.getElementById('updateMessageSelect');
+	if (ddl == null) {} else {
+		var opts = ddl.options.length;
+		for (var i=0; i<opts; i++){
+			if (ddl.options[i].value == localStorage.getItem('UpdateMessage')){
+				ddl.options[i].selected = true;
+				break;
+			}
+		} 
+	}
 })
 
 
@@ -142,20 +180,35 @@ window.onload = (event) => {
  	setTheme()
 	
 	var themeSelect = document.getElementById("themeSelect")
-	themeSelect.addEventListener("change", function(event){
-		if (localStorage.getItem('theme')===null ){ localStorage.setItem('theme', "Classic"); }
-		localStorage.setItem('theme', event.target.value);
-		setTheme()
-	})
+	if(themeSelect){
+		themeSelect.addEventListener("change", function(event){
+			if (localStorage.getItem('theme')===null ){ localStorage.setItem('theme', "Classic"); }
+			localStorage.setItem('theme', event.target.value);
+			setTheme()
+		})
+	}
 
 	setCloak()
 	
 	var cloakSelect = document.getElementById("cloakSelect")
-	cloakSelect.addEventListener("change", function(event){
-		if (localStorage.getItem('tabCloak')===null ){ localStorage.setItem('tabCloak', "Google Slides"); }
-		localStorage.setItem('tabCloak', event.target.value);
-		setCloak()
-	})
+	if(cloakSelect){
+		cloakSelect.addEventListener("change", function(event){
+			if (localStorage.getItem('tabCloak')===null ){ localStorage.setItem('tabCloak', "Google Slides"); }
+			localStorage.setItem('tabCloak', event.target.value);
+			setCloak()
+		})
+	}
+
+	setUpdateMessage()
+	
+	var updateMessageSelect = document.getElementById("updateMessageSelect")
+	if(updateMessageSelect){
+		updateMessageSelect.addEventListener("change", function(event){
+			if (localStorage.getItem('UpdateMessage')===null ){ localStorage.setItem('UpdateMessage', "No"); }
+			localStorage.setItem('UpdateMessage', event.target.value);
+			setUpdateMessage()
+		})
+	}
 };
 
 function play(game,gameName){
@@ -250,13 +303,16 @@ setInterval(function () {
 		"Basketbros.io",
 		"Fireboy & Watergirl Fireboy and Watergirl",
 		"Getaway Shootout",
+		"Mage Clash.io",
 		"Rooftop Snipers",
 	]
 
 	let adventure_games = [
+		"Airman Challenge",
 		"Burrito Bisen",
 		"CraftMine",
 		"Dragon Ball Z",
+		"Duck Life 2",
 		"Duck Life 3",
 		"Duck Life 4",
 		"Fireboy & Watergirl Fireboy and Watergirl",
@@ -270,6 +326,7 @@ setInterval(function () {
 		"Pokemon Ruby",
 		"Pokemon Sapphire",
 		"Run 3",
+		"Super Mario 64",
 		"Turbo Moto Racer"
 	]
 
@@ -278,17 +335,23 @@ setInterval(function () {
 		"Appel",
 		"Ball Blast",
 		"Crossy Road",
+		"Diep 2.io",
 		"Draw The Hill",
 		"Geometry Dash",
+		"Space Paper.io",
 		"Stack",
+		"Starve.io",
+		"Stickman Hook",
 		"Super Mario Bros",
 		"Temple Run 2"
 	]
 
 	let classic_games = [
 		"Chess",
+		"Chrome Dinosaur",
 		"Connect 4",
-		"Minesweeper"
+		"Minesweeper",
+		"Uno",
 	]
 
 	let drifting_games = [
@@ -322,7 +385,14 @@ setInterval(function () {
 		"Adventure Capitalist",
 		"Cookie Clicker",
 		"Idle Breakout",
+		"Little Alchemy",
 		"Slope 1",
+		"Sort The Court",
+		"Tank Trouble",
+	]
+
+	let multiplayer_games = [
+		"Uno",
 	]
 
 	let mystery_games = [
@@ -487,6 +557,17 @@ setInterval(function () {
 			}
 		}
 
+		if(tag === "Multiplayer"){
+			for(o = 0; o < multiplayer_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === multiplayer_games[o].toLowerCase()) {
+						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
 		if(tag === "Mystery"){
 			for(o = 0; o < mystery_games.length; o++){
 				for (i = 0; i < a.length; i++) {
@@ -564,3 +645,21 @@ setInterval(function () {
 			}
 		}
 	}
+
+	const loading = setInterval(() => {
+		let a = document.getElementById("title")
+		let b = document.getElementById("sub-title")
+
+		console.log(a + b)
+
+		if(a && b !== null){
+			clearInterval(loading)
+			let e = document.getElementById("ms-spinner")
+			setTimeout(() => {
+				e.style.opacity = "0"
+				setTimeout(() => {
+					e.style.display = "none"
+				}, 200)
+			}, 500)
+		}
+	}, 100)

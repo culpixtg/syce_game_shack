@@ -32,13 +32,21 @@
       //   w = undefined;
       // }
     </script>
-
     <link rel="stylesheet" href="style.css">
+    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div slot="indeterminate">
+          <svg class="spinner-svg" viewBox="0 0 16 16">
+              <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
+              <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
+          </svg>
+      </div>
+    </div>
+
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h1 style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px; margin: 0;">Latest update - 5/26/2022 (v3.5.2): Added Raze 1, Dragon Ball Z, Mario Kart, Pokemon Fire Red, Leaf Green, Mystery Dungeon Red, & Ruby.</h3>
+    <h1 id="updateMessage" style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px; margin: 0;">Latest update - 5/30/2022 (v3.6.0): Added Airman Challenge, Chrome Dinosaur, Diep 2.io, Duck Life 2, Little Alchemy, Mage Clash.io, Sort The Court, Space Paper.io, Starve.io, Stickman Hook, Super Mario 64, Tank Trouble, and Uno. You can now also hide this message in settings, plus a new loading screen for the website.</h3>
     <h1 style="background-color:#7a7a7a; text-align:center; color:black; padding:10px; line-height:120%; font-size:17px; border-radius: 5px;">Syce's Game Shack Link Hub (Alt links): <a style="cursor: pointer;" onclick="window.open('https://bit.ly/sgs-links', '_blank');">bit.ly/sgs-links</a></h3>
     <button id="settingsBtn" onclick="window.location = 'settings.html'" class="settingsBtn">Settings</button>
     <br>
@@ -61,6 +69,7 @@
         <button onclick="filterFunction('FPS')" class="dropbtn">FPS</button>
         <button onclick="filterFunction('Horror')" class="dropbtn">Horror</button>
         <button onclick="filterFunction('Misc')" class="dropbtn">Misc</button>
+        <button onclick="filterFunction('Multiplayer')" class="dropbtn">Multiplayer</button>
         <button onclick="filterFunction('Mystery')" class="dropbtn">Mystery</button>
         <button onclick="filterFunction('Puzzle')" class="dropbtn">Puzzle</button>
         <button onclick="filterFunction('Rhythm')" class="dropbtn">Rhythm</button>
@@ -112,6 +121,14 @@
       <img src="Adventure Capitalist/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Adventure Capitalist</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Airman Challenge" style="color:white; display: inline-block;">
+      <a href="Airman Challenge/index.html">
+      <img src="Airman Challenge/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Airman Challenge</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
       </a>
     </div>
 
@@ -203,6 +220,14 @@
       </a>
     </div>
 
+    <div class="container" id="Chrome Dinosaur" style="color:white; display: inline-block;">
+      <a href="Chrome Dinosaur/main.html">
+      <img src="Chrome Dinosaur/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Chrome Dinosaur</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
+      </a>
+    </div>
+
     <!--
     <div class="container" id="Commando" style="color:white; display: inline-block;">
       <a href="Commando/index.html">
@@ -269,6 +294,14 @@
       </a>
     </div>
 
+    <div class="container" id="Diep 2.io" style="color:white; display: inline-block;">
+      <a href="Diep 2.io/index.html">
+      <img src="Diep 2.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Diep 2.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
     <div class="container" id="Dragon Ball Z" style="color:white; display: inline-block;">
       <a href="Dragon Ball Z/index.html">
       <img src="Dragon Ball Z/logo.png" class="game-img">
@@ -298,6 +331,14 @@
       <img src="Drift Hunters/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Drift Hunters</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Drifting</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Duck Life 2" style="color:white; display: inline-block;">
+      <a href="Duck Life 2/main.html">
+      <img src="Duck Life 2/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 2</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
       </a>
     </div>
 
@@ -394,6 +435,22 @@
       <img src="Incredibox/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Incredibox</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Rhythm</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Little Alchemy" style="color:white; display: inline-block;">
+      <a href="Little Alchemy/index.html">
+      <img src="Little Alchemy/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Little Alchemy</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Mage Clash.io" style="color:white; display: inline-block;">
+      <a href="Mage Clash.io/index.html">
+      <img src="Mage Clash.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Mage Clash.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
 
@@ -596,11 +653,43 @@
         <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
+
+    <div class="container" id="Sort The Court" style="color:white; display: inline-block;">
+      <a href="Sort The Court/index.html">
+      <img src="Sort The Court/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Sort The Court</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Space Paper.io" style="color:white; display: inline-block;">
+      <a href="Space Paper.io/index.html">
+      <img src="Space Paper.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Space Paper.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
     
     <div class="container" id="Stack" style="color:white; display: inline-block;">
       <a href="Stack/main.html">
       <img src="Stack/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Stack</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Starve.io" style="color:white; display: inline-block;">
+      <a href="Starve.io/index.html">
+      <img src="Starve.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Starve.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Stickman Hook" style="color:white; display: inline-block;">
+      <a href="Stickman Hook/main.html">
+      <img src="Stickman Hook/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Stickman Hook</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div>
@@ -613,11 +702,27 @@
       </a>
     </div>
 
+    <div class="container" id="Super Mario 64" style="color:white; display: inline-block;">
+      <a href="Super Mario 64/main.html">
+      <img src="Super Mario 64/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Super Mario 64</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
+      </a>
+    </div>
+
     <div class="container" id="Super Mario Bros" style="color:white; display: inline-block;">
       <a href="Super Mario Bros/main.html">
       <img src="Super Mario Bros/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Super Mario Bros</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Tank Trouble" style="color:white; display: inline-block;">
+      <a href="Tank Trouble/index.html">
+      <img src="Tank Trouble/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Tank Trouble</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
 
@@ -674,6 +779,14 @@
       <img src="Turbo Moto Racer/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Turbo Moto Racer</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Driving / Adventure</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Uno" style="color:white; display: inline-block;">
+      <a href="Uno/index.html">
+      <img src="Uno/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Uno</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Classic / Multiplayer</h4>
       </a>
     </div>
 

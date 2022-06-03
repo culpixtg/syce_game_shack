@@ -371,7 +371,6 @@ setInterval(function () {
 	let fps_games = [
 		"1v1.lol",
 		"Horde Killer",
-		"Shell Shockers",
 		"Time Shooter 2",
 		"Time Shooter 3",
 	]

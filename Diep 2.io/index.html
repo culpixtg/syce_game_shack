@@ -10,6 +10,14 @@
 <body style>
 
     <link rel="stylesheet" href="../style.css">
+    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <div slot="indeterminate">
+            <svg class="spinner-svg" viewBox="0 0 16 16">
+                <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
+                <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
+            </svg>
+        </div>
+    </div>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
@@ -21,6 +29,9 @@
     <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
     <div style="text-align:center; line-height:150%; font-size:20px"></div>
     <hr>
+    
+    <br>
+    <h1 id="gameTitle" style="font-family: Radio Canada">DIEP 2.IO</h1>
 	
 	<!--GAME-->
 	<iframe class="gameIframe" src="https://diepio-2.com/" id="gameIframe" width="1074" height="600"></iframe>

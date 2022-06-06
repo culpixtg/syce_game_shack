@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h1 id="updateMessage0" style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:20px; margin: 0;">NEVER MIND! After investigating it turns out Google thought my shack was sus because of Shell Shockers. Apparently Shell Shockers is dangerous which is why it was saying that. So it has since then been removed and the main site should be up soon. Sorry for the panic :)</h3>
+    <h1 id="updateMessage" style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:18px; margin: 0;">Latest update - 6/5/2022 (v4.0.0-1): New footer! You can now suggest games to be added to the shack. Loads of new games including Betrayal.io, Bowmasters, Super Buddy Kick, just to name a few. New toggleable game name that can be changed in the settings. New redesign on the update logs page. Remove Basketbros.io because it got blocked. <br>You can view the entire release note on the <a onclick="window.location = 'update_logs.html'" style="cursor: pointer; color: #2b2b2b">update logs</a> page.</h3>
     <h1 style="background-color:#7a7a7a; text-align:center; color:black; padding:10px; line-height:120%; font-size:17px; border-radius: 5px;">Syce's Game Shack Link Hub (Alt links): <a style="cursor: pointer;" onclick="window.open('https://bit.ly/sgs-links', '_blank');">bit.ly/sgs-links</a></h3>
     <button id="settingsBtn" onclick="window.location = 'settings.html'" class="settingsBtn">Settings</button>
     <br>
@@ -57,10 +57,11 @@
     <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">BROWSER GAMES</span><hr/></div>
 
     <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Enter a game...">
-    <div class="dropdown">
+    <div id="filterCategory" class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Filter by category...</button>
       <div id="myDropdown" class="dropdown-content">
         <button onclick="filterFunction('2_Player')" class="dropbtn">2 Player</button>
+        <button onclick="filterFunction('Action')" class="dropbtn">Action</button>
         <button onclick="filterFunction('Adventure')" class="dropbtn">Adventure</button>
         <button onclick="filterFunction('Arcade')" class="dropbtn">Arcade</button>
         <button onclick="filterFunction('Classic')" class="dropbtn">Classic</button>
@@ -68,6 +69,7 @@
         <button onclick="filterFunction('Driving')" class="dropbtn">Driving</button>
         <button onclick="filterFunction('FPS')" class="dropbtn">FPS</button>
         <button onclick="filterFunction('Horror')" class="dropbtn">Horror</button>
+        <button onclick="filterFunction('Managing')" class="dropbtn">Managing</button>
         <button onclick="filterFunction('Misc')" class="dropbtn">Misc</button>
         <button onclick="filterFunction('Multiplayer')" class="dropbtn">Multiplayer</button>
         <button onclick="filterFunction('Mystery')" class="dropbtn">Mystery</button>
@@ -79,8 +81,18 @@
         <button onclick="filterFunction('Sports')" class="dropbtn">Sports</button>
       </div>
     </div>
+
+    <!-- <div id="sortBy" class="dropdown">
+      <button onclick="myFunction2()" class="dropbtn">Sort by...</button>
+      <div id="myDropdown2" class="dropdown-content">
+        <button onclick="sortFunction('Category')" class="dropbtn">Category</button>
+        <button onclick="sortFunction('Most Popular')" class="dropbtn">Most Popular</button>
+        <button onclick="sortFunction('Most Popular')" class="dropbtn">Recently Added</button>
+      </div>
+    </div> -->
     
     <button onclick="clearFilter()" id="clearFilter" class="clearFilterBtn">Clear filter</button>
+    <button onclick="clearFilter()" id="clearSort" class="clearFilterBtn">Clear sort</button>
 
     <br>
 
@@ -148,6 +160,14 @@
       </a>
     </div>
 
+    <div class="container" id="Bacon May Die" style="color:white; display: inline-block;">
+      <a href="Bacon May Die/index.html">
+      <img src="Bacon May Die/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Bacon May Die</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Action</h4>
+      </a>
+    </div>
+
     <div class="container" id="Ball Blast" style="color:white; display: inline-block;">
       <a href="Ball Blast/main.html">
       <img src="Ball Blast/logo.png" class="game-img">
@@ -164,11 +184,19 @@
       </a>
     </div>
 
-    <div class="container" id="Basketbros.io" style="color:white; display: inline-block;">
+    <!-- <div class="container" id="Basketbros.io" style="color:white; display: inline-block;">
       <a href="Basketbros.io/index.html">
       <img src="Basketbros.io/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Basketbros.io</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Sports</h4>
+      </a>
+    </div> -->
+
+    <div class="container" id="Betrayal.io" style="color:white; display: inline-block;">
+      <a href="Betrayal.io/index.html">
+      <img src="Betrayal.io/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Betrayal.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Mystery</h4>
       </a>
     </div>
 
@@ -185,6 +213,14 @@
       <img src="Bloxorz/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Bloxorz</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Bowmasters" style="color:white; display: inline-block;">
+      <a href="Bowmasters/index.html">
+      <img src="Bowmasters/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Bowmasters</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
 
@@ -263,10 +299,18 @@
     </div>
 
     <div class="container" id="Crossy Road" style="color:white; display: inline-block;">
-      <a href="Crossy Road/main.html">
+      <a href="Crossy Road/index.html">
       <img src="Crossy Road/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Crossy Road</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Cube Surfer" style="color:white; display: inline-block;">
+      <a href="Cube Surfer/index.html">
+      <img src="Cube Surfer/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Cube Surfer</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Acade</h4>
       </a>
     </div>
 
@@ -374,6 +418,14 @@
       </a>
     </div>
 
+    <div class="container" id="Fireboy & Watergirl Fireboy and Watergirl" style="color:white; display: inline-block;">
+      <a href="Fireboy & Watergirl/index.html">
+      <img src="Fireboy & Watergirl/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Fishington.io</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
+      </a>
+    </div>
+
     <div class="container" id="Five Nights At Freddy's Final Purgatory FNAF Final Purgatory" style="color:white; display: inline-block;">
       <a href="Five Nights At Freddy's/index.html">
       <img src="Five Nights At Freddy's/logo.png" class="game-img">
@@ -406,13 +458,21 @@
       </a>
     </div>
 
-    <div class="container" id="Getting Over It (Scratch)" style="color:white; display: inline-block;">
+    <div class="container" id="Getting Over It" style="color:white; display: inline-block;">
+      <a href="Getting Over It/index.html">
+      <img src="Getting Over It/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Getting Over It</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
+      </a>
+    </div>
+
+    <!-- <div class="container" id="Getting Over It (Scratch)" style="color:white; display: inline-block;">
       <a href="Getting Over It (Scratch)/main.html">
       <img src="Getting Over It (Scratch)/logo.png" class="game-img">
         <h4 style="font-family: Radio Canada; color:#ffffff">Getting Over It (Scratch)</h4>
         <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
       </a>
-    </div>
+    </div> -->
 
     <div class="container" id="Horde Killer" style="color:white; display: inline-block;">
       <a href="Horde Killer/index.html">
@@ -438,11 +498,27 @@
       </a>
     </div>
 
+    <div class="container" id="Knots" style="color:white; display: inline-block;">
+      <a href="Knots/index.html">
+      <img src="Knots/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Knots</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
     <div class="container" id="Little Alchemy" style="color:white; display: inline-block;">
       <a href="Little Alchemy/index.html">
       <img src="Little Alchemy/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Little Alchemy</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Mad Burger 3" style="color:white; display: inline-block;">
+      <a href="Mad Burger 3/index.html">
+      <img src="Mad Burger 3/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Mad Burger 3</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Managing</h4>
       </a>
     </div>
 
@@ -541,6 +617,14 @@
         <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
       </a>
     </div> -->
+
+    <div class="container" id="Pocket League 3D" style="color:white; display: inline-block;">
+      <a href="Pocket League 3D/index.html">
+      <img src="Pocket League 3D/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Pocket League 3D</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade / Sports</h4>
+      </a>
+    </div>
 
     <div class="container" id="Pokemon Emerald" style="color:white; display: inline-block;">
       <a href="Pokemon Emerald/index.html">
@@ -687,10 +771,18 @@
     </div>
 
     <div class="container" id="Subway Surfers" style="color:white; display: inline-block;">
-      <a href="Subway Surfers/index.html">
+      <a href="Subway Surfers/main.html">
       <img src="Subway Surfers/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Subway Surfers</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Runner</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Super Buddy Kick" style="color:white; display: inline-block;">
+      <a href="Super Buddy Kick/index.html">
+      <img src="Super Buddy Kick/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Super Buddy Kick</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
 
@@ -734,6 +826,22 @@
       </a>
     </div>
 
+    <div class="container" id="The Impossible Quiz" style="color:white; display: inline-block;">
+      <a href="The Impossible Quiz/index.html">
+      <img src="The Impossible Quiz/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">The Impossible Quiz</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <div class="container" id="The Impossible Quiz 2" style="color:white; display: inline-block;">
+      <a href="The Impossible Quiz 2/index.html">
+      <img src="The Impossible Quiz 2/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">The Impossible Quiz 2</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
     <div class="container" id="Time Shooter 2" style="color:white; display: inline-block;">
       <a href="Time Shooter 2/index.html">
       <img src="Time Shooter 2/logo.png" class="game-img">
@@ -755,6 +863,22 @@
       <img src="Townscaper/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Townscaper</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Building</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Tube Jumpers" style="color:white; display: inline-block;">
+      <a href="Tube Jumpers/index.html">
+      <img src="Tube Jumpers/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Tube Jumpers</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player</h4>
+      </a>
+    </div>
+
+    <div class="container" id="Tunnel Rush" style="color:white; display: inline-block;">
+      <a href="Tunnel Rush/index.html">
+      <img src="Tunnel Rush/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Tunnel Rush</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
       </a>
     </div>
 
@@ -806,10 +930,26 @@
       </a>
     </div>
 
-    <div class="container" id="Wordle+" style="color:white; display: inline-block;">
+    <div class="container" id="Wordle Unlimited" style="color:white; display: inline-block;">
+      <a href="Wordle Unlimited/main.html">
+      <img src="Wordle Unlimitied/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">Wordle Unlimited</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div>
+
+    <!-- <div class="container" id="Wordle+" style="color:white; display: inline-block;">
       <a href="Wordle+/main.html">
       <img src="Wordle+/logo.png" class="game-img">
         <h3 style="font-family: Radio Canada; color:#ffffff">Wordle+</h3>
+        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
+      </a>
+    </div> -->
+
+    <div class="container" id="World's Hardest Game" style="color:white; display: inline-block;">
+      <a href="World's Hardest Game/index.html">
+      <img src="World's Hardest Game/logo.png" class="game-img">
+        <h3 style="font-family: Radio Canada; color:#ffffff">World's Hardest Game</h3>
         <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
       </a>
     </div>
@@ -840,6 +980,18 @@
     </div> -->
 
     <hr>
-      <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color: #ffffff;" href="update_logs.html">Want to check out previous update logs? Click here!</a></h3>
-    </hr>
+    <!-- <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color: #ffffff;" href="update_logs.html">Want to check out previous update logs? Click here!</a></h3> -->
+    <button class="footerBtn" onclick="window.location = 'update_logs.html'">View Update Logs</a></button>
+    <button class="footerBtn" onclick="window.open('https://forms.gle/kTU8HM2Gfn57spXF8', '_blank');">Sumbit a Game Suggestion!</a></button>
+    <button class="footerBtn" onclick="window.open('https://forms.gle/QvXbwhcbRaEoqNYK7', '_blank')">Report something</a></button>
+    
+    <hr>
+    <div style="background-color:#7a7a7a; text-align:center; padding:10px; line-height:50%; border-radius: 10px;">
+      <h1 style="color:black; font-size:25px; font-family: Radio Canada;">CREDITS</h1>
+      <h1 style="color:black; font-size:17px; font-family: Radio Canada;">Credit to Bob's Game Shack for the idea and most of the code. Plus like 2 - 3 games which purely run on his github page.</h1>
+      <br>
+      <h1 style="color:black; font-size:17px; font-family: Radio Canada;">The games shown in this website are the property of their respective owners:</h1>
+      <h1 style="color:black; font-size:17px; font-family: Radio Canada; line-height: 100%;">DashNet, GoGoMan, Google, Hasbro, Hipster Whale, Kiloo & SYBO Games, Madbox, Nintendo, The Funkin Crew Inc., US Air Force, ZeptoLab</h1>
+      <h1 style="color:black; font-size:14px; font-family: Radio Canada;">*Plus many others that I don't have time to mention</h1>
+    </div>
 </div>

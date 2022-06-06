@@ -1,19 +1,6 @@
-// {
-// 	let currentTheme = localStorage.getItem("TitleColor")
-// 	if(currentTheme === "Classic" || currentTheme === null){
-// 		document.getElementById("title").style.class = "neon";
-// 	}
-
-// 	if(currentTheme === "Blue" || currentTheme === null){
-// 		document.getElementById("title").style.class = "neon-blue";
-// 	}
-
-// 	setInterval(() => {
-// 		console.log(document.getElementById("themeSelect").value)
-// 	}, 100)
-// }
-
+let aa = null
 function setTheme() {
+	aa = true
 	let theme = localStorage.getItem("theme")
 	if(!theme) theme = "Classic"
 
@@ -50,9 +37,11 @@ function setTheme() {
 	}
 }
 
+let ab = null
 setCloak()
 
 function setCloak() {
+	ab = true
 	let icon = localStorage.getItem("tabCloak")
 	if(!icon) icon = "Google Slides"
 	var link = window.document.querySelector("link[rel~='icon']");
@@ -93,11 +82,12 @@ function setCloak() {
 	}
 }
 
+let ac = null
 setUpdateMessage()
 
 function setUpdateMessage() {
+	ac = true
 	let message = localStorage.getItem("UpdateMessage")
-	console.log(message)
 
 	if(message === "No"){
 		let e = document.getElementById("updateMessage")
@@ -114,6 +104,32 @@ function setUpdateMessage() {
 
 		} else {
 			e.style.display = "none"
+		}
+	}
+}
+
+let ad = null
+setGameName()
+
+function setGameName() {
+	ad = true
+	let message = localStorage.getItem("GameName")
+
+	if(message === "No"){
+		let e = document.getElementById("gameTitle")
+		if(!e){
+
+		} else {
+			e.style.display = "none"
+		}
+	}
+
+	if(message === "Yes"){
+		let e = document.getElementById("gameTitle")
+		if(!e){
+
+		} else {
+			e.style.display = ""
 		}
 	}
 }
@@ -173,6 +189,19 @@ window.addEventListener("load", function(){
 			}
 		} 
 	}
+
+	var gameNameSelect = document.getElementById("gameNameSelect")
+ 	if (localStorage.getItem('GameName') === null ){ localStorage.setItem('GameName', "Yes"); }
+ 	var ddl = document.getElementById('gameNameSelect');
+	if (ddl == null) {} else {
+		var opts = ddl.options.length;
+		for (var i=0; i<opts; i++){
+			if (ddl.options[i].value == localStorage.getItem('GameName')){
+				ddl.options[i].selected = true;
+				break;
+			}
+		} 
+	}
 })
 
 
@@ -206,6 +235,17 @@ window.onload = (event) => {
 		updateMessageSelect.addEventListener("change", function(event){
 			if (localStorage.getItem('UpdateMessage')===null ){ localStorage.setItem('UpdateMessage', "No"); }
 			localStorage.setItem('UpdateMessage', event.target.value);
+			setUpdateMessage()
+		})
+	}
+
+	setGameName()
+	
+	var gameNameSelect = document.getElementById("gameNameSelect")
+	if(gameNameSelect){
+		gameNameSelect.addEventListener("change", function(event){
+			if (localStorage.getItem('GameName')===null ){ localStorage.setItem('GameName', "Yes"); }
+			localStorage.setItem('GameName', event.target.value);
 			setUpdateMessage()
 		})
 	}
@@ -286,6 +326,15 @@ setInterval(function () {
 		}
 	}
 
+	function myFunction2() {
+		e = document.getElementById("myDropdown2")
+		if(e.style.display === "none" || (e.style.display !== "none" && e.style.display !== "block")){
+			e.style.display = "block"
+		} else {
+			e.style.display = "none"
+		}
+	}
+
 	function clearFilter(){
 		a = document.getElementsByClassName("container");
 
@@ -295,6 +344,18 @@ setInterval(function () {
 
 		e = document.getElementById("clearFilter");
 		e.style.display="none"
+
+		b = document.getElementById("clearSort");
+		b.style.display="none"
+
+		c = document.getElementById("filterCategory");
+		c.style.display="inline-table"
+
+		// d = document.getElementById("sortBy");
+		// d.style.display="inline-table"
+
+		e = document.getElementById("searchbar");
+		e.style.display="inline-table"
 	}
 
 	let two_player_games = [
@@ -305,6 +366,11 @@ setInterval(function () {
 		"Getaway Shootout",
 		"Mage Clash.io",
 		"Rooftop Snipers",
+		"Tube Jumpers",
+	]
+
+	let action_games = [
+		"Bacon May Die",
 	]
 
 	let adventure_games = [
@@ -326,7 +392,6 @@ setInterval(function () {
 		"Pokemon Ruby",
 		"Pokemon Sapphire",
 		"Run 3",
-		"Super Mario 64",
 		"Turbo Moto Racer"
 	]
 
@@ -335,9 +400,11 @@ setInterval(function () {
 		"Appel",
 		"Ball Blast",
 		"Crossy Road",
+		"Cube Surfer",
 		"Diep 2.io",
 		"Draw The Hill",
 		"Geometry Dash",
+		"Pocket League 3D",
 		"Space Paper.io",
 		"Stack",
 		"Starve.io",
@@ -355,6 +422,7 @@ setInterval(function () {
 	]
 
 	let drifting_games = [
+		"Drift Boss",
 		"Drift Hunters",
 		"Tanuki Sunset"
 	]
@@ -380,14 +448,21 @@ setInterval(function () {
 		"Five Nights At Freddy's Final Purgatory FNAF Final Purgatory",
 	]
 
+	let managing_games = [
+		"Mad Burger 3",
+	]
+
 	let misc_games = [
 		"Adventure Capitalist",
+		"Bowmasters",
 		"Cookie Clicker",
 		"Idle Breakout",
 		"Little Alchemy",
 		"Slope 1",
 		"Sort The Court",
+		"Super Buddy Kick",
 		"Tank Trouble",
+		"Tunnel Rush",
 	]
 
 	let multiplayer_games = [
@@ -396,6 +471,7 @@ setInterval(function () {
 
 	let mystery_games = [
 		"Among Us",
+		"Betrayal.io",
 	]
 
 	let puzzle_games = [
@@ -406,10 +482,14 @@ setInterval(function () {
 		"Cut the Rope Holiday CTR Holiday",
 		"Cut the Rope Time Travel CTR Time Travel",
 		"Edge Not Found",
+		"Knots",
 		"Minesweeper",
 		"Roadblocks",
 		"Tetris",
-		"Wordle+",
+		"The Impossible Quiz",
+		"The Impossible Quiz 2",
+		"Wordle Unlimited",
+		"World's Hardest Game"
 	]
 
 	let rhythm_games = [
@@ -451,6 +531,13 @@ setInterval(function () {
 			a[i].style.display = "none";
 		}
 
+		// b = document.getElementById("sortBy")
+		// b.style.display = "none"
+
+		c = document.getElementById("searchbar");
+		c.style.display="none"
+		c.value = ""
+
 		e = document.getElementById("clearFilter");
 		e.style.display="inline-block"
 
@@ -461,7 +548,16 @@ setInterval(function () {
 			for(o = 0; o < two_player_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === two_player_games[o].toLowerCase()) {
-						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Action"){
+			for(o = 0; o < action_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === action_games[o].toLowerCase()) {
 						a[i].style.display="inline-table";
 					}
 				}
@@ -472,7 +568,6 @@ setInterval(function () {
 			for(o = 0; o < adventure_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === adventure_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -483,7 +578,6 @@ setInterval(function () {
 			for(o = 0; o < arcade_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === arcade_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -494,7 +588,6 @@ setInterval(function () {
 			for(o = 0; o < classic_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === classic_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -505,7 +598,6 @@ setInterval(function () {
 			for(o = 0; o < drifting_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === drifting_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -516,7 +608,6 @@ setInterval(function () {
 			for(o = 0; o < driving_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === driving_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -527,7 +618,6 @@ setInterval(function () {
 			for(o = 0; o < fps_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === fps_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -538,7 +628,16 @@ setInterval(function () {
 			for(o = 0; o < horror_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === horror_games[o].toLowerCase()) {
-						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Managing"){
+			for(o = 0; o < managing_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === managing_games[o].toLowerCase()) {
 						a[i].style.display="inline-table";
 					}
 				}
@@ -549,7 +648,6 @@ setInterval(function () {
 			for(o = 0; o < misc_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === misc_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -560,7 +658,6 @@ setInterval(function () {
 			for(o = 0; o < multiplayer_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === multiplayer_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -571,7 +668,6 @@ setInterval(function () {
 			for(o = 0; o < mystery_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === mystery_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -582,7 +678,6 @@ setInterval(function () {
 			for(o = 0; o < puzzle_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === puzzle_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -593,7 +688,6 @@ setInterval(function () {
 			for(o = 0; o < rhythm_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === rhythm_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -604,7 +698,6 @@ setInterval(function () {
 			for(o = 0; o < rougelike_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === rougelike_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -615,7 +708,6 @@ setInterval(function () {
 			for(o = 0; o < runner_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === runner_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -626,7 +718,6 @@ setInterval(function () {
 			for(o = 0; o < shooter_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === shooter_games[o].toLowerCase()) {
-						console.log(a[i])
 						a[i].style.display="inline-table";
 					}
 				}
@@ -637,7 +728,64 @@ setInterval(function () {
 			for(o = 0; o < sports_games.length; o++){
 				for (i = 0; i < a.length; i++) {
 					if (a[i].id.toLowerCase() === sports_games[o].toLowerCase()) {
-						console.log(a[i])
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+	}
+
+	let category_games = [
+		"2 Player Games",
+		"Basketball Stars",
+		"Cannon Basketball 4",
+	]
+
+	let popular_games = [
+		"Subway Surfers",
+		"Stickman Hook",
+		"Uno",
+		"Little Alchemy",
+		"Space Paper.io",
+		"Idle Breakout",
+		"2048",
+	]
+
+	async function sortFunction(tag) {
+		div = document.getElementById("myDropdown2");
+		a = document.getElementsByClassName("container");
+
+		for (i = 0; i < a.length; i++) {
+			a[i].style.display = "none";
+		}
+
+		b = document.getElementById("filterCategory")
+		b.style.display = "none"
+
+		c = document.getElementById("searchbar");
+		c.style.display="none"
+		c.value = ""
+
+		e = document.getElementById("clearSort");
+		e.style.display="inline-block"
+
+		e = document.getElementById("myDropdown2");
+		e.style.display="none"
+
+		if(tag === "Category"){
+			for(o = 0; o < category_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === category_games[o].toLowerCase()) {
+						a[i].style.display="inline-table";
+					}
+				}
+			}
+		}
+
+		if(tag === "Most Popular"){
+			for(o = 0; o < popular_games.length; o++){
+				for (i = 0; i < a.length; i++) {
+					if (a[i].id.toLowerCase() === popular_games[o].toLowerCase()) {
 						a[i].style.display="inline-table";
 					}
 				}
@@ -649,9 +797,7 @@ setInterval(function () {
 		let a = document.getElementById("title")
 		let b = document.getElementById("sub-title")
 
-		console.log(a + b)
-
-		if(a && b !== null){
+		if((a && b !== null) && (aa && ab && ac && ad !== "")){
 			clearInterval(loading)
 			let e = document.getElementById("ms-spinner")
 			setTimeout(() => {

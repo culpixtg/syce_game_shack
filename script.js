@@ -403,6 +403,7 @@ setInterval(function () {
 		"Cube Surfer",
 		"Diep 2.io",
 		"Draw The Hill",
+		"Fishington.io",
 		"Geometry Dash",
 		"Pocket League 3D",
 		"Space Paper.io",

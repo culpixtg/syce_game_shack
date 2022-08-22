@@ -1,997 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Google Slides</title>
-  <link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
-  <!--https://ssl.gstatic.com/docs/presentations/images/favicon5.ico-->
-<div class="ng-scope" style="text-align: center;">
-  <style>
-
-  </style>
-
-    <script>
-      // var w;
-      
-      // function startWorker() {
-      //   if (typeof(Worker) !== "undefined") {
-      //     if (typeof(w) == "undefined") {
-      //       w = new Worker("./Cookie Clicker~");
-      //     }
-      //     w.onmessage = function(event) {
-      //       document.getElementById("result").innerHTML = event.data;
-      //     };
-      //   } else {
-      //     document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
-      //   }
-      // }
-      
-      // startWorker()
-      
-      // function stopWorker() {
-      //   w.terminate();
-      //   w = undefined;
-      // }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
-    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-      <div slot="indeterminate">
-          <svg class="spinner-svg" viewBox="0 0 16 16">
-              <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
-              <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
-          </svg>
-      </div>
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Syce's Game Shack</title>
+    <link rel="icon" herf="sgs-logo.png">
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
+
+    <nav class="sidebar close">
+        <header>
+            <br>
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Syce's</span>
+                    <span class="profession">Game Shack</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#" class="selected">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext1">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="games.html">
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext2">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext3">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="soundboard.html">
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                            <span class="hovertext3">Soundboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="blog.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Blog</span>
+                            <span class="hovertext4">Blog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext5">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">Alt Links</span>
+                            <span class="hovertext5">Alt Links</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content" style="transform: translateY(-40%);">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li> -->
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section">
+        <br>
+        <div class="title">Welcome to Syce's Game Shack!</div>
+        <div class="text">Here you'll find one of the best unblocked game websites with over 90+ games perfect to play during free time!</div>
+        <br>
+        <div class="text">Feel free to share this with as many people as you want.</div>
+        <!-- <div class="text">This site is still very unfinished as I didn't have time to work on a lot of the key features I wanted for this update. Such as all the game details (descriptions, publisher, controls, etc), the soundboard, settings, and even this page right here.</div>-->
+        <br>
+        <div class="homeSection">
+            <img class="homeSectionImg" style="transform: translate(65%, 45px);" src="Images/v4.png">
+            <div style="display: inline-table; width: 403px; height: auto; transform: translate(-65%, 48px)">
+                <div class="homeSectionTitle"><b>Introducing Version 4!</b></div> 
+                <div class="homeSectionText">Looks different? This is my newly improved website with a complete different overhaul. You can see some of the features below or in the update logs found on the blog page.<br><br><b>Just want to play games? Click the games tab or</b></div> 
+                <div onclick="window.location = 'games.html'" class="homeSectionPlayBtn">Click Here to Start Playing</div>
+            </div>
+        </div>
+        <br>
+        <div class="homeSection1">
+            <img class="homeSectionImg" style="transform: translate(-65%, 45px);" src="Images/home_section_img1.png">
+            <div style="display: inline-table; width: 403px; height: auto; transform: translate(65%, 48px)">
+                <div class="homeSectionTitle"><b>New Sidebar with Dark and Light Mode!</b></div> 
+                <div class="homeSectionText">Introducing the new Sidebar! This sidebar is used for switching between pages on the site. This makes it much easier as its all in one place.<br><br>And also introducing Light Mode! Light mode is basically a light version of the site. Some may prefer it while others may not. It's really easy to turn it on as it's built right into the sidebar.</div> 
+            </div>
+        </div>
+        <br>
+        <div class="homeSection">
+            <img class="homeSectionImg" style="transform: translate(65%, 45px);" src="Images/home_section_img2.png">
+            <div style="display: inline-table; width: 403px; height: auto; transform: translate(-65%, 48px)">
+                <div class="homeSectionTitle"><b>New Looking Design</b></div> 
+                <div class="homeSectionText">This update changes the design of many elements of the original site.<br><br>There's now a splash screen for each game with information about that game. This will show a description of the game, the genre of it, and the publisher. Also feel free to hide the game icons in the settings if you prefer that type.</b></div> 
+            </div>
+        </div>
+        <br>
+    </section>
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <h1 id="updateMessage" style="background-color:#eb4034; text-align:center; color:black; padding:10px; line-height:120%; font-size:18px; margin: 0;">UPDATING!!! Stuff will slowing stop working before I push the update.</h3>
-    <h1 style="background-color:#7a7a7a; text-align:center; color:black; padding:10px; line-height:120%; font-size:17px; border-radius: 5px;">Syce's Game Shack Link Hub (Alt links): <a style="cursor: pointer;" onclick="window.open('https://bit.ly/sgs-links', '_blank');">bit.ly/sgs-links</a></h3>
-    <button id="settingsBtn" onclick="window.location = 'settings.html'" class="settingsBtn">Settings</button>
-    <br>
-    <h1 class="neon" id="title" style="font-size: 50px;">Syce's Game Shack</h1>
-    <h4 class="neon-blue" id="sub-title" style="font-size: 15px;">Created by Syce</h4>
-    <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
-    <div style="text-align:center; line-height:150%; font-size:20px"></div>
-    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">BROWSER GAMES</span><hr/></div>
 
-    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Enter a game...">
-    <div id="filterCategory" class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Filter by category...</button>
-      <div id="myDropdown" class="dropdown-content">
-        <button onclick="filterFunction('2_Player')" class="dropbtn">2 Player</button>
-        <button onclick="filterFunction('Action')" class="dropbtn">Action</button>
-        <button onclick="filterFunction('Adventure')" class="dropbtn">Adventure</button>
-        <button onclick="filterFunction('Arcade')" class="dropbtn">Arcade</button>
-        <button onclick="filterFunction('Classic')" class="dropbtn">Classic</button>
-        <button onclick="filterFunction('Drifting')" class="dropbtn">Drifting</button>
-        <button onclick="filterFunction('Driving')" class="dropbtn">Driving</button>
-        <button onclick="filterFunction('FPS')" class="dropbtn">FPS</button>
-        <button onclick="filterFunction('Horror')" class="dropbtn">Horror</button>
-        <button onclick="filterFunction('Managing')" class="dropbtn">Managing</button>
-        <button onclick="filterFunction('Misc')" class="dropbtn">Misc</button>
-        <button onclick="filterFunction('Multiplayer')" class="dropbtn">Multiplayer</button>
-        <button onclick="filterFunction('Mystery')" class="dropbtn">Mystery</button>
-        <button onclick="filterFunction('Puzzle')" class="dropbtn">Puzzle</button>
-        <button onclick="filterFunction('Rhythm')" class="dropbtn">Rhythm</button>
-        <button onclick="filterFunction('Rougelike')" class="dropbtn">Rougelike</button>
-        <button onclick="filterFunction('Runner')" class="dropbtn">Runner</button>
-        <button onclick="filterFunction('Shooter')" class="dropbtn">Shooter</button>
-        <button onclick="filterFunction('Sports')" class="dropbtn">Sports</button>
-      </div>
-    </div>
-
-    <!-- <div id="sortBy" class="dropdown">
-      <button onclick="myFunction2()" class="dropbtn">Sort by...</button>
-      <div id="myDropdown2" class="dropdown-content">
-        <button onclick="sortFunction('Category')" class="dropbtn">Category</button>
-        <button onclick="sortFunction('Most Popular')" class="dropbtn">Most Popular</button>
-        <button onclick="sortFunction('Most Popular')" class="dropbtn">Recently Added</button>
-      </div>
-    </div> -->
-    
-    <button onclick="clearFilter()" id="clearFilter" class="clearFilterBtn">Clear filter</button>
-    <button onclick="clearFilter()" id="clearSort" class="clearFilterBtn">Clear sort</button>
-
-    <br>
-
-    <div class="container" id="1v1.lol" style="color:white; display: inline-block;">
-      <a href="1v1.lol/index.html">
-      <img src="1v1.lol/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">1v1.lol</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">FPS / Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="2 Player Games" style="color:white; display: inline-block;">
-      <a href="2 Player Games/main.html">
-      <img src="2 Player Games/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">2 Player Games</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player</h4>
-      </a>
-    </div>
-
-    <div class="container" id="99 Balls" style="color:white; display: inline-block;">
-      <a href="99 Balls/index.html">
-      <img src="99 Balls/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">99 Balls</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="2048" style="color:white; display: inline-block;">
-      <a href="2048/main.html">
-      <img src="2048/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">2048</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Adventure Capitalist" style="color:white; display: inline-block;">
-      <a href="Adventure Capitalist/index.html">
-      <img src="Adventure Capitalist/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Adventure Capitalist</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Airman Challenge" style="color:white; display: inline-block;">
-      <a href="Airman Challenge/index.html">
-      <img src="Airman Challenge/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Airman Challenge</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Among Us" style="color:white; display: inline-block;">
-      <a href="Among Us/main.html">
-      <img src="Among Us/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Among Us</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Mystery</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Appel" style="color:white; display: inline-block;">
-      <a href="Appel/main.html">
-      <img src="Appel/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Appel</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Bacon May Die" style="color:white; display: inline-block;">
-      <a href="Bacon May Die/index.html">
-      <img src="Bacon May Die/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Bacon May Die</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Action</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Ball Blast" style="color:white; display: inline-block;">
-      <a href="Ball Blast/main.html">
-      <img src="Ball Blast/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Ball Blast</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-    
-    <div class="container" id="Basketball Stars" style="color:white; display: inline-block;">
-      <a href="Basketball Stars/main.html">
-      <img src="Basketball Stars/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Basketball Stars</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Sports</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Basketbros.io" style="color:white; display: inline-block;">
-      <a href="Basketbros.io/index.html">
-      <img src="Basketbros.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Basketbros.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Sports</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="Betrayal.io" style="color:white; display: inline-block;">
-      <a href="Betrayal.io/index.html">
-      <img src="Betrayal.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Betrayal.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Mystery</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Binding of Isaac" style="color:white; display: inline-block;">
-      <a href="Binding of Isaac/index.html">
-      <img src="Binding of Isaac/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Binding of Isaac</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Rougelike</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Bloxorz" style="color:white; display: inline-block;">
-      <a href="Bloxorz/main.html">
-      <img src="Bloxorz/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Bloxorz</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Bowmasters" style="color:white; display: inline-block;">
-      <a href="Bowmasters/index.html">
-      <img src="Bowmasters/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Bowmasters</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="BoxBob" style="color:white; display: inline-block;">
-      <a href="BoxBob/index.html">
-      <img src="BoxBob/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">BoxBob</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Burrito Bison" style="color:white; display: inline-block;">
-      <a href="Burrito Bison/index.html">
-      <img src="Burrito Bison/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Burrito Bison</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cannon Basketball 4" style="color:white; display: inline-block;">
-      <a href="Cannon Basketball 4/main.html">
-      <img src="Cannon Basketball 4/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Cannon Basketball 4</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Sports</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Chess" style="color:white; display: inline-block;">
-      <a href="Chess/main.html">
-      <img src="Chess/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Chess</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Chrome Dinosaur" style="color:white; display: inline-block;">
-      <a href="Chrome Dinosaur/main.html">
-      <img src="Chrome Dinosaur/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Chrome Dinosaur</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
-      </a>
-    </div>
-
-    <!--
-    <div class="container" id="Commando" style="color:white; display: inline-block;">
-      <a href="Commando/index.html">
-      <img src="Commando/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Commando</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
-      </a>
-    </div>
-  -->
-
-    <div class="container" id="Connect 4" style="color:white; display: inline-block;">
-      <a href="Connect 4/main.html">
-      <img src="Connect 4/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Connect 4</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Classic</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cookie Clicker" style="color:white; display: inline-block;">
-      <a href="Cookie Clicker/main.html">
-      <img src="Cookie Clicker/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Cookie Clicker</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="CraftMine" style="color:white; display: inline-block;">
-      <a href="CraftMine/index.html">
-      <img src="CraftMine/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">CraftMine</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Crossy Road" style="color:white; display: inline-block;">
-      <a href="Crossy Road/index.html">
-      <img src="Crossy Road/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Crossy Road</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cube Surfer" style="color:white; display: inline-block;">
-      <a href="Cube Surfer/index.html">
-      <img src="Cube Surfer/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Cube Surfer</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Acade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cut the Rope CTR" style="color:white; display: inline-block;">
-      <a href="Cut the Rope/main.html">
-      <img src="Cut the Rope/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Cut the Rope</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cut the Rope Holiday CTR Holiday" style="color:white; display: inline-block;">
-      <a href="CTR Holiday/main.html">
-      <img src="CTR Holiday/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">CTR Holiday</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Cut the Rope Time Travel CTR Time Travel" style="color:white; display: inline-block;">
-      <a href="CTR Time Travel/main.html">
-      <img src="CTR Time Travel/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">CTR Time Travel</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Diep 2.io" style="color:white; display: inline-block;">
-      <a href="Diep 2.io/index.html">
-      <img src="Diep 2.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Diep 2.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Dragon Ball Z" style="color:white; display: inline-block;">
-      <a href="Dragon Ball Z/index.html">
-      <img src="Dragon Ball Z/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Dragon Ball Z</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Draw The Hill" style="color:white; display: inline-block;">
-      <a href="Draw The Hill/index.html">
-      <img src="Draw The Hill/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Draw The Hill</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Dreader" style="color:white; display: inline-block;">
-      <a href="Dreader/index.html">
-      <img src="Dreader/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Dreader</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Horror</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Drift Hunters" style="color:white; display: inline-block;">
-      <a href="Drift Hunters/index.html">
-      <img src="Drift Hunters/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Drift Hunters</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Drifting</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Duck Life 2" style="color:white; display: inline-block;">
-      <a href="Duck Life 2/main.html">
-      <img src="Duck Life 2/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 2</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Duck Life 3" style="color:white; display: inline-block;">
-      <a href="Duck Life 3/main.html">
-      <img src="Duck Life 3/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 3</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Duck Life 4" style="color:white; display: inline-block;">
-      <a href="Duck Life 4/main.html">
-      <img src="Duck Life 4/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Duck Life 4</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Edge Not Found" style="color:white; display: inline-block;">
-      <a href="Edge Not Found/main.html">
-      <img src="Edge Not Found/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Edge Not Found</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Fireboy & Watergirl Fireboy and Watergirl" style="color:white; display: inline-block;">
-      <a href="Fireboy & Watergirl/index.html">
-      <img src="Fireboy & Watergirl/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Fireboy & Watergirl</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Adventure</h4>
-      </a>
-    </div>
-  
-    <div class="container" id="Fishington.io" style="color:white; display: inline-block;">
-      <a href="Fishington.io/index.html">
-      <img src="Fishington.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Fishington.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Five Nights At Freddy's Final Purgatory FNAF Final Purgatory" style="color:white; display: inline-block;">
-      <a href="Five Nights At Freddy's/index.html">
-      <img src="Five Nights At Freddy's/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">FNAF: Final Purgatory</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Horror</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Friday Night Funkin'" style="color:white; display: inline-block;">
-      <a href="Friday Night Funkin'/index.html">
-      <img src="Friday Night Funkin'/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Friday Night Funkin'</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Rhythm</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Geometry Dash" style="color:white; display: inline-block;">
-      <a href="GeometryDash/main.html">
-      <img src="GeometryDash/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Geometry Dash</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Getaway Shootout" style="color:white; display: inline-block;">
-      <a href="Getaway Shootout/main.html">
-      <img src="Getaway Shootout/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Getaway Shootout</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Getting Over It" style="color:white; display: inline-block;">
-      <a href="Getting Over It/index.html">
-      <img src="Getting Over It/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Getting Over It</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Getting Over It (Scratch)" style="color:white; display: inline-block;">
-      <a href="Getting Over It (Scratch)/main.html">
-      <img src="Getting Over It (Scratch)/logo.png" class="game-img">
-        <h4 style="font-family: Radio Canada; color:#ffffff">Getting Over It (Scratch)</h4>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="Horde Killer" style="color:white; display: inline-block;">
-      <a href="Horde Killer/index.html">
-      <img src="Horde Killer/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Horde Killer</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">FPS</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Idle Breakout" style="color:white; display: inline-block;">
-      <a href="Idle Breakout/main.html">
-      <img src="Idle Breakout/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Idle Breakout</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Incredibox" style="color:white; display: inline-block;">
-      <a href="Incredibox/index.html">
-      <img src="Incredibox/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Incredibox</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Rhythm</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Knots" style="color:white; display: inline-block;">
-      <a href="Knots/index.html">
-      <img src="Knots/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Knots</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Little Alchemy" style="color:white; display: inline-block;">
-      <a href="Little Alchemy/index.html">
-      <img src="Little Alchemy/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Little Alchemy</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Mad Burger 3" style="color:white; display: inline-block;">
-      <a href="Mad Burger 3/index.html">
-      <img src="Mad Burger 3/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Mad Burger 3</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Managing</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Mage Clash.io" style="color:white; display: inline-block;">
-      <a href="Mage Clash.io/index.html">
-      <img src="Mage Clash.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Mage Clash.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Mario Kart" style="color:white; display: inline-block;">
-      <a href="Mario Kart/index.html">
-      <img src="Mario Kart/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Mario Kart</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure / Driving</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Minecraft" style="color:white; display: inline-block;">
-      <a href="Minecraft (1.5.2)/index.html">
-      <img src="not_working.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Minecraft</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="Minesweeper" style="color:white; display: inline-block;">
-      <a href="Minesweeper/index.html">
-      <img src="Minesweeper/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Minesweeper</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Classic / Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Moto X3M" style="color:white; display: inline-block;">
-      <a href="Moto X3M/main.html">
-      <img src="Moto X3M/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Driving</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Moto X3M Pool Party" style="color:white; display: inline-block;">
-      <a href="Moto X3M Pool Party/main.html">
-      <img src="Moto X3M Pool Party/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Pool Party</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Driving</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Moto X3M Spooky" style="color:white; display: inline-block;">
-      <a href="Moto X3M Spooky/main.html">
-      <img src="Moto X3M Spooky/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Spooky</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Driving</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Moto X3M Winter" style="color:white; display: inline-block;">
-      <a href="Moto X3M Winter/main.html">
-      <img src="Moto X3M Winter/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Moto X3M Winter</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Driving</h4>
-      </a>
-    </div>
-
-    <div class="container" id="My Friend Pedro" style="color:white; display: inline-block;">
-      <a href="My Friend Pedro/index.html">
-      <img src="My Friend Pedro/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="My Friend Pedro Arena" style="color:white; display: inline-block;">
-      <a href="My Friend Pedro Arena/index.html">
-      <img src="My Friend Pedro Arena/logo.png" class="game-img">
-        <h4 style="font-family: Radio Canada; color:#ffffff">My Friend Pedro Arena</h4>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Paper Minecraft" style="color:white; display: inline-block;">
-      <a href="Paper Minecraft/main.html">
-      <img src="Paper Minecraft/logo.png" class="game-img">
-        <h4 style="font-family: Radio Canada; color:#ffffff">Paper Minecraft</h4>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Paper.io" style="color:white; display: inline-block;">
-      <a href="Paper.io/index.html">
-        <img src="not_working.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Paper.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="Pocket League 3D" style="color:white; display: inline-block;">
-      <a href="Pocket League 3D/index.html">
-      <img src="Pocket League 3D/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pocket League 3D</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade / Sports</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Emerald" style="color:white; display: inline-block;">
-      <a href="Pokemon Emerald/index.html">
-      <img src="Pokemon Emerald/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Emerald</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Fire Red" style="color:white; display: inline-block;">
-      <a href="Pokemon Fire Red/index.html">
-      <img src="Pokemon Fire Red/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Fire Red</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Leaf Green" style="color:white; display: inline-block;">
-      <a href="Pokemon Leaf Green/index.html">
-      <img src="Pokemon Leaf Green/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Leaf Green</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Mystery Dungeon Red" style="color:white; display: inline-block;">
-      <a href="Pokemon Mystery Dungeon Red/index.html">
-      <img src="Pokemon Mystery Dungeon Red/logo.png" class="game-img">
-        <h5 style="font-family: Radio Canada; color:#ffffff; font-size: 13px;">Pokemon Mystery Dungeon Red</h5>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Ruby" style="color:white; display: inline-block;">
-      <a href="Pokemon Ruby/index.html">
-      <img src="Pokemon Ruby/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Ruby</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Pokemon Sapphire" style="color:white; display: inline-block;">
-      <a href="Pokemon Sapphire/index.html">
-      <img src="Pokemon Sapphire/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Pokemon Sapphire</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Raze 1" style="color:white; display: inline-block;">
-      <a href="Raze 1/index.html">
-      <img src="Raze 1/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Raze 1</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="RoadBlocks" style="color:white; display: inline-block;">
-      <a href="RoadBlocks/main.html">
-      <img src="RoadBlocks/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">RoadBlocks</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Rooftop Snipers" style="color:white; display: inline-block;">
-      <a href="Rooftop Snipers/main.html">
-      <img src="Rooftop Snipers/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Rooftop Snipers</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player / Shooter</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Run 3" style="color:white; display: inline-block;">
-      <a href="Run 3/index.html">
-      <img src="Run 3/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Run 3</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Adventure</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Skribbl.io" style="color:white; display: inline-block;">
-      <a href="Skribbl.io/index.html">
-        <img src="not_working.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Skribbl.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Drawing</h4>
-      </a>
-    </div> -->
-
-    <!-- <div class="container" id="Slither.io" style="color:white; display: inline-block;">
-      <a href="Slither.io/index.html">
-      <img src="not_working.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Slither.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="Slope 1" style="color:white; display: inline-block;">
-      <a href="Slope 1/main.html">
-      <img src="Slope 1/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Slope 1</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Sort The Court" style="color:white; display: inline-block;">
-      <a href="Sort The Court/index.html">
-      <img src="Sort The Court/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Sort The Court</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Space Paper.io" style="color:white; display: inline-block;">
-      <a href="Space Paper.io/index.html">
-      <img src="Space Paper.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Space Paper.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-    
-    <div class="container" id="Stack" style="color:white; display: inline-block;">
-      <a href="Stack/main.html">
-      <img src="Stack/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Stack</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Starve.io" style="color:white; display: inline-block;">
-      <a href="Starve.io/index.html">
-      <img src="Starve.io/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Starve.io</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Stickman Hook" style="color:white; display: inline-block;">
-      <a href="Stickman Hook/main.html">
-      <img src="Stickman Hook/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Stickman Hook</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Subway Surfers" style="color:white; display: inline-block;">
-      <a href="Subway Surfers/main.html">
-      <img src="Subway Surfers/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Subway Surfers</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Runner</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Super Buddy Kick" style="color:white; display: inline-block;">
-      <a href="Super Buddy Kick/index.html">
-      <img src="Super Buddy Kick/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Super Buddy Kick</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Super Mario Bros" style="color:white; display: inline-block;">
-      <a href="Super Mario Bros/main.html">
-      <img src="Super Mario Bros/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Super Mario Bros</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Tank Trouble" style="color:white; display: inline-block;">
-      <a href="Tank Trouble/index.html">
-      <img src="Tank Trouble/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Tank Trouble</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Tanuki Sunset" style="color:white; display: inline-block;">
-      <a href="Tanuki Sunset/index.html">
-      <img src="Tanuki Sunset/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Tanuki Sunset</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Drifting</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Temple Run 2" style="color:white; display: inline-block;">
-      <a href="Temple Run 2/index.html">
-      <img src="Temple Run 2/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Temple Run 2</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Arcade</h4>
-      </a>
-    </div>
-    
-    <div class="container" id="Tetris" style="color:white; display: inline-block;">
-      <a href="Tetris/main.html">
-      <img src="Tetris/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Tetris</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="The Impossible Quiz" style="color:white; display: inline-block;">
-      <a href="The Impossible Quiz/index.html">
-      <img src="The Impossible Quiz/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">The Impossible Quiz</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="The Impossible Quiz 2" style="color:white; display: inline-block;">
-      <a href="The Impossible Quiz 2/index.html">
-      <img src="The Impossible Quiz 2/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">The Impossible Quiz 2</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Time Shooter 2" style="color:white; display: inline-block;">
-      <a href="Time Shooter 2/index.html">
-      <img src="Time Shooter 2/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Time Shooter 2</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">FPS</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Time Shooter 3" style="color:white; display: inline-block;">
-      <a href="Time Shooter 3/index.html">
-      <img src="Time Shooter 3/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Time Shooter 3</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">FPS</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Townscaper" style="color:white; display: inline-block;">
-      <a href="Townscaper/index.html">
-      <img src="Townscaper/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Townscaper</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Building</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Tube Jumpers" style="color:white; display: inline-block;">
-      <a href="Tube Jumpers/index.html">
-      <img src="Tube Jumpers/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Tube Jumpers</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">2 Player</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Tunnel Rush" style="color:white; display: inline-block;">
-      <a href="Tunnel Rush/index.html">
-      <img src="Tunnel Rush/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Tunnel Rush</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Misc</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Turbo Moto Racer" style="color:white; display: inline-block;">
-      <a href="Turbo Moto Racer/index.html">
-      <img src="Turbo Moto Racer/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Turbo Moto Racer</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Driving / Adventure</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Uno" style="color:white; display: inline-block;">
-      <a href="Uno/index.html">
-      <img src="Uno/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Uno</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Classic / Multiplayer</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Vex 3" style="color:white; display: inline-block;">
-      <a href="Vex 3/main.html">
-      <img src="Vex 3/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Vex 3</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Platformer</h4>
-      </a>
-    </div>
-    
-    <div class="container" id="Vex 4" style="color:white; display: inline-block;">
-      <a href="Vex 4/main.html">
-      <img src="Vex 4/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Vex 4</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Platformer</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Vex 5" style="color:white; display: inline-block;">
-      <a href="Vex 5/main.html">
-      <img src="Vex 5/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Vex 5</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Platformer</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Vex 6" style="color:white; display: inline-block;">
-      <a href="Vex 6/main.html">
-      <img src="Vex 6/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Vex 6</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Platformer</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Wordle Unlimited" style="color:white; display: inline-block;">
-      <a href="Wordle Unlimited/main.html">
-      <img src="Wordle Unlimitied/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Wordle Unlimited</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <!-- <div class="container" id="Wordle+" style="color:white; display: inline-block;">
-      <a href="Wordle+/main.html">
-      <img src="Wordle+/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Wordle+</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div> -->
-
-    <div class="container" id="World's Hardest Game" style="color:white; display: inline-block;">
-      <a href="World's Hardest Game/index.html">
-      <img src="World's Hardest Game/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">World's Hardest Game</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Puzzle</h4>
-      </a>
-    </div>
-
-    <div class="container" id="Zombs Royale" style="color:white; display: inline-block;">
-      <a href="Zombs Royale/index.html">
-      <img src="Zombs Royale/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Zombs Royale</h3>
-        <h4 style="font-family: Radio Canada; color:#ffffff">Shooter</h4>
-      </a>
-    </div>
-    
-    <!-- 
-    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">MY OWN GAMES (THAT ARE BAD)</span><hr/></div>
-
-    <div class="container" id="Falling Ball" style="color:white; display: inline-block;">
-      <a href="Falling Ball/index.html">
-      <img src="Falling Ball/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Falling Ball</h3>
-      </a>
-    </div>
-
-    <div class="container" id="Flappy Bird" style="color:white; display: inline-block;">
-      <a href="FlappyBird/index.html">
-      <img src="FlappyBird/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Flappy Bird</h3>
-      </a>
-    </div> -->
-
-    <hr>
-    <!-- <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color: #ffffff;" href="update_logs.html">Want to check out previous update logs? Click here!</a></h3> -->
-    <button class="footerBtn" onclick="window.location = 'update_logs.html'">View Update Logs</a></button>
-    <button class="footerBtn" onclick="window.open('https://forms.gle/kTU8HM2Gfn57spXF8', '_blank');">Sumbit a Game Suggestion!</a></button>
-    <button class="footerBtn" onclick="window.open('https://forms.gle/QvXbwhcbRaEoqNYK7', '_blank')">Report something</a></button>
-    
-    <hr>
-    <div style="background-color:#7a7a7a; text-align:center; padding:10px; line-height:50%; border-radius: 10px;">
-      <h1 style="color:black; font-size:25px; font-family: Radio Canada;">CREDITS</h1>
-      <h1 style="color:black; font-size:17px; font-family: Radio Canada;">Credit to Bob's Game Shack for the idea and most of the code. Plus like 2 - 3 games which purely run on his github page.</h1>
-      <br>
-      <h1 style="color:black; font-size:17px; font-family: Radio Canada;">The games shown in this website are the property of their respective owners:</h1>
-      <h1 style="color:black; font-size:17px; font-family: Radio Canada; line-height: 100%;">DashNet, GoGoMan, Google, Hasbro, Hipster Whale, Kiloo & SYBO Games, Madbox, Nintendo, The Funkin Crew Inc., US Air Force, ZeptoLab</h1>
-      <h1 style="color:black; font-size:14px; font-family: Radio Canada;">*Plus many others that I don't have time to mention</h1>
-    </div>
-</div>
+</body>
+</html>

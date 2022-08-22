@@ -1,120 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Google Slides</title>
-<link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
-<div class="ng-scope" style="text-align: center;">
-  <style>
-
-  </style>
-
-    <script>
-      // var w;
-      
-      // function startWorker() {
-      //   if (typeof(Worker) !== "undefined") {
-      //     if (typeof(w) == "undefined") {
-      //       w = new Worker("./Cookie Clicker~");
-      //     }
-      //     w.onmessage = function(event) {
-      //       document.getElementById("result").innerHTML = event.data;
-      //     };
-      //   } else {
-      //     document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
-      //   }
-      // }
-      
-      // startWorker()
-      
-      // function stopWorker() {
-      //   w.terminate();
-      //   w = undefined;
-      // }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
-    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-      <div slot="indeterminate">
-          <svg class="spinner-svg" viewBox="0 0 16 16">
-              <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
-              <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
-          </svg>
-      </div>
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Syce's Game Shack</title>
+    <link rel="icon" herf="sgs-logo.png">
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
+
+    <nav class="sidebar close">
+        <header>
+            <br>
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Syce's</span>
+                    <span class="profession">Game Shack</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext1">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="games.html">
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext2">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext3">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="soundboard.html">
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                            <span class="hovertext3">Soundboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="blog.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Blog</span>
+                            <span class="hovertext4">Blog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" class="selected">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext5">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">Alt Links</span>
+                            <span class="hovertext5">Alt Links</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content" style="transform: translateY(-40%);">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li> -->
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section">
+        <br>
+        <div class="title">Settings</div>
+        <div class="text">This is the settings page, change settings for the site here! If your looking for dark & light mode you should find it at the bottom on the sidebar.</div>
+        <br>
+        <!-- <div class="search-box" style="float: left; transform: translateX(8.5%); display: relative;">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
+        </div>
+        <br><br><br> -->
+
+        <div class="settingsBox" style="float: left; left: 4.5%;">
+            <div class="settingsTitle">Show Game Icon</div>
+            <div class="settingsDescription">Turning this off can improve faster loading times and help reduce network usage.</div>
+            <div class="settingsSwitch" onclick="gameIconSetting(true)">
+                <span class="switchBack"></span>
+                <span class="switchDot" id="gameIconSwitch"></span>
+            </div>
+        </div>
+        <div class="settingsBox">
+            <div class="settingsTitle">Tab Cloak</div>
+            <div class="settingsDescription">This changes the website icon and title to help hide this among your tabs.</div>
+            <select class="settingsSelect" id="cloakSelect">
+                <option class="settingsSelectOption">Default</option>
+                <option class="settingsSelectOption">Google Slides</option>
+                <option class="settingsSelectOption">Google Docs</option>
+                <option class="settingsSelectOption">Google Drive</option>
+                <option class="settingsSelectOption">Schoology</option>
+                <option class="settingsSelectOption">Desmos</option>
+            </select>
+        </div>
+        <br>
+        <div class="settingsBox" style="float: left; left: 4.5%;">
+            <div class="settingsTitle">Open Sidebar by Default</div>
+            <div class="settingsDescription">This will keep the sidebar open and only close when you play a game or if you close it.</div>
+            <div class="settingsSwitch" onclick="openSidebarSetting(true)">
+                <span class="switchBack"></span>
+                <span class="switchDot" id="openSidebarSwitch"></span>
+            </div>
+        </div>
+        <div class="settingsBox">
+            <div class="settingsTitle">Hide Alt Links Button</div>
+            <div class="settingsDescription">If you prefer it, this will hide the alt links button on the sidebar.</div>
+            <div class="settingsSwitch" onclick="altLinksSetting(true)">
+                <span class="switchBack"></span>
+                <span class="switchDot" id="altLinksSwitch"></span>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
-    <br>
-    <h1 class="neon" id="title" style="font-size: 50px;">Syce's Game Shack</h1>
-    <h4 class="neon-blue" id="sub-title" style="font-size: 15px;">Created by Syce</h4>
-    <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
-    <div style="text-align:center; line-height:150%; font-size:20px"></div>
-    <hr><br>
 
-    <h1 style="font-family: Radio Canada">SETTINGS</h1>
-    <br>
-    <div style="line-height:0%; display: inline-block;">
-      <h3 style="font-family: Radio Canada">Choose Theme</h3>
-      <select style="border-radius:5px; background-color:#262626;color: #ffffff; padding-top:6px; padding-bottom:6px; padding-right:40px; font-family: Radio Canada; font-size: 15px;" id="themeSelect">
-        <option>Classic</option>
-        <option>Gold</option>
-        <option>Blue</option>
-        <option>Green</option>
-       </select>
-    </div>
-
-    <div style="line-height:0%; display: inline-block;">
-      <h3 style="font-family: Radio Canada">Tab Cloaking</h3>
-      <select style="border-radius:5px; background-color:#262626;color: #ffffff; padding-top:6px; padding-bottom:6px; padding-right:40px; font-family: Radio Canada; font-size: 15px;" id="cloakSelect">
-        <option>Default</option>
-        <option>Google Slides</option>
-        <option>Google Docs</option>
-        <option>Google Drive</option>
-        <option>Schoology</option>
-        <option>Desmos</option>
-       </select>
-    </div>
-
-    <div style="line-height:0%; display: inline-block;">
-      <h3 style="font-family: Radio Canada">Hide Update Log</h3>
-      <select style="border-radius:5px; background-color:#262626;color: #ffffff; padding-top:6px; padding-bottom:6px; padding-right:40px; font-family: Radio Canada; font-size: 15px;" id="updateMessageSelect">
-        <option>Yes</option>
-        <option>No</option>
-       </select>
-    </div>
-
-    <div style="line-height:0%; display: inline-block;">
-      <h3 style="font-family: Radio Canada">Show Game Name</h3>
-      <select style="border-radius:5px; background-color:#262626;color: #ffffff; padding-top:6px; padding-bottom:6px; padding-right:40px; font-family: Radio Canada; font-size: 15px;" id="gameNameSelect">
-        <option>Yes</option>
-        <option>No</option>
-       </select>
-    </div>
-
-    <br><br>
-    <button onclick="window.location = 'index.html'" class="regularBtn">Back to home page</button>
-
-    <br><br><br>
-
-    <!-- 
-    <div style="text-align: center; line-height: 150%;"><hr /><br /><span class="neon-blue" style="font-size: 40px;">MY OWN GAMES (THAT ARE BAD)</span><hr/></div>
-
-    <div class="container" id="Falling Ball" style="color:white; display: inline-block;">
-      <a href="Falling Ball/index.html">
-      <img src="Falling Ball/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Falling Ball</h3>
-      </a>
-    </div>
-
-    <div class="container" id="Flappy Bird" style="color:white; display: inline-block;">
-      <a href="FlappyBird/index.html">
-      <img src="FlappyBird/logo.png" class="game-img">
-        <h3 style="font-family: Radio Canada; color:#ffffff">Flappy Bird</h3>
-      </a>
-    </div> -->
-
-    <hr>
-      <h3 class="neon-blue" style="background-color:#121212; text-align:center; padding:15px; line-height:150%; font-size:20px;"><a style="color: #ffffff;" href="update_logs.html">Want to check out previous update logs? Click here!</a></h3>
-    </hr>
-</div>
+</body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Syce's Game Shack</title>
+    <link rel="icon" herf="sgs-logo.png">
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <nav class="sidebar close">
+        <header>
+            <br>
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Syce's</span>
+                    <span class="profession">Game Shack</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext1">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" class="selected" onclick="gamepage()">
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext2">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext3">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="soundboard.html">
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                            <span class="hovertext3">Soundboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="blog.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Blog</span>
+                            <span class="hovertext4">Blog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext5">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">Alt Links</span>
+                            <span class="hovertext5">Alt Links</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content" style="transform: translateY(-40%);">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li> -->
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" id="mainpage">
+        <br>
+        <div class="title">Games</div>
+        <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div>
+        <br>
+        <div class="text" id="gamecount" style="display: inline-table; float: left;"></div>
+        <div class="" style="display: inline-table; float: right; padding-right: 4.7%;">
+            <div class="reportBox" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
+                <i class='bx bxs-flag-alt icon'></i>
+                <span class="hovertext6">Report</span>
+            </div>
+        </div>
+        <div class="" style="display: inline-table; float: right; padding-right: 1%;">
+            <div class="suggestionBox" onclick="window.open('https://forms.gle/gs3eyQ4rwb8tucxo8', '_blank')">
+                <i class='bx bxs-plus-circle icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
+                <span>Make a suggestion</span>
+            </div>
+        </div>
+        <br>
+        <div style="height: 35px; width: 1px;"></div>
+
+        <div class="search-box">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
+        </div>
+        <div style="display: inline-table; width: 2%;"></div>
+        <div class="filter">
+            <span class='bx bx-filter icon'></span>
+            <select class="filter-input" id="filterSelect">
+                <option class="dropdown-option">None</option>
+                <!-- <option class="dropdown-option">hello</option> -->
+            </select>
+        </div>
+        <br>
+        <br>
+
+        <div class="gameViewFullscreen" id="gameViewFullscreen">
+            <div class="fadedBackground" id="fadedBackground"></div>
+            <div class="gameView" id="gameViewBox" onclick="clicked()">
+                <div class="gameViewTitle" id="gameViewTitle"></div>
+                <img class="gameViewImg" id="gameViewImg">
+                <div class="gameViewSubTitle">Description</div>
+                <div class="gameViewText" id="gameViewDescription"></div>
+                <br>
+                <div style="display: inline-table; width: 50%; float: left;">
+                    <div class="gameViewSubTitle">Genre</div>
+                    <div class="gameViewText" id="gameViewGenre"></div>
+                </div>
+                <div style="display: inline-table; width: 50%; float: left;">
+                    <div class="gameViewSubTitle">Publisher</div>
+                    <div class="gameViewText" id="gameViewPublisher"></div>
+                </div>
+                <br><br><br>
+                <div class="playButton" id="playButton">PLAY</div>
+                <div class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">REPORT</div>
+            </div>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+        <br><br>
+    </section>
+
+    <section class="section" id="gamepage" style="display: none;">
+        <br>
+        <div class="title" id="gamePageTitle"></div>
+        <div class="text" id="gamePageDesc"></div>
+        <br>
+
+        <!-- <iframe class="gameIframe" src="" id="gameIframe" width="1074" height="600"></iframe> -->
+        <iframe class="gameIframe" src="" id="gameIframe" onclick="console.log('hi')"></iframe>
+        <br>
+        <div class="controlsBox" id="controls">
+            <span class="controlsTitle">Controls</span>
+            <br>
+            <span class="controlsText" id="controlsText"></span>
+        </div>
+        <div class="gamePageBtnBackground">
+            <div class="gamePageBtn" onclick="fullscreen()">
+                <span class='bx bx-fullscreen icon' style="transform: translateY(1px)"></span>
+                <span style="padding: 5px">Fullscreen</span>
+            </div>
+            <div style="width: 5%; height: 1px; display: inline-table;"></div>
+            <div class="gamePageBtn" onclick="controls()">
+                <span class='bx bxs-joystick-button icon' style="transform: translateY(1px)"></span>
+                <span style="padding: 5px">Controls</span>
+            </div>
+            <div style="width: 5%; height: 1px; display: inline-table;"></div>
+            <div class="gamePageBtn" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
+                <span class='bx bxs-megaphone icon' style="transform: translateY(1px)"></span>
+                <span style="padding: 5px">Report</span>
+            </div>
+            <div style="width: 5%; height: 1px; display: inline-table;"></div>
+            <div class="gamePageBtn" onclick="gamepage()">
+                <span class='bx bxs-joystick icon' style="transform: translateY(1px)"></span>
+                <span style="padding: 5px">Gamepage</span>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="game_data.js"></script>
+
+</body>
+</html>

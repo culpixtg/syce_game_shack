@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Slides</title>
+<link rel="icon" href="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico">
+<script src="../script.js"></script>
+</head>
+<div class="ng-scope" style="text-align: center;">
+
+<body style>
+
+    <link rel="stylesheet" href="../style.css">
+    <div id="ms-spinner" class="fullscreen show" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <div slot="indeterminate">
+            <svg class="spinner-svg" viewBox="0 0 16 16">
+                <circle class="outer-circle" cx="8px" cy="8px" r="7px"></circle>
+                <circle class="inner-circle inner-circle-animation" cx="8px" cy="8px" r="7px"></circle>
+            </svg>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P" class="ng-scope">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed" class="ng-scope">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada:400,400i,700" class="ng-scope">
+    <br>
+    <button id="settingsBtn" onclick="window.location = '../settings.html'" class="settingsBtn">Settings</button>
+    <br>
+    <h1 class="neon" id="title" style="font-size: 50px;">Syce's Game Shack</h1>
+    <h4 class="neon-blue" id="sub-title" style="font-size: 15px;">Created by Syce</h4>
+    <div style="padding: 0px; font-size: 10px;"><br /><hr /><a class="neon">Remember to only play games during free time! I am not responsible for any misfourtunes that this may cause.</a></div>
+    <div style="text-align:center; line-height:150%; font-size:20px"></div>
+    <hr>
+    
+    <br>
+    <h1 id="gameTitle" style="font-family: Radio Canada">CONNECT 4</h1>
+	
+	<!--GAME-->
+	<iframe class="gameIframeWithoutBackground" src="index.html" id="gameIframe" width="1074" height="600"></iframe>
+	
+    <br>
+	<br><button class="fullScreenBtn" onclick="fullscreen()">Fullscreen</button>
+    <button class="fullScreenBtn" onclick="gameselection()">Game Selection</button><br>
+
+    <style>
+        .fullScreenBtn {
+            background-color:#141414;
+            border-radius:5px;
+            color:white;
+            padding:12px;
+            padding-left:20px;
+            padding-right:20px;
+            font-family: Radio Canada;
+            font-size: 100%;
+        }
+    </style>
+</div>
+</body>
+</html>

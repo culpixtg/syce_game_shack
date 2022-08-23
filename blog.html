@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Syce's Game Shack</title>
+    <link rel="icon" herf="sgs-logo.png" type=image/png>
+</head>
+<body>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    
+    <nav class="sidebar close">
+        <header>
+            <br>
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Syce's</span>
+                    <span class="profession">Game Shack</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="games.html">
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="soundboard.html">
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                            <span class="hovertext">Soundboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" class="selected" onclick="blog()">
+                            <i class='bx bx-book-alt icon'></i>
+                            <span class="text nav-text">Blog</span>
+                            <span class="hovertext">Blog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">Alt Links</span>
+                            <span class="hovertext">Alt Links</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content" style="transform: translateY(-40%);">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li> -->
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section" id="blog">
+        <br>
+        <div class="title">Blog</div>
+        <div class="text">This is my blog page! This page will probably just include upload logs but I might write about other important things.</div>
+        <br><br>
+        <div class="blogBox" onclick="">
+            <div class="blogTitle"></div>
+            <div class="blogDate"></div>
+            <br>
+            <div class="blogDescription">Click to read this blog.</div>
+        </div>
+        <div class="blogBox" onclick="">
+            <div class="blogTitle"></div>
+            <div class="blogDate"></div>
+            <br>
+            <div class="blogDescription">Click to read this blog.</div>
+        </div>
+    </section>
+
+    <section class="section" id="blogPage" style="display: none">
+        <br>
+        <div class="title" id="blog_title">Title</div>
+        <div class="text" id="blog_date">date</div>
+        <div class="blogBack" onclick="blog()">
+            <i class='bx bx-chevron-left icon' ></i>
+            <span class="hovertext7">Back</span>
+        </div>
+        <br>
+        <div class="blogText" id="blog_text">text</div>
+        <br>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="blog_data.js"></script>
+
+</body>
+</html>

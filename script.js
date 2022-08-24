@@ -5,6 +5,8 @@ const body = document.querySelector('body'),
         modeSwitch = body.querySelector(".toggle-switch"),
         modeText = body.querySelector(".mode-text");
 
+        body.style.display = "block"
+
         //startup
         let mode = localStorage.getItem("mode")
         if(mode === null){
@@ -262,4 +264,10 @@ window.onload = (event) => {
     setTimeout(() => {
         document.getElementById("loader-wrapper").style.display = "none";
     }, 500)
+}
+
+window.onbeforeunload = function() {
+    document.querySelector("html").style.backgroundColor = "#18191a"
+    document.querySelector("body").style.display = "none";
+    window.scrollTo(0, 0)
 }

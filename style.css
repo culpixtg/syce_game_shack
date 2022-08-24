@@ -544,7 +544,6 @@ body.dark .container:hover{
 
 .gameView{
     width: 40%;
-    width: 40vw;
     height: auto;
     background-color: var(--sidebar-color);
     position: relative;
@@ -596,11 +595,12 @@ body.dark .container:hover{
 .gameViewBack {
     background: transparent;
     /* background:  var(--primary-color); */
-    float: right;
+    right: 3vmin;
     width: 35px;
     height: 35px;
     border-radius: 5px;
-    transform: translate(1355%, -105%);
+    /* transform: translate(1355%, -105%); */
+    transform: translateY(-105%);
     color: var(--text-color);
     font-size: 35px;
     font-weight: 600;

@@ -1532,10 +1532,8 @@ function checkFocus(){
     if(document.getElementById("gamepage").style.display === "block"){
         if(document.activeElement === document.getElementById("gameIframe")){
             document.body.style.overflow = "hidden"
-            document.getElementById("gameIframe").style.opacity = 1
         } else {
             document.body.style.overflow = "visible"
-            document.getElementById("gameIframe").style.opacity = 0.5
         }
     }
 }

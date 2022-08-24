@@ -477,7 +477,7 @@ body.dark .container:hover{
     border-width: 3px;
     border-radius: 5px;
     margin-bottom: 0;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .gameIframeFull{
@@ -599,6 +599,7 @@ body.dark .container:hover{
     color: #FFF;
     font-weight: 600;
     font-stretch: expanded;
+    font-size: 15px;
     display: inline-table;
     float: left;
     border: hidden;
@@ -620,6 +621,7 @@ body.dark .container:hover{
     color: #fff;
     font-weight: 600;
     font-stretch: expanded;
+    font-size: 15;;
     display: inline-table;
     float: right;
     border: hidden;
@@ -1006,7 +1008,7 @@ body.dark .container:hover{
 .homeSection {
     width: 90%;
     height: 307px;
-    height: 50vh;
+    height: 23.1vw;
     background-color: var(--primary-color-light);
     position: relative;
     margin: auto;
@@ -1019,7 +1021,7 @@ body.dark .container:hover{
 .homeSection1 {
     width: 90%;
     height: 307px;
-    height: 50vh;
+    height: 23.1vw;
     background-color: var(--primary-color);
     position: relative;
     margin: auto;

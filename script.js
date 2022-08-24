@@ -57,6 +57,7 @@ function gamepage(){
     document.getElementById("gamepage").style.display = "none"
     document.getElementById("mainpage").style.display = "block"
     document.getElementById("gameIframe").src = ""
+    document.body.style.overflow = "visible"
 
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
 }

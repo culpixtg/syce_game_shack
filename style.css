@@ -621,7 +621,7 @@ body.dark .container:hover{
     color: #fff;
     font-weight: 600;
     font-stretch: expanded;
-    font-size: 15;;
+    font-size: 15px;
     display: inline-table;
     float: right;
     border: hidden;

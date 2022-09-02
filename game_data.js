@@ -329,19 +329,19 @@ const data = [
             "Right Click - Interact",
         ]
     },
-    {
-        name: "Crossy Road",
-        id: "crossy_road",
-        genre: "Arcade",
-        description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
-        link: "https://yell0wsuit.page/html5-games/games/crossy-road/",
-        img: "Images/crossy_road.png",
-        file_based: false,
-        publisher: "Poki",
-        controls: [
-            "WASD/Arrow Keys/Right Click - Movement",
-        ]
-    },
+//     {
+//         name: "Crossy Road",
+//         id: "crossy_road",
+//         genre: "Arcade",
+//         description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
+//         link: "https://yell0wsuit.page/html5-games/games/crossy-road/",
+//         img: "Images/crossy_road.png",
+//         file_based: false,
+//         publisher: "Poki",
+//         controls: [
+//             "WASD/Arrow Keys/Right Click - Movement",
+//         ]
+//     },
     {
         name: "Cube Surfer",
         id: "cube_surfer",

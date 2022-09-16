@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZF5EEF09R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-RZF5EEF09R');
-    </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZPCB9G4RZ"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-LZPCB9G4RZ');
-     </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS51LMPFLE"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-SS51LMPFLE');
-     </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT7SGCCZFZ"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-ZT7SGCCZFZ');
-     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -149,7 +113,7 @@
                     </a>
                 </li> -->
 
-                <li class="mode">
+                <!-- <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
@@ -159,7 +123,7 @@
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
-                </li>
+                </li> -->
                 
             </div>
         </div>
@@ -169,7 +133,7 @@
     <section class="section">
         <br>
         <div class="title">Settings</div>
-        <div class="text">This is the settings page, change settings for the site here! If your looking for dark & light mode you should find it at the bottom on the sidebar.</div>
+        <div class="text">This is the settings page, change settings for the site here!</div>
         <br>
         <!-- <div class="search-box" style="float: left; transform: translateX(8.5%); display: relative;">
             <span class='bx bx-search icon'></span>
@@ -177,6 +141,28 @@
         </div>
         <br><br><br> -->
 
+        <div class="settingsBox" style="float: left; left: 4.5%;">
+            <div class="settingsTitle">Mode</div>
+            <div class="settingsDescription">Change the website's appearance by a dark and a light contrast.</div>
+            <select class="settingsSelect" id="modeSelect">
+                <option class="settingsSelectOption">Dark</option>
+                <option class="settingsSelectOption">Dark Themed</option>
+                <option class="settingsSelectOption">Light</option>
+            </select>
+        </div>
+        <div class="settingsBox">
+            <div class="settingsTitle">Theme Color</div>
+            <div class="settingsDescription">This changes the website icon and title to help hide this among your tabs.</div>
+            <select class="settingsSelect" id="themeSelect">
+                <option class="settingsSelectOption">Purple (Default)</option>
+                <option class="settingsSelectOption">Green</option>
+                <option class="settingsSelectOption">Light Blue</option>
+                <option class="settingsSelectOption">Orange</option>
+                <option class="settingsSelectOption">Red</option>
+                <option class="settingsSelectOption">Yellow</option>
+            </select>
+        </div>
+        <br>
         <div class="settingsBox" style="float: left; left: 4.5%;">
             <div class="settingsTitle">Show Game Icon</div>
             <div class="settingsDescription">Turning this off can improve faster loading times and help reduce network usage.</div>

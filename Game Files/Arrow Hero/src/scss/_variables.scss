@@ -1,0 +1,17 @@
+$padding: 10px;
+$key_size: 60px;
+$key_color: white;
+$selector_size: $key_size + 4;
+$selector_border_size: 5px;
+$real_selector_size: $selector_size + 2*$selector_border_size;
+$size: $key_size * 6 + $padding * 2 + $selector_border_size * 2;
+$orbit_radius: 250%;
+$helper_spacing: 10px;
+$background_color: #181818;
+$text_color: #e1e1e1;
+$board_color: black;
+$left_color: #48ff3b;
+$up_color: #ff5252;
+$right_color: #00b2ff;
+$down_color: #ffff00;
+$logo_border_size: 20px;

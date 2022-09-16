@@ -1,3 +1,4 @@
+let bannerMessageNum = "1"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -7,28 +8,28 @@ const body = document.querySelector('body'),
 
         body.style.display = "block"
 
-        //startup
+        // startup
         let mode = localStorage.getItem("mode")
         if(mode === null){
-            mode === "dark"
-            localStorage.setItem("mode", "dark")
+            mode === "Dark"
+            localStorage.setItem("mode", "Dark")
             
             body.classList.toggle("dark");
                 
-            if(body.classList.contains("dark")){
-                modeText.innerText = "Light mode";
-            }else{
-                modeText.innerText = "Dark mode";
-            }
+            // if(body.classList.contains("dark")){
+            //     modeText.innerText = "Light mode";
+            // }else{
+            //     modeText.innerText = "Dark mode";
+            // }
         } else {
-            if(mode === "dark"){
+            if(mode === "Dark" || mode === "Dark Themed"){
                 body.classList.toggle("dark");
                 
-                if(body.classList.contains("dark")){
-                    modeText.innerText = "Light mode";
-                }else{
-                    modeText.innerText = "Dark mode";
-                }
+                // if(body.classList.contains("dark")){
+                //     modeText.innerText = "Light mode";
+                // }else{
+                //     modeText.innerText = "Dark mode";
+                // }
             }
         }
 
@@ -42,17 +43,17 @@ const body = document.querySelector('body'),
         //     sidebar.classList.remove("close");
         // })
 
-        modeSwitch.addEventListener("click" , () =>{
-            body.classList.toggle("dark");
+        // modeSwitch.addEventListener("click" , () =>{
+        //     body.classList.toggle("dark");
             
-            if(body.classList.contains("dark")){
-                modeText.innerText = "Light mode";
-                localStorage.setItem("mode", "dark")
-            }else{
-                modeText.innerText = "Dark mode";
-                localStorage.setItem("mode", "light")
-            }
-        });
+        //     if(body.classList.contains("dark")){
+        //         modeText.innerText = "Light mode";
+        //         localStorage.setItem("mode", "dark")
+        //     }else{
+        //         modeText.innerText = "Dark mode";
+        //         localStorage.setItem("mode", "light")
+        //     }
+        // });
 
 function gamepage(){
     document.getElementById("gameViewFullscreen").style.display = "none"
@@ -247,6 +248,91 @@ if(ddl !== null){
     }
 }
 
+function setMode(){
+    let mode = localStorage.getItem("mode")
+    if(!mode) mode = "Dark"
+
+    if(mode === "Dark"){
+        localStorage.setItem("mode", "Dark");
+        if(body.classList[0] !== "dark") body.classList.toggle("dark");
+        document.body.style.setProperty("--primary-color", "#3a3b3c");
+        document.body.style.setProperty("--primary-text-color", "#ccc")
+    }
+    if(mode === "Dark Themed"){
+        localStorage.setItem("mode", "Dark Themed");
+        if(body.classList[0] !== "dark") body.classList.toggle("dark");
+        loadTheme()
+    }
+    if(mode === "Light"){
+        localStorage.setItem("mode", "Light");
+        if(body.classList[0] === "dark") body.classList.toggle("dark");
+        loadTheme();
+    }
+}
+
+var ddl = document.getElementById("modeSelect");
+if(ddl !== null){
+    var opts = ddl.options.length
+    for(var i = 0; i < opts; i++){
+        if(ddl.options[i].value == localStorage.getItem("mode")){
+            ddl.options[i].selected = true;
+            break;
+        }
+    }
+}
+
+loadTheme();
+function loadTheme(){
+    let theme = localStorage.getItem("themeHex")
+    if(!theme) theme = "#695CFE"
+    if(localStorage.getItem("mode") === "Dark Themed"){
+        document.body.style.setProperty("--primary-color", theme)
+        document.body.style.setProperty("--primary-text-color", "#fff")
+    }
+    if(localStorage.getItem("mode") === "Light"){
+        document.body.style.setProperty("--primary-color", theme)
+    }
+}
+
+function setTheme(){
+    let theme = localStorage.getItem("theme")
+    if(theme === "Purple (Default)"){
+        localStorage.setItem("themeHex", "#695CFE")
+        loadTheme();
+    }
+    if(theme === "Green"){
+        localStorage.setItem("themeHex", "#0ed929")
+        loadTheme();
+    }
+    if(theme === "Light Blue"){
+        localStorage.setItem("themeHex", "#16aee6")
+        loadTheme();
+    }
+    if(theme === "Orange"){
+        localStorage.setItem("themeHex", "#f6920e")
+        loadTheme();
+    }
+    if(theme === "Red"){
+        localStorage.setItem("themeHex", "#f6290e")
+        loadTheme();
+    }
+    if(theme === "Yellow"){
+        localStorage.setItem("themeHex", "#febb01")
+        loadTheme();
+    }
+}
+
+var ddl = document.getElementById("themeSelect");
+if(ddl !== null){
+    var opts = ddl.options.length
+    for(var i = 0; i < opts; i++){
+        if(ddl.options[i].value == localStorage.getItem("theme")){
+            ddl.options[i].selected = true;
+            break;
+        }
+    }
+}
+
 window.onload = (event) => {
     var cloakSelect = document.getElementById("cloakSelect")
     if(cloakSelect){
@@ -259,15 +345,124 @@ window.onload = (event) => {
         })
     }
 
+    var modeSelect = document.getElementById("modeSelect")
+    if(modeSelect){
+        modeSelect.addEventListener("change", function(event){
+            if(localStorage.getItem("mode") === null){
+                localStorage.setItem("mode", "Dark");
+            }
+            localStorage.setItem("mode", event.target.value);
+            setMode();
+        })
+    }
+
+    var themeSelect = document.getElementById("themeSelect")
+    if(themeSelect){
+        themeSelect.addEventListener("change", function(event){
+            if(localStorage.getItem("theme") === null){
+                localStorage.setItem("theme", "Purple (Default)");
+            }
+            localStorage.setItem("theme", event.target.value);
+            setTheme();
+        })
+    }
+
     document.getElementById("loader-wrapper").style.opacity = 0;
     document.body.style.overflow = "visible";
     setTimeout(() => {
         document.getElementById("loader-wrapper").style.display = "none";
     }, 500)
+
+    if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null) document.getElementById("bannerMessage").style.display = "block"
 }
 
 window.onbeforeunload = function() {
     document.querySelector("html").style.backgroundColor = "#18191a"
     document.querySelector("body").style.display = "none";
-    window.scrollTo(0, 0)
+}
+
+function hideBanner(){
+    document.getElementById("bannerMessage").style.display = "none"
+    localStorage.setItem("bannerMessageNum", bannerMessageNum)
+}
+
+function setFormMessage(formElement, type, message) {
+    const messageElement = formElement.querySelector(".form__message");
+
+    messageElement.textContent = message;
+    messageElement.classList.remove("form__message--success", "form__message--error");
+    messageElement.classList.add(`form__message--${type}`);
+}
+
+function setInputError(inputElement, message) {
+    inputElement.classList.add("form__input--error");
+    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
+}
+
+function clearInputError(inputElement) {
+    inputElement.classList.remove("form__input--error");
+    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.querySelector("#login");
+    const createAccountForm = document.querySelector("#createAccount");
+
+    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
+        e.preventDefault();
+        loginForm.classList.add("form--hidden");
+        createAccountForm.classList.remove("form--hidden");
+    });
+
+    document.querySelector("#linkLogin").addEventListener("click", e => {
+        e.preventDefault();
+        loginForm.classList.remove("form--hidden");
+        createAccountForm.classList.add("form--hidden");
+    });
+
+    loginForm.addEventListener("submit", e => {
+        e.preventDefault();
+
+        // Perform your AJAX/Fetch login
+
+        setFormMessage(loginForm, "error", "Invalid username/password combination");
+    });
+
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+        inputElement.addEventListener("blur", e => {
+            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
+                setInputError(inputElement, "Username must be at least 10 characters in length");
+            }
+        });
+
+        inputElement.addEventListener("input", e => {
+            clearInputError(inputElement);
+        });
+    });
+});
+
+function toggleLoginPage(){
+    let page = document.getElementById("loginPage")
+    if(page.style.display === "block"){
+        page.style.display = "none"
+        document.body.style.overflow = "visible"
+        var newlink = document.createElement("link").herf = "#hello"
+        document.getElementsByTagName("head")[0].appendChild(newlink)
+    } else {
+        page.style.display = "block"
+        page.style.position = "fixed"
+        document.body.style.overflow = "hidden"
+        var newlink = document.createElement("link").herf = "#login"
+        document.getElementsByTagName("head")[0].appendChild(newlink)
+    }
+}
+
+function toggleLoginSidebar(){
+    if(document.getElementById("loggedIn").style.display === "block"){
+        document.getElementById("notLoggedIn").style.display = "block"
+        document.getElementById("loggedIn").style.display = "none"
+    } else {
+        document.getElementById("notLoggedIn").style.display = "none"
+        document.getElementById("loggedIn").style.display = "block"
+    }
 }

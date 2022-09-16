@@ -1,4 +1,4 @@
-let lastUpdate = "8/23/2022"
+let lastUpdate = "9/15/2022"
 const data = [
     {
         name: "1v1.lol",
@@ -110,6 +110,33 @@ const data = [
             "Arrow Keys/WASD/Spacebar - Movement",
         ]
     },
+    // {
+    //     name: "Arrow Hero",
+    //     id: "arrow_hero",
+    //     genre: "Platformer",
+    //     description: "A minimalist game where your goal is to match your inputs with an unstoppable continuous overwelming flow of arrows.",
+    //     link: "Game Files/Arrow Hero/index.html",
+    //     img: "Images/arrow_hero.png",
+    //     file_based: true,
+    //     publisher: "Acelis Weaven",
+    //     controls: [
+    //         "Arrow Keys - Input",
+    //     ]
+    // },
+    {
+        name: "Asteroids",
+        id: "asteroids",
+        genre: "Arcade / Shooter",
+        description: "In this game you control a single spaceship in an asteroid field which is periodically traversed by flying saucers. The object of the game is to shoot and destroy the asteroids and saucers without getting hit by them.",
+        link: "Game Files/Asteroids/index.html",
+        img: "Images/asteroids.png",
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "Arrow Keys - Movement",
+            "Space - Shoot",
+        ]
+    },
     {
         name: "Bacon May Die",
         id: "bacon_may_die",
@@ -202,6 +229,22 @@ const data = [
         ]
     },
     {
+        name: "Bounce Back",
+        id: "bounce_back",
+        genre: "Adventure / Rouge-like",
+        description: "Bounce Back is a charming and addictive little Zelda inspired rogue-like adventure game where you use boomerangs to battle your way through 10 challenging procedurally generated levels.",
+        link: "Game Files/Bounce Back/index.html",
+        img: "Images/bounce_back.png",
+        file_based: true,
+        publisher: "JS13kGames",
+        controls: [
+            "WASD - Movement",
+            "Mouse - Aim",
+            "Click - Throw",
+            "Space - Dash",
+        ]
+    },
+    {
         name: "Bowmasters",
         id: "bowmasters",
         genre: "Archery",
@@ -228,6 +271,19 @@ const data = [
             "WASD/Arrow Keys - Movement",
             "U - Undo",
             "R - Restart",
+        ]
+    },
+    {
+        name: "BreakLock",
+        id: "breaklock",
+        genre: "Puzzle",
+        description: "A hybrid of Mastermind and the Android pattern lock. A game you gonna love to hate. Link the dots to try to find the pattern, you will get clues to help you solve it.",
+        link: "Game Files/BreakLock/index.html",
+        img: "Images/breaklock.png",
+        file_based: true,
+        publisher: "engineering.com",
+        controls: [
+            "Unknown",
         ]
     },
     {
@@ -329,19 +385,33 @@ const data = [
             "Right Click - Interact",
         ]
     },
-//     {
-//         name: "Crossy Road",
-//         id: "crossy_road",
-//         genre: "Arcade",
-//         description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
-//         link: "https://yell0wsuit.page/html5-games/games/crossy-road/",
-//         img: "Images/crossy_road.png",
-//         file_based: false,
-//         publisher: "Poki",
-//         controls: [
-//             "WASD/Arrow Keys/Right Click - Movement",
-//         ]
-//     },
+    // {
+    //     name: "Crossy Road",
+    //     id: "crossy_road",
+    //     genre: "Arcade",
+    //     description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
+    //     link: "Game Files/Crossy Road/index.html",
+    //     img: "Images/crossy_road.png",
+    //     file_based: false,
+    //     publisher: "Poki",
+    //     controls: [
+    //         "WASD/Arrow Keys/Right Click - Movement",
+    //     ]
+    // },
+    {
+        name: "Cubefield",
+        id: "cubefield",
+        genre: "Endless",
+        description: "Cubefield is a simple but addictive game where there are only two controls. You must guide your ship through an endless field of ominous looking colored cubes without hitting them.",
+        link: "Game Files/Cubefield/index.html",
+        img: "Images/cubefield.png",
+        file_based: true,
+        publisher: "flecko.net",
+        controls: [
+            "Arrow Keys - Movement",
+            "P - Pause"
+        ]
+    },
     {
         name: "Cube Surfer",
         id: "cube_surfer",
@@ -408,6 +478,19 @@ const data = [
         publisher: "diep.io-2",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Doodle Jump",
+        id: "doodle_jump",
+        genre: "Platformer",
+        description: "The aim of the game is to guide a four-legged creature called the Doodler up an unending series of platformers without falling.",
+        link: "Game Files/Doodle Jump/index.html",
+        img: "Images/doodle_jump.png",
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "Arrow Keys - Movement",
         ]
     },
     {
@@ -520,6 +603,19 @@ const data = [
         ]
     },
     {
+        name: "Evil Glitch",
+        id: "evil_glitch",
+        genre: "Shooter",
+        description: "You must fight to survive as long you can while evading enemies and destroying their bases to stop the corruption.",
+        link: "Game Files/Evil Glitch/index.html",
+        img: "Images/evil_glitch.png",
+        file_based: true,
+        publisher: "JS13kGames",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Fireboy & Watergirl",
         id: "fireboy_and_watergirl",
         genre: "2 Player / Puzzle",
@@ -541,6 +637,19 @@ const data = [
         img: "Images/fishington-io.png",
         file_based: false,
         publisher: "End Game Interactive, Inc.",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
+        name: "Flappy Bird",
+        id: "flappy_bird",
+        genre: "Arcade",
+        description: "You must navigate Faby, the bird, through pairs of pipes that have equally sized gaps placed at random heights.",
+        link: "Game Files/Flappy Bird/index.html",
+        img: "Images/flappy_bird.png",
+        file_based: true,
+        publisher: "Unknown",
         controls: [
             "Unknown",
         ]
@@ -608,6 +717,32 @@ const data = [
         publisher: "iclouds.io",
         controls: [
             "Drag & Left Click - Swing Hammer",
+        ]
+    },
+    // {
+    //     name: "Hakai",
+    //     id: "hakai",
+    //     genre: "",
+    //     description: "",
+    //     link: "https://freezydev.itch.io/hakai",
+    //     img: "Images/.png",
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "Unknown",
+    //     ]
+    // },
+    {
+        name: "Hextris",
+        id: "hextris",
+        genre: "Strategy",
+        description: "The goal of the game is to stop blocks from leaving the inside of the outer gray hexagon.",
+        link: "Game Files/Hextris/index.html",
+        img: "Images/hextris.png",
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "Left/Right Arrow Key - Rotate",
         ]
     },
     {
@@ -806,9 +941,22 @@ const data = [
     //     ]
     // },
     {
+        name: "Pac-Man",
+        id: "pac-man",
+        genre: "Action / Maze",
+        description: "You must control Pac-Man through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts.",
+        link: "Game Files/Pac-Man/index.html",
+        img: "Images/pac-man.png",
+        file_based: true,
+        publisher: "TomMalbran",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Paper Minecraft",
         id: "paper_minecraft",
-        genre: "Adventure / Survivial",
+        genre: "Adventure / Survival",
         description: "Paper Minecraft is a 2D version of the legendary building game Minecraft. Before starting a game you can choose a variety of different character skins and game modes. You must surivive for as long as possible before dying.",
         link: "Game Files/Paper Minecraft/index.html",
         img: "Images/paper_minecraft.png",
@@ -836,7 +984,7 @@ const data = [
         id: "pokemon_emerald",
         genre: "Adventure",
         description: "Emerald does more with double battles, as gym leaders can be re-challenged after the story to participate in double battles. You can also encounter more double battles by having at least two conscious Pokemon on their team and being seen by two other trainers simultaneously.",
-        link: "https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemonemerald",
+        link: "./GBA-Emulator/launcher.html#pokemonemerald",
         img: "Images/pokemon_emerald.png",
         file_based: false,
         publisher: "Nintendo",
@@ -909,6 +1057,19 @@ const data = [
             "Unknown",
         ]
     },
+    {
+        name: "Radius Raid",
+        id: "radius_raid",
+        genre: "Shooter",
+        description: "Radius Raid is a space themed shoot 'em up where you must blast away unrelenting enemies before they destroy you.",
+        link: "Game Files/Radius Raid/index.html",
+        img: "Images/radius_raid.png",
+        file_based: true,
+        publisher: "JS13kGames",
+        controls: [
+            "Unknown",
+        ]
+    },
     // {
     //     name: "Raze 1",
     //     id: "raze_1",
@@ -922,6 +1083,19 @@ const data = [
     //         "",
     //     ]
     // },
+    {
+        name: "Retrohaunt",
+        id: "retrohaunt",
+        genre: "Mystery",
+        description: "Someone or something is stealing our time. Today was yesterday and tomorrow is nowhere to be seen. Detective Clay is on the case!",
+        link: "Game Files/Retrohaunt/index.html",
+        img: "Images/retrohaunt.png",
+        file_based: true,
+        publisher: "JS13kGames",
+        controls: [
+            "Arrow Keys - Movement",
+        ]
+    },
     {
         name: "RoadBlocks",
         id: "roadblocks",
@@ -983,6 +1157,19 @@ const data = [
         img: "Images/sort_the_court.png",
         file_based: false,
         publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
+        name: "Space Company",
+        id: "space_company",
+        genre: "Incremental",
+        description: "Space Company is a science-fiction incremental game where you start from humble beginnings on Earth, working your way up to travelling between star systems and building Dyson Spheres and pretty much colonising the entire galaxy(ies?) And more!",
+        link: "Game Files/Space Company/index.html",
+        img: "Images/space_company.png",
+        file_based: true,
+        publisher: "Sparticle999",
         controls: [
             "Unknown",
         ]
@@ -1303,6 +1490,19 @@ const data = [
         ]
     },
     {
+        name: "Weaver Unlimited",
+        id: "weaver_unlimited",
+        genre: "Puzzle",
+        description: "It's a bit like Wordle, but this game has you figuring out how to ladder from one word to another. You have six chances to guess the path between two words in Weaver.",
+        link: "https://weaverwordle.com/weaver-unlimited/",
+        img: "Images/weaver_unlimited.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Wordle Unlimited",
         id: "wordle_unlimited",
         genre: "Puzzle",
@@ -1447,6 +1647,7 @@ function viewGame(gameID){
             genre.innerText = data[i].genre
             publisher.innerText = data[i].publisher
             playBtn.onclick = function(){ playGame(data[i].id) }
+            document.body.style.overflow = "hidden"
         }
     }
 }
@@ -1466,6 +1667,7 @@ document.addEventListener("click", () => {
             clickedView = false
             clickcount = 0
             document.getElementById("gameViewFullscreen").style.display = "none"
+            document.body.style.overflow = "visible"
         }
     }
 })

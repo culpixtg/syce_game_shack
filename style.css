@@ -1151,6 +1151,7 @@ body.dark .homeSectionPlayBtn:hover {
     padding-top: 10px;
     padding-bottom: 53px;
     padding-left: 15px;
+    padding-right: 15px;
     text-align: left;
     display: none;
 }

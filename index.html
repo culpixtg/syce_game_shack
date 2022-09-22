@@ -123,14 +123,6 @@
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="settings.html">
-                            <i class='bx bx-cog icon' ></i>
-                            <span class="text nav-text">Settings</span>
-                            <span class="hovertext">Settings</span>
-                        </a>
-                    </li>
-
                     <li class="nav-link" id="altLinks">
                         <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
                             <i class='bx bx-link-alt icon' ></i>
@@ -142,6 +134,38 @@
             </div>
 
             <div class="bottom-content" style="transform: translateY(-40%);">
+                <li class="nav-link">
+                    <a href="settings.html">
+                        <i class='bx bx-cog icon' ></i>
+                        <span class="text nav-text">Settings</span>
+                        <span class="hovertext">Settings</span>
+                    </a>
+                </li>
+                <!-- <li class="mode" id="notLoggedIn">
+                    <a href="#" onclick="toggleLoginPage()">
+                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                        <span class="text nav-text">Login or create</span>
+                        <span class="hovertext">Login or create an account</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="loggedIn" style="display: none">
+                    <a href="#">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Account (BETA)</span>
+                        <span class="hovertext">Manage Account (BETA)</span>
+                    </a>
+                </li> -->
+
+                <!-- <li class="">
+                    <div class="profile-details">
+                        <i class='bx bx-user-circle icon' ></i>
+                        <div class="name_job">
+                            <div class="text nav-text">Tiller68</div>
+                            <div class="name">Lol</div>
+                        </div>
+                    </div>
+                </li> -->
 
                 <!-- <li class="mode">
                     <div class="sun-moon">
@@ -192,7 +216,65 @@
             </div>
         </div>
         <br>
+        <!-- <footer class="footer">
+            <br>
+            <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
+            <br>
+            <span class="text">Terms of Service - Privacy Policy - Blog</span>
+        </footer> -->
     </section>
+
+    <!-- <section class="section" style="display:none; background-color: transparent;" id="loginPage">
+        <div class="fadedBackground"></div>
+        <br>
+        <div class="login">
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <!-- <p class="form__text">
+                    <a href="#" class="form__link">Forgot your password?</a>
+                </p> -->
+                <br><br>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+            </form>
+            <form class="form form--hidden" id="createAccount" action="connect.php" method="post">
+                <h1 class="form__title">Create Account</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username" name="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <!-- <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div> -->
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password" name="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <br><br>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                </p>
+            </form>
+        </div>
+    </section> -->
 
     <script src="script.js"></script>
 

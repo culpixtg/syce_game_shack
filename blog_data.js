@@ -9,6 +9,13 @@ let data = [
     //     hidden: true,
     // },
     {
+        title: "Changelog of v4.1.1",
+        date: "9/21/22",
+        time: "1 - 2 min read",
+        id: "5",
+        text: "This update includes some needed changes and bug fixes. Read below for more details:<br><br><b>Changes</b><br>• Moved the settings tab down on the sidebar to the bottom<br>• New focus screen for when you go out of focus during a game (like when you're not clicked on it)<br>• New message when you play a game that may be experiencing issues<br><br><b>New Games</b><br>• Basketbros.io (Re-added)<br>• Death Chase 3<br>• Powerline.io<br>• Shell Shocker<br>ㅤ◦ This game was previously removed after some security issues but seems to have been resolved<br>• Solitaire<br><br><b>Other</b><br>• Removed Betrayal.io because it got blocked.<br>• Fixed Friday Night Funkin'<br>• Fixed Sort the Court.<br>• Fixed the World's Hardest Game<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br>• 1v1.lol is not loading all the way. (91155718)<br><br><b>Resolved Issues</b><br>• On some devices, game descriptions might be too long that they get cut off, and/or the play button, at the bottom of the page. (79099003)<br>ㅤ◦ <b>Solution:</b> Turned on the y-overflow for the div element so it adds a scrollbar if it goes beyond a certain height.<br>• On some devices, a weird glitch would occur where if you scroll down on the gamepage and you play a game the page would be scrolled down too far somehow.<br>ㅤ◦ <b>Solution:</b> Every time the user plays a game it will scroll up to the top of the page.",
+    },
+    {
         title: "Changelog of v4.1.0",
         date: "9/15/22",
         time: "2 min read",

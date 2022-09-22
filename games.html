@@ -123,14 +123,6 @@
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="settings.html">
-                            <i class='bx bx-cog icon' ></i>
-                            <span class="text nav-text">Settings</span>
-                            <span class="hovertext">Settings</span>
-                        </a>
-                    </li>
-
                     <li class="nav-link" id="altLinks">
                         <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
                             <i class='bx bx-link-alt icon' ></i>
@@ -142,6 +134,14 @@
             </div>
 
             <div class="bottom-content" style="transform: translateY(-40%);">
+                <li class="nav-link">
+                    <a href="settings.html">
+                        <i class='bx bx-cog icon' ></i>
+                        <span class="text nav-text">Settings</span>
+                        <span class="hovertext">Settings</span>
+                    </a>
+                </li>
+                
                 <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -168,9 +168,13 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Just letting you know...</div>
-            <div class="messageBannerText">I am aware that many games don't work. I'm working on an update that will resolve some of these issues. Other games will be fixed in later updates.</div>
-            <button class="messageBannerButton" onclick="hideBanner()">Never show again</button>
+            <div class="messageBannerTitle">Another New Update! (v4.1.1)</div>
+            <div style="display: inline-table; width: 70%; float: left; height: auto;">
+                <div class="messageBannerText">New games, features, and bug fixes! Read the new blog for more.</div>
+            </div>
+            <div style="display: inline-table; width: 25%; float: right; padding-right: 15px; height: auto;">
+                <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
+            </div>
         </div>
         <div class="title">Games</div>
         <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div>
@@ -226,8 +230,13 @@
                     <div class="gameViewText" id="gameViewPublisher"></div>
                 </div>
                 <br><br><br>
-                <button class="playButton" id="playButton">PLAY</button>
-                <button class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">REPORT</button>
+                <button class="playButton" id="playButton">
+                    <i class='bx bx-play icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
+                    <span>PLAY</span>
+                </button>
+                <button class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
+                    <i class='bx bxs-flag-alt icon'></i>
+                </button>
             </div>
         </div>
 
@@ -407,6 +416,30 @@
             </a>
         </div>
         
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
+        <div class="container" id="container">
+            <a herf=" " class="game_click" onclick="" id="click">
+                <img class="game_img" id="img">
+                <div class="game_title" id="title"></div>
+                <div class="game_genre" id="genre"></div>
+            </a>
+        </div>
+
         <div class="container" id="container">
             <a herf=" " class="game_click" onclick="" id="click">
                 <img class="game_img" id="img">
@@ -1108,12 +1141,31 @@
 
     <section class="section" id="gamepage" style="display: none;">
         <br>
+        <div class="messageBanner" style="display: none; background-color: red;" id="importantMessage">
+            <div class="messageBannerTitle">
+                <span class='bx bx-error icon' style="transform: translateY(2px)"></span>
+                <span>This game may be experiencing issues.<span>
+            </div>
+            <div style="display: inline-table; width: 70%; float: left; height: auto;">
+                <div class="messageBannerText">If so, this game may not be working as expected. A fix is probably in the works.</div>
+            </div>
+        </div>
         <div class="title" id="gamePageTitle"></div>
         <div class="text" id="gamePageDesc"></div>
         <br>
 
         <!-- <iframe class="gameIframe" src="" id="gameIframe" width="1074" height="600"></iframe> -->
-        <iframe class="gameIframe" src="" id="gameIframe" onclick="console.log('hi')"></iframe>
+        <iframe class="gameIframe" style="overflow: hidden;" src="" id="gameIframe"></iframe>
+        <div class="iframeFocus" onclick="focusGame()" id="iframeFocus">
+            <br><br>
+            <span style="font-size: 2.25vw; line-height: 150%; font-weight: 600;">Game not focused</span>
+            <br>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">Click to re-focus.</span>
+            <div style="height: 55%; width: 1px; opacity: 0;"></div>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 600;">Why is this important?</span>
+            <br>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">It's because you can't control the game if it's not focused.</span>
+        </div>
         <br>
         <div class="controlsBox" id="controls">
             <span class="controlsTitle">Controls</span>

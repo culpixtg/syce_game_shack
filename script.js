@@ -1,4 +1,4 @@
-let bannerMessageNum = "2"
+let bannerMessageNum = "3"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -61,6 +61,7 @@ function gamepage(){
     document.getElementById("mainpage").style.display = "block"
     document.getElementById("gameIframe").src = ""
     document.body.style.overflow = "visible"
+    document.getElementById("importantMessage").style.display = "none"
 
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
 }
@@ -71,6 +72,7 @@ function blog(){
 }
 
 function fullscreen(){
+    document.getElementById("gameIframe").focus();
     if(window.location == window.parent.location){
         var elem = document.getElementById("gameIframe")
         if(elem.requestFullscreen){
@@ -90,7 +92,11 @@ var container = document.getElementsByClassName("container")
 resizeWidth()
 function resizeWidth(){
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width
-    if(document.getElementById("gameIframe") !== null) document.getElementById("gameIframe").style.height = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
+    if(document.getElementById("gameIframe") !== null){
+        let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
+        document.getElementById("gameIframe").style.height = newHeight
+        document.getElementById("iframeFocus").style.height = newHeight
+    }
     if(width >= 0 && width < 699) for(i = 0; i < container.length; i++){
         container[i].style.width = "30%";
     }
@@ -121,7 +127,7 @@ function resizeWidth(){
     console.log(width)
 }
 
-window.addEventListener("resize", resizeWidth)
+window.addEventListener("resize", function(){ resizeWidth(); })
 
 //Settings
 gameIconSetting();

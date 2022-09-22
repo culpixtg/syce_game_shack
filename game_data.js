@@ -1,4 +1,4 @@
-let lastUpdate = "9/15/2022"
+let lastUpdate = "9/21/2022"
 const data = [
     {
         name: "1v1.lol",
@@ -11,7 +11,8 @@ const data = [
         publisher: "JustPlay.LOL",
         controls: [
             "Slide Left Click - Aim",
-        ]
+        ],
+        broken: true,
     },
     {
         name: "2 Player Games",
@@ -110,19 +111,6 @@ const data = [
             "Arrow Keys/WASD/Spacebar - Movement",
         ]
     },
-    // {
-    //     name: "Arrow Hero",
-    //     id: "arrow_hero",
-    //     genre: "Platformer",
-    //     description: "A minimalist game where your goal is to match your inputs with an unstoppable continuous overwelming flow of arrows.",
-    //     link: "Game Files/Arrow Hero/index.html",
-    //     img: "Images/arrow_hero.png",
-    //     file_based: true,
-    //     publisher: "Acelis Weaven",
-    //     controls: [
-    //         "Arrow Keys - Input",
-    //     ]
-    // },
     {
         name: "Asteroids",
         id: "asteroids",
@@ -166,6 +154,19 @@ const data = [
         ]
     },
     {
+        name: "Basketbros.io",
+        id: "basketbros-io",
+        genre: "2 Player / Sports",
+        description: "BasketBros. IO is a charming basketball game with a cool retro look that can be played with friends or against CPUs.",
+        link: "https://basketball.services/",
+        img: "Images/basketbros-io.png",
+        file_based: false,
+        publisher: "Blue Wizard Digital",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Basketball Stars",
         id: "basketball_stars",
         genre: "2 Player / Sports",
@@ -179,21 +180,6 @@ const data = [
             "V - Special Item, B - Steal",
             "Player 2: Arrow Keys - Movement, Up Arrow (Jump) - Shoot",
             "K - Special Item, L - Steal",
-        ]
-    },
-    {
-        name: "Betrayal.io",
-        id: "betrayal.io",
-        genre: "Mystery",
-        description: "Betrayal.io is a multiplayer social deduction game like Among Us. sussy game 2.0",
-        link: "https://betrayal.io/",
-        img: "Images/betrayal-io.png",
-        file_based: false,
-        publisher: "End Game Interactive, Inc.",
-        controls: [
-            "WASD/Arrow Keys - Movement",
-            "Spacebar/E - Interact",
-            "M - Map",
         ]
     },
     {
@@ -468,6 +454,22 @@ const data = [
         ]
     },
     {
+        name: "Death Chase 3",
+        id: "death_chase_3",
+        genre: "Driving / Racing",
+        description: "Death Chase 3 is a platform type car racing game. Race on mountain roads; A road full of tricky passages, cliffs, underground tunnels, bridges and traps.",
+        link: "https://b0bz-d34thch4z3.netlify.app/",
+        img: "Images/death_chase_3.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Arrow Keys - Movement",
+            "X - Missile",
+            "N - Nitro",
+            "Space - Jump",
+        ]
+    },
+    {
         name: "Diep 2.io",
         id: "diep_2-io",
         genre: "Arcade",
@@ -672,13 +674,13 @@ const data = [
         id: "friday_night_funkin",
         genre: "Rhythm",
         description: "Friday Night Funkin' is a rhythm game where you must control a character called Boyfriend, who must defeat a series of opponents in order to continue dating his significant other, Girlfriend.",
-        link: "https://INSP3CT1NG-1SNT-N1C3-RJ.github.io/projects/fnf/index.html",
+        link: "Game Files/Friday Night Funkin/index.html",
         img: "Images/friday_night_funkin.png",
-        file_based: false,
+        file_based: true,
         publisher: "The Funkin' Crew Inc.",
         controls: [
             "Arrow Keys - Play Notes",
-        ]
+        ],
     },
     {
         name: "Geometry Dash",
@@ -720,10 +722,36 @@ const data = [
         ]
     },
     // {
+    //     name: "Gun Mayhem 2",
+    //     id: "gun_mayhem_2",
+    //     genre: "?",
+    //     description: "?",
+    //     link: "https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/gun-mayhem-2.swf",
+    //     img: "Images/gun_mayhem_2.png",
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "Unknown",
+    //     ]
+    // },
+    // {
+    //     name: "Gun Mayhem Redux",
+    //     id: "gun_mayhem_redux",
+    //     genre: "?",
+    //     description: "?",
+    //     link: "https://www-sites-opensocial.googleusercontent.com/gadgets/proxy/refresh=3600&container=enterprise/https://syedeinstein.weebly.com/uploads/9/3/7/5/93752046/gun_mayhem_3.swf",
+    //     img: "Images/gun_mayhem_redux.png",
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "Unknown",
+    //     ]
+    // },
+    // {
     //     name: "Hakai",
     //     id: "hakai",
-    //     genre: "",
-    //     description: "",
+    //     genre: "?",
+    //     description: "?",
     //     link: "https://freezydev.itch.io/hakai",
     //     img: "Images/.png",
     //     file_based: false,
@@ -782,7 +810,8 @@ const data = [
         publisher: "incredibox.com",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true
     },
     {
         name: "Knots",
@@ -1058,6 +1087,19 @@ const data = [
         ]
     },
     {
+        name: "Powerline.io",
+        id: "powerline-io",
+        genre: "Arcade / Multiplayer",
+        description: "The game involves players taking on the role of a powerline, similar to a snake from Slither.io, another popular io game. The player must kill other players by causing them to collide with their powerline, and eat their food to grow.",
+        link: "https://powerline.io/",
+        img: "Images/powerline-io.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Radius Raid",
         id: "radius_raid",
         genre: "Shooter",
@@ -1136,6 +1178,19 @@ const data = [
         ]
     },
     {
+        name: "Shell Shockers",
+        id: "shell_shockers",
+        genre: "FPS / Shooter",
+        description: "Shell Shockers is an online, first-person shooter game where you control Eggs that move around one of nine Maps, with the objective being to go up the leaderboard killing each other.",
+        link: "https://tam-shellshockers.arfotoarte.com/",
+        img: "Images/shell_shockers.png",
+        file_based: false,
+        publisher: "Blue Wizard Digital",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Slope 1",
         id: "slope_1",
         genre: "Arcade / Speed Run",
@@ -1149,13 +1204,26 @@ const data = [
         ]
     },
     {
+        name: "Solitaire",
+        id: "solitaire",
+        genre: "Classic",
+        description: "The first objective is to release and play into position certain cards to build up each foundation, in sequence and in suit, from the ace through the king. The ultimate objective is to build the whole pack onto the foundations, and if that can be done, the Solitaire game is won.",
+        link: "Game Files/Solitaire/index.html",
+        img: "Images/solitaire.png",
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Sort the Court",
         id: "sort_the_court",
         genre: "Simulation",
         description: "Sort the Court is a game where you are a king and the goal is to raise your population, happiness, and gold. You do this by answering Yes or No to people that come up to you with offers.",
-        link: "https://INSP3CT1NG-1SNT-N1C3-RJ.github.io/projects/sort-the-court/index.html",
+        link: "Game Files/Sort the Court/index.html",
         img: "Images/sort_the_court.png",
-        file_based: false,
+        file_based: true,
         publisher: "Unknown",
         controls: [
             "Unknown",
@@ -1231,14 +1299,15 @@ const data = [
         id: "subwaysurfers",
         genre: "Endless / Runner",
         description: "It's you're goal to run a away from a cop chasing you while you complete missions, etc. How far can you go before getting caught?",
-        link: "https://yell0wsuit.page/html5-games/games/subway-surfers-unity/",
+        link: "Game Files/subway-surfers/index.html",
         img: "Images/subway_surfers.png",
-        file_based: false,
+        file_based: true,
         publisher: "Poki",
         controls: [
             "Arrow Keys/WASD - Movement",
             "Spacebar - Hoverboard"
-        ]
+        ],
+        broken: true
     },
     {
         name: "Super Buddy Kick",
@@ -1279,7 +1348,8 @@ const data = [
             "Player 1: Arrow Keys - Movement, Space - Shoot",
             "Player 2: WASD - Movement, Q - Shoot",
             "Player 3: Move Mouse - Movement, Left Click - Shoot",
-        ]
+        ],
+        broken: true,
     },
     // {
     //     name: "TankTrouble 2",
@@ -1520,9 +1590,9 @@ const data = [
         id: "worlds_hardest_game",
         genre: "Puzzle",
         description: "This game is a very difficult game as it requires you to go through very difficult level that seem very unpossible.",
-        link: "https://vinmannie.github.io/WorldsHardestGame/",
+        link: "Game Files/World's Hardest Game/index.html",
         img: "Images/worlds_hardest_game.png",
-        file_based: false,
+        file_based: true,
         publisher: "Unknown",
         controls: [
             "Arrow Keys - Movement",
@@ -1698,10 +1768,17 @@ function playGame(gameID){
             document.getElementById("gameIframe").src = data[i].link
             document.getElementById("controls").style.transform = `translateY(${-70 + (data[i].controls.length * -25)}px)`
             document.getElementById("controlsText").innerText = data[i].controls.join("\n")
-            document.getElementById("gameIframe").style.height = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
+
+            let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
+            document.getElementById("gameIframe").style.height = newHeight
+            document.getElementById("iframeFocus").style.height = newHeight
+            
+            if(data[i].broken) document.getElementById("importantMessage").style.display = "block"
 
             if(body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
-            intervalManager(true);
+            // document.getElementById("gameIframe").focus();
+            window.scrollTo(0, 0)
+            // document.body.style.overflow = "hidden"
         }
     }
 }
@@ -1734,10 +1811,17 @@ function checkFocus(){
     if(document.getElementById("gamepage").style.display === "block"){
         if(document.activeElement === document.getElementById("gameIframe")){
             document.body.style.overflow = "hidden"
+            document.getElementById("iframeFocus").style.display = "none"
         } else {
             document.body.style.overflow = "visible"
+            document.getElementById("iframeFocus").style.display = "block"
         }
     }
+}
+
+function focusGame(){
+    document.getElementById("gameIframe").focus();
+    checkFocus();
 }
 
 document.body.onclick = function(){ checkFocus() }
@@ -1748,6 +1832,14 @@ const listener = window.addEventListener("blur", () => {
     }
     window.removeEventListener("blur", listener)
 })
+// window.addEventListener('keydown', (e) => {
+//     console.log(e)
+//     e.preventDefault();
+// })
+
+// window.dispatchEvent(new KeyboardEvent('keydown', {
+//     'key': 'b'
+// }));
 
 function controls(){
     if(document.getElementById("controls").style.display !== "block"){

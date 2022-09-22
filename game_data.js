@@ -154,19 +154,6 @@ const data = [
         ]
     },
     {
-        name: "Basketbros.io",
-        id: "basketbros-io",
-        genre: "2 Player / Sports",
-        description: "BasketBros. IO is a charming basketball game with a cool retro look that can be played with friends or against CPUs.",
-        link: "https://basketball.services/",
-        img: "Images/basketbros-io.png",
-        file_based: false,
-        publisher: "Blue Wizard Digital",
-        controls: [
-            "Unknown",
-        ]
-    },
-    {
         name: "Basketball Stars",
         id: "basketball_stars",
         genre: "2 Player / Sports",
@@ -180,6 +167,19 @@ const data = [
             "V - Special Item, B - Steal",
             "Player 2: Arrow Keys - Movement, Up Arrow (Jump) - Shoot",
             "K - Special Item, L - Steal",
+        ]
+    },
+    {
+        name: "BasketBros.io",
+        id: "basketbros-io",
+        genre: "2 Player / Sports",
+        description: "BasketBros.io is a charming basketball game with a cool retro look that can be played with friends or against CPUs.",
+        link: "https://basketball.services/",
+        img: "Images/basketbros-io.png",
+        file_based: false,
+        publisher: "Blue Wizard Digital",
+        controls: [
+            "Unknown",
         ]
     },
     {

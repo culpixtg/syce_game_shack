@@ -180,7 +180,8 @@ const data = [
         publisher: "Blue Wizard Digital",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true
     },
     {
         name: "Binding of Isaac",
@@ -1097,7 +1098,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true
     },
     {
         name: "Radius Raid",

@@ -1598,7 +1598,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Arrow Keys - Movement",
-        ]
+        ],
+        broken: true
     },
     // {
     //     name: "Zombs Royale",

@@ -1114,19 +1114,6 @@ const data = [
             "Unknown",
         ]
     },
-    // {
-    //     name: "Raze 1",
-    //     id: "raze_1",
-    //     genre: "Shooter",
-    //     description: "",
-    //     link: "https://cdn.icestonesoft.com/online_games/raze/",
-    //     img: "Images/raze_1.png",
-    //     file_based: false,
-    //     publisher: "Unknown",
-    //     controls: [
-    //         "",
-    //     ]
-    // },
     {
         name: "Retrohaunt",
         id: "retrohaunt",

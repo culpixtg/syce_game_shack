@@ -1,4 +1,4 @@
-let lastUpdate = "9/21/2022"
+let lastUpdate = "9/28/2022"
 const data = [
     {
         name: "1v1.lol",

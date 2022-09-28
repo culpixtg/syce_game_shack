@@ -9,6 +9,13 @@ let data = [
     //     hidden: true,
     // },
     {
+        title: "Changelog of v4.1.2",
+        date: "9/28/22",
+        time: "< 1 min read",
+        id: "6",
+        text: "This update includes some new games and other fixes. Read below for more details:<br><br><b>Changes</b><br>• Fixed a typo in the settings.<br><br><b>New Games</b><br>• Age of War<br>• Death Run 3D<br>• Gun Mayhem 2 & Redux (finally, sorry for the wait)<br>• Jetboy<br>• Papa's Pizzaria & Scooperia<br>• Retro Bowl<br><br><b>Other</b><br>• Removed Fishington.io because it got blocked.<br>• Removed Powerline.io because it got blocked.<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br>• 1v1.lol is not loading all the way. (91155718)<br>• Can't fullscreen on phones<br>• Some games' title text might be too long and cause it to look weird<br>• Connect 4 randomly broke its style (idk how lol)",
+    },
+    {
         title: "Changelog of v4.1.1",
         date: "9/21/22",
         time: "1 - 2 min read",

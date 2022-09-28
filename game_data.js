@@ -70,6 +70,19 @@ const data = [
     //     ]
     // },
     {
+        name: "Age of War",
+        id: "age_of_war",
+        genre: "Defense / Strategy",
+        description: "Take control of 16 different units and 15 different turrets to defend your base and destroy your enemy. In this game, you start at the caveman age, then evolve! There are a total of 5 ages, each with its own unique units and turrets.",
+        link: "Game Files/Age of War/index.html",
+        img: "Images/age_of_war.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Airman Challenge",
         id: "airman_challenge",
         genre: "Adventure",
@@ -181,7 +194,7 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true
+        broken: true,
     },
     {
         name: "Binding of Isaac",
@@ -472,6 +485,19 @@ const data = [
         ]
     },
     {
+        name: "Death Run 3D",
+        id: "death_run_3d",
+        genre: "Endless",
+        description: "Death Run 3D is an extremely fast game for true skillers only. If you love hardcore games, this game is the right for you. You fly inside a tube with various blocks and almost each of them is movable. Your task is avoid them. Gaps between blocks are very short so swift responses are the only way to success.",
+        link: "Game Files/Death Run 3D/index.html",
+        img: "Images/death_run_3d.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Diep 2.io",
         id: "diep_2-io",
         genre: "Arcade",
@@ -632,19 +658,19 @@ const data = [
             "Unknown",
         ]
     },
-    {
-        name: "Fishington.io",
-        id: "fishington-io",
-        genre: "Arcade",
-        description: "Fishington.io is a multiplayer fishing game featuring characters from the game Betrayal.io. Cast your line and catch fish to sell on the market!",
-        link: "https://fishington.io",
-        img: "Images/fishington-io.png",
-        file_based: false,
-        publisher: "End Game Interactive, Inc.",
-        controls: [
-            "Unknown",
-        ]
-    },
+    // {
+    //     name: "Fishington.io",
+    //     id: "fishington-io",
+    //     genre: "Arcade",
+    //     description: "Fishington.io is a multiplayer fishing game featuring characters from the game Betrayal.io. Cast your line and catch fish to sell on the market!",
+    //     link: "https://fishington.io",
+    //     img: "Images/fishington-io.png",
+    //     file_based: false,
+    //     publisher: "End Game Interactive, Inc.",
+    //     controls: [
+    //         "Unknown",
+    //     ]
+    // },
     {
         name: "Flappy Bird",
         id: "flappy_bird",
@@ -723,32 +749,32 @@ const data = [
             "Drag & Left Click - Swing Hammer",
         ]
     },
-    // {
-    //     name: "Gun Mayhem 2",
-    //     id: "gun_mayhem_2",
-    //     genre: "?",
-    //     description: "?",
-    //     link: "https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/gun-mayhem-2.swf",
-    //     img: "Images/gun_mayhem_2.png",
-    //     file_based: false,
-    //     publisher: "Unknown",
-    //     controls: [
-    //         "Unknown",
-    //     ]
-    // },
-    // {
-    //     name: "Gun Mayhem Redux",
-    //     id: "gun_mayhem_redux",
-    //     genre: "?",
-    //     description: "?",
-    //     link: "https://www-sites-opensocial.googleusercontent.com/gadgets/proxy/refresh=3600&container=enterprise/https://syedeinstein.weebly.com/uploads/9/3/7/5/93752046/gun_mayhem_3.swf",
-    //     img: "Images/gun_mayhem_redux.png",
-    //     file_based: false,
-    //     publisher: "Unknown",
-    //     controls: [
-    //         "Unknown",
-    //     ]
-    // },
+    {
+        name: "Gun Mayhem 2",
+        id: "gun_mayhem_2",
+        genre: "Action / Shooter",
+        description: "The aim of each round is simple - you must knock your enemies off of the stage and prevent them from jumping back on. You can push your enemies by shooting them. You can avoid being thrown off the stage yourself by using a series of jumps and double jumps. The gameplay is fast-paced and fun and you must have quick reactions to win!",
+        link: "Game Files/Gun Mayhem 2/index.html",
+        img: "Images/gun_mayhem_2.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
+        name: "Gun Mayhem Redux",
+        id: "gun_mayhem_redux",
+        genre: "Action / Shooter",
+        description: "Gun Mayhem Redux is a third-person shooter game. The goal of the game is either to capture a flag for a certain duration or kill your opponents. To play the game you move a character up and down, back and forth while shooting at the enemy. The game provides you with eight campaign levels and a tutorial.",
+        link: "Game Files/Gun Mayhem Redux/index.html",
+        img: "Images/gun_mayhem_redux.png",
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "Unknown",
+        ]
+    },
     // {
     //     name: "Hakai",
     //     id: "hakai",
@@ -814,6 +840,19 @@ const data = [
             "Unknown",
         ],
         broken: true
+    },
+    {
+        name: "Jetboy",
+        id: "jetboy",
+        genre: "Platformer",
+        description: "Jet Boy is a fun to play endless platform game. You need to avoid the mines and the holes in the ground and collect the fruit and the coins so you can buy Shields, the shields protect you for 10 seconds so you wont't get hurt… Buy Shields with In-App Purchase, Remove Admob Ads with In-App Purchase Controls",
+        link: "https://b0bz-j3tb0y.netlify.app/",
+        img: "Images/jetboy.png",
+        file_based: false,
+        publisher: "Bob's Shack",
+        controls: [
+            "Unknown",
+        ]
     },
     {
         name: "Knots",
@@ -985,6 +1024,32 @@ const data = [
         ]
     },
     {
+        name: "Papa's Pizzaria",
+        id: "papas_pizzaria",
+        genre: "Management",
+        description: "Papa's Pizzeria gently introduces you to the art of customer service and making steamy delicious pizzas fresh from the oven. Take your first orders and start by adding the requested toppings. Then, move your pizza to the oven and cook it for the specified time.",
+        link: "Game Files/Papa's Pizzaria/index.html",
+        img: "Images/papas_pizzaria.png",
+        file_based: false,
+        publisher: "Bob's Shack",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
+        name: "Papa's Scooperia",
+        id: "papas_scooperia",
+        genre: "Management",
+        description: "Stay in this town and open up an ice-cream shop! Bake cookies, sell ice-cream and make money! The game offers an option of saving your game if need be, so that you can continue after you return to the game. Start playing and start cashing in!",
+        link: "https://vnqpi4csdtso3eagjo7nnc69ejilnlvh-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%252Fpapa-s-scooperia.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=21a6c241a3303c26&libs=core&mid=218&parent=https://sites.google.com/site/unblockedgameswtf/papa-s-scooperia#st=e%3DAIHE3cCxvtz7hq9Gryodd6Nt45yhjSnaXIpJpaolmsUgcqwoTiOTG01gbSe1qJqw6YvklEsB1soh3WC4SZnzMpgOJ53SQroIepWugRHjoU8Hj4fQys50OHyPHmb%252FsjOricwxZUGwlwn4%26c%3Denterprise&rpctoken=-5455470944845841767",
+        img: "Images/papas_scooperia.png",
+        file_based: false,
+        publisher: "",
+        controls: [
+            "Unknown",
+        ]
+    },
+    {
         name: "Paper Minecraft",
         id: "paper_minecraft",
         genre: "Adventure / Survival",
@@ -1088,20 +1153,20 @@ const data = [
             "Unknown",
         ]
     },
-    {
-        name: "Powerline.io",
-        id: "powerline-io",
-        genre: "Arcade / Multiplayer",
-        description: "The game involves players taking on the role of a powerline, similar to a snake from Slither.io, another popular io game. The player must kill other players by causing them to collide with their powerline, and eat their food to grow.",
-        link: "https://powerline.io/",
-        img: "Images/powerline-io.png",
-        file_based: false,
-        publisher: "Unknown",
-        controls: [
-            "Unknown",
-        ],
-        broken: true
-    },
+    // {
+    //     name: "Powerline.io",
+    //     id: "powerline-io",
+    //     genre: "Arcade / Multiplayer",
+    //     description: "The game involves players taking on the role of a powerline, similar to a snake from Slither.io, another popular io game. The player must kill other players by causing them to collide with their powerline, and eat their food to grow.",
+    //     link: "https://powerline.io/",
+    //     img: "Images/powerline-io.png",
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "Unknown",
+    //     ],
+    //     broken: true,
+    // },
     {
         name: "Radius Raid",
         id: "radius_raid",
@@ -1111,6 +1176,32 @@ const data = [
         img: "Images/radius_raid.png",
         file_based: true,
         publisher: "JS13kGames",
+        controls: [
+            "Unknown",
+        ]
+    },
+    // {
+    //     name: "Raze 1",
+    //     id: "raze_1",
+    //     genre: "Shooter",
+    //     description: "",
+    //     link: "https://cdn.icestonesoft.com/online_games/raze/",
+    //     img: "Images/raze_1.png",
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "",
+    //     ]
+    // },
+    {
+        name: "Retro Bowl",
+        id: "retro_bowl",
+        genre: "Sports",
+        description: "Retro Bowl is the perfect game for the armchair quarterback to finally prove a point. Presented in a glorious retro style, the game has simple roster management, including press duties and the handling of fragile egos, while on the field you get to call the shots. Can you pass the grade and take your team all the way to the ultimate prize?",
+        link: "Game Files/Retro Bowl/index.html",
+        img: "Images/retro_bowl.png",
+        file_based: false,
+        publisher: "Unknown",
         controls: [
             "Unknown",
         ]
@@ -1589,32 +1680,6 @@ const data = [
         ],
         broken: true
     },
-    // {
-    //     name: "Zombs Royale",
-    //     id: "zombs_royale",
-    //     genre: "Shooter",
-    //     description: "",
-    //     link: "https://rudolph-the-red-nosed-reindeer.ga/tmm-zombsroyale",
-    //     img: "Images/zombs_royale.png",
-    //     file_based: false,
-    //     publisher: "Unknown",
-    //     controls: [
-    //         "",
-    //     ]
-    // },
-    // {
-    //     name: "",
-    //     id: "",
-    //     genre: "",
-    //     description: "",
-    //     link: "",
-    //     img: "Images/.png",
-    //     file_based: false,
-    //     publisher: "Unknown",
-    //     controls: [
-    //         "",
-    //     ]
-    // },
 ]
 
 document.getElementById("gamecount").innerText = `Game count: ${data.length}\nUpdated: ${lastUpdate}`

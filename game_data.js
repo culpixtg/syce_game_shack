@@ -341,7 +341,8 @@ const data = [
         controls: [
             "Right Click - Place Piece in Row",
             "Right Click - Play Again"
-        ]
+        ],
+        broken: true
     },
     {
         name: "Cookie Clicker",

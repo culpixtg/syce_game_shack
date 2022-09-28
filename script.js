@@ -462,13 +462,3 @@ function toggleLoginPage(){
         document.getElementsByTagName("head")[0].appendChild(newlink)
     }
 }
-
-function toggleLoginSidebar(){
-    if(document.getElementById("loggedIn").style.display === "block"){
-        document.getElementById("notLoggedIn").style.display = "block"
-        document.getElementById("loggedIn").style.display = "none"
-    } else {
-        document.getElementById("notLoggedIn").style.display = "none"
-        document.getElementById("loggedIn").style.display = "block"
-    }
-}

@@ -37,7 +37,7 @@ const body = document.querySelector('body'),
             sidebar.classList.toggle("close");
         })
 
-        if(localStorage.getItem("openSidebar") === "true") sidebar.classList.toggle("close");
+        if(localStorage.getItem("openSidebar") === "true") sidebar.classList.toggle("close")
 
         // searchBtn.addEventListener("click" , () =>{
         //     sidebar.classList.remove("close");
